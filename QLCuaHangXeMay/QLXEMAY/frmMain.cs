@@ -1,13 +1,15 @@
-﻿using System;
+﻿using DevExpress.XtraEditors;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Quan_Ly_Ban_Xe
+namespace QLXEMAY
 {
     public partial class frmMain : DevExpress.XtraEditors.XtraForm
     {
@@ -16,9 +18,10 @@ namespace Quan_Ly_Ban_Xe
             InitializeComponent();
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void btnXeMay_Click(object sender, EventArgs e)
         {
-
+            frmXeMay frm = new frmXeMay();
+            frm.Show();
         }
     }
 }

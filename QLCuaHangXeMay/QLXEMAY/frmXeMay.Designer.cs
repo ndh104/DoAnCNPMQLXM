@@ -29,40 +29,31 @@ namespace QLXEMAY
         /// </summary>
         private void InitializeComponent()
         {
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.gcXeMay = new DevExpress.XtraGrid.GridControl();
+            this.gvXeMay = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.Xoa = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcXeMay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvXeMay)).BeginInit();
             this.SuspendLayout();
             // 
-            // gridControl1
+            // gcXeMay
             // 
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.gridControl1.Location = new System.Drawing.Point(0, 93);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(994, 315);
-            this.gridControl1.TabIndex = 0;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.gcXeMay.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.gcXeMay.Location = new System.Drawing.Point(0, 93);
+            this.gcXeMay.MainView = this.gvXeMay;
+            this.gcXeMay.Name = "gcXeMay";
+            this.gcXeMay.Size = new System.Drawing.Size(994, 315);
+            this.gcXeMay.TabIndex = 0;
+            this.gcXeMay.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvXeMay});
             // 
-            // gridView1
+            // gvXeMay
             // 
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Location = new System.Drawing.Point(8, 101);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton1.TabIndex = 1;
-            this.simpleButton1.Text = "simpleButton1";
+            this.gvXeMay.GridControl = this.gcXeMay;
+            this.gvXeMay.Name = "gvXeMay";
             // 
             // btnThem
             // 
@@ -109,24 +100,23 @@ namespace QLXEMAY
             this.Controls.Add(this.Xoa);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnThem);
-            this.Controls.Add(this.simpleButton1);
-            this.Controls.Add(this.gridControl1);
+            this.Controls.Add(this.gcXeMay);
             this.Name = "frmXeMay";
             this.Text = "frmXeMay";
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            this.Load += new System.EventHandler(this.frmXeMay_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.gcXeMay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvXeMay)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraGrid.GridControl gcXeMay;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button Xoa;
         private System.Windows.Forms.Button btnHuy;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvXeMay;
     }
 }

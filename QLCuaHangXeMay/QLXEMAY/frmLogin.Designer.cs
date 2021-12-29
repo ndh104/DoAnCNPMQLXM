@@ -78,12 +78,13 @@ namespace QLXEMAY
             // btnDN
             // 
             this.btnDN.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDN.Location = new System.Drawing.Point(42, 117);
+            this.btnDN.Location = new System.Drawing.Point(84, 117);
             this.btnDN.Name = "btnDN";
             this.btnDN.Size = new System.Drawing.Size(83, 32);
             this.btnDN.TabIndex = 4;
             this.btnDN.Text = "Đăng nhập";
             this.btnDN.UseVisualStyleBackColor = true;
+            this.btnDN.Click += new System.EventHandler(this.btnDN_Click);
             // 
             // btnThoat
             // 
@@ -94,6 +95,7 @@ namespace QLXEMAY
             this.btnThoat.TabIndex = 5;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // frmLogin
             // 
@@ -108,6 +110,7 @@ namespace QLXEMAY
             this.Controls.Add(this.labelControl1);
             this.Name = "frmLogin";
             this.Text = "LOGIN";
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

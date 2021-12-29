@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using QLXEMAY.Model;
 
 namespace QLXEMAY
 {
@@ -16,6 +18,11 @@ namespace QLXEMAY
         public frmXeMay()
         {
             InitializeComponent();
+        }
+
+        private void frmXeMay_Load(object sender, EventArgs e)
+        {
+            gcXeMay.DataSource = myClass.getData("select MAXE, TENXE, GIABAN, MAUSAC, DUNGTICH, TINHTRANG from XEMAY");
         }
     }
 }
