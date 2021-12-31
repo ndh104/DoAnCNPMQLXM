@@ -63,5 +63,35 @@ namespace QLXEMAY
         {
 
         }
+
+        private void lblThoat_Click(object sender, EventArgs e)
+        {
+            DialogResult tb = MessageBox.Show("Bạn có muốn thoát?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(tb == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void txtTK_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTK_Click(object sender, EventArgs e)
+        {
+            txtTK.Text = "";
+        }
+
+        private void txtMK_Click(object sender, EventArgs e)
+        {
+            txtMK.Text = "";
+            
+        }
     }
 }

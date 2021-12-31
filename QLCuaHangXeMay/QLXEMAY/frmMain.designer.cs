@@ -43,6 +43,7 @@ namespace QLXEMAY
             // toolStrip1
             // 
             this.toolStrip1.AutoSize = false;
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnTrangChu,
             this.btnXeMay,
@@ -134,7 +135,11 @@ namespace QLXEMAY
             this.ClientSize = new System.Drawing.Size(995, 389);
             this.Controls.Add(this.toolStrip1);
             this.Name = "frmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CỬA HÀNG XE MÁY DUY MẠNH";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMain_FormClosed);
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);

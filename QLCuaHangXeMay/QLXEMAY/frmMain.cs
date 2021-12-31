@@ -46,5 +46,20 @@ namespace QLXEMAY
         {
 
         }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
