@@ -1,6 +1,6 @@
 /*
 Created		25/12/2021
-Modified		26/12/2021
+Modified		31/12/2021
 Project		
 Model			
 Company		
@@ -12,10 +12,10 @@ Create database QUANLYXEMAY
 GO
 Use QUANLYXEMAY
 GO
-
 Create table [HOADON]
 (
 	[MAHD] Char(5) NOT NULL,
+	[TENHD] Nvarchar(20) NULL,
 	[NGAYLAPHD] Datetime NULL,
 	[MAKH] Char(5) NOT NULL,
 	[MANV] Char(4) NOT NULL,
@@ -70,7 +70,7 @@ Create table [CHITIETHOADON]
 (
 	[MAHD] Char(5) NOT NULL,
 	[MAXE] Char(5) NOT NULL,
-	[SOLUONG] Char(2) NULL,
+	[SOLUONG] Integer NULL,
 	[DONGIA] Numeric(18,0) NULL,
 Primary Key ([MAHD],[MAXE])
 ) 
@@ -86,7 +86,7 @@ Create table [NHANVIEN]
 	[CMND] Nvarchar(15) NULL,
 	[SDT] Nvarchar(11) NULL,
 	[CHUCVU] Nvarchar(20) NULL,
-	[USERNAME] Char(15) NULL,
+	[USERNAME] Nvarchar(10) NULL,
 	[PASSWORD] Nvarchar(10) NULL,
 Primary Key ([MANV])
 ) 

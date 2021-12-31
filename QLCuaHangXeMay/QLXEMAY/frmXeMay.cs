@@ -22,7 +22,8 @@ namespace QLXEMAY
 
         private void frmXeMay_Load(object sender, EventArgs e)
         {
-            gcXeMay.DataSource = myClass.getData("select MAXE, TENXE, GIABAN, MAUSAC, DUNGTICH, TINHTRANG from XEMAY");
+            gcXeMay.DataSource = myClass.getData("select MAXE, TENXE, MAUSAC, DUNGTICH, TINHTRANG, GIABAN from XEMAY");
+            
         }
     }
 }

@@ -29,13 +29,14 @@ namespace QLXEMAY
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnTrangChu = new System.Windows.Forms.ToolStripButton();
             this.btnXeMay = new System.Windows.Forms.ToolStripButton();
             this.btnNhanVien = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.btnKhachHang = new System.Windows.Forms.ToolStripButton();
+            this.btnDX = new System.Windows.Forms.ToolStripButton();
+            this.btnXuatHoaDon = new System.Windows.Forms.ToolStripButton();
+            this.btnThongKe = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,8 +47,10 @@ namespace QLXEMAY
             this.btnTrangChu,
             this.btnXeMay,
             this.btnNhanVien,
-            this.toolStripButton4,
-            this.toolStripButton5});
+            this.btnKhachHang,
+            this.btnDX,
+            this.btnXuatHoaDon,
+            this.btnThongKe});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(995, 55);
@@ -82,22 +85,47 @@ namespace QLXEMAY
             this.btnNhanVien.Size = new System.Drawing.Size(65, 52);
             this.btnNhanVien.Text = "Nhân viên";
             this.btnNhanVien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnNhanVien.Click += new System.EventHandler(this.btnNhanVien_Click);
             // 
-            // toolStripButton4
+            // btnKhachHang
             // 
-            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(114, 52);
-            this.toolStripButton4.Text = "toolStripButton4";
+            this.btnKhachHang.Image = global::QLXEMAY.Properties.Resources.customer;
+            this.btnKhachHang.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnKhachHang.Name = "btnKhachHang";
+            this.btnKhachHang.Size = new System.Drawing.Size(74, 52);
+            this.btnKhachHang.Text = "Khách hàng";
+            this.btnKhachHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnKhachHang.Click += new System.EventHandler(this.btnKhachHang_Click);
             // 
-            // toolStripButton5
+            // btnDX
             // 
-            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
-            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(114, 52);
-            this.toolStripButton5.Text = "toolStripButton5";
+            this.btnDX.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnDX.Image = global::QLXEMAY.Properties.Resources.logout;
+            this.btnDX.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnDX.Name = "btnDX";
+            this.btnDX.Size = new System.Drawing.Size(65, 52);
+            this.btnDX.Text = "Đăng xuất";
+            this.btnDX.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // btnXuatHoaDon
+            // 
+            this.btnXuatHoaDon.Image = global::QLXEMAY.Properties.Resources.hoadon;
+            this.btnXuatHoaDon.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnXuatHoaDon.Name = "btnXuatHoaDon";
+            this.btnXuatHoaDon.Size = new System.Drawing.Size(82, 52);
+            this.btnXuatHoaDon.Text = "Xuất hoá đơn";
+            this.btnXuatHoaDon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnXuatHoaDon.Click += new System.EventHandler(this.btnXuatHoaDon_Click);
+            // 
+            // btnThongKe
+            // 
+            this.btnThongKe.Image = global::QLXEMAY.Properties.Resources.thongke;
+            this.btnThongKe.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnThongKe.Name = "btnThongKe";
+            this.btnThongKe.Size = new System.Drawing.Size(60, 52);
+            this.btnThongKe.Text = "Thống kê";
+            this.btnThongKe.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
             // 
             // frmMain
             // 
@@ -119,7 +147,9 @@ namespace QLXEMAY
         private System.Windows.Forms.ToolStripButton btnTrangChu;
         private System.Windows.Forms.ToolStripButton btnXeMay;
         private System.Windows.Forms.ToolStripButton btnNhanVien;
-        private System.Windows.Forms.ToolStripButton toolStripButton4;
-        private System.Windows.Forms.ToolStripButton toolStripButton5;
+        private System.Windows.Forms.ToolStripButton btnKhachHang;
+        private System.Windows.Forms.ToolStripButton btnDX;
+        private System.Windows.Forms.ToolStripButton btnXuatHoaDon;
+        private System.Windows.Forms.ToolStripButton btnThongKe;
     }
 }

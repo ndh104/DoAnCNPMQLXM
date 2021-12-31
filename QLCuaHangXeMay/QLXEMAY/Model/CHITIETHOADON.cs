@@ -19,8 +19,7 @@ namespace QLXEMAY.Model
         [StringLength(5)]
         public string MAXE { get; set; }
 
-        [StringLength(2)]
-        public string SOLUONG { get; set; }
+        public int? SOLUONG { get; set; }
 
         [Column(TypeName = "numeric")]
         public decimal? DONGIA { get; set; }

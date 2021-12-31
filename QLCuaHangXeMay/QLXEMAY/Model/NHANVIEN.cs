@@ -39,7 +39,7 @@ namespace QLXEMAY.Model
         [StringLength(20)]
         public string CHUCVU { get; set; }
 
-        [StringLength(15)]
+        [StringLength(10)]
         public string USERNAME { get; set; }
 
         [StringLength(10)]

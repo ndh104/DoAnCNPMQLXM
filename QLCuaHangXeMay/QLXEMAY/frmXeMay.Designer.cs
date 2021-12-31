@@ -35,8 +35,10 @@ namespace QLXEMAY
             this.btnSua = new System.Windows.Forms.Button();
             this.Xoa = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.gcXeMay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvXeMay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // gcXeMay
@@ -48,7 +50,8 @@ namespace QLXEMAY
             this.gcXeMay.Size = new System.Drawing.Size(994, 315);
             this.gcXeMay.TabIndex = 0;
             this.gcXeMay.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gvXeMay});
+            this.gvXeMay,
+            this.gridView1});
             // 
             // gvXeMay
             // 
@@ -91,6 +94,11 @@ namespace QLXEMAY
             this.btnHuy.Text = "Huỷ";
             this.btnHuy.UseVisualStyleBackColor = true;
             // 
+            // gridView1
+            // 
+            this.gridView1.GridControl = this.gcXeMay;
+            this.gridView1.Name = "gridView1";
+            // 
             // frmXeMay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -106,6 +114,7 @@ namespace QLXEMAY
             this.Load += new System.EventHandler(this.frmXeMay_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gcXeMay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvXeMay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -118,5 +127,6 @@ namespace QLXEMAY
         private System.Windows.Forms.Button Xoa;
         private System.Windows.Forms.Button btnHuy;
         private DevExpress.XtraGrid.Views.Grid.GridView gvXeMay;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
     }
 }

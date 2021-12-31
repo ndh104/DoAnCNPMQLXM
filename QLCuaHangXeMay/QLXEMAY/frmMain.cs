@@ -23,5 +23,28 @@ namespace QLXEMAY
             frmXeMay frm = new frmXeMay();
             frm.Show();
         }
+
+        private void btnXuatHoaDon_Click(object sender, EventArgs e)
+        {
+            frmHoaDon frm = new frmHoaDon();
+            frm.Show();
+        }
+
+        private void btnNhanVien_Click(object sender, EventArgs e)
+        {
+            frmNhanVien frm = new frmNhanVien();
+            frm.Show();
+        }
+
+        private void btnKhachHang_Click(object sender, EventArgs e)
+        {
+            frmKhachHang frm = new frmKhachHang();
+            frm.Show();
+        }
+
+        private void btnThongKe_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

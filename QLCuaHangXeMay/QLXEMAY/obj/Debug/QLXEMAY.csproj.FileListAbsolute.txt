@@ -151,3 +151,6 @@ F:\DoAnCNPM\DoAnCNPM\DoAnCNPMQLXM\QLCuaHangXeMay\QLXEMAY\bin\Debug\EntityFramewo
 F:\DoAnCNPM\DoAnCNPM\DoAnCNPMQLXM\QLCuaHangXeMay\QLXEMAY\bin\Debug\EntityFramework.SqlServer.dll
 F:\DoAnCNPM\DoAnCNPM\DoAnCNPMQLXM\QLCuaHangXeMay\QLXEMAY\bin\Debug\EntityFramework.xml
 F:\DoAnCNPM\DoAnCNPM\DoAnCNPMQLXM\QLCuaHangXeMay\QLXEMAY\bin\Debug\EntityFramework.SqlServer.xml
+F:\DoAnCNPM\DoAnCNPM\DoAnCNPMQLXM\QLCuaHangXeMay\QLXEMAY\obj\Debug\QLXEMAY.frmHoaDon.resources
+F:\DoAnCNPM\DoAnCNPM\DoAnCNPMQLXM\QLCuaHangXeMay\QLXEMAY\obj\Debug\QLXEMAY.frmKhachHang.resources
+F:\DoAnCNPM\DoAnCNPM\DoAnCNPMQLXM\QLCuaHangXeMay\QLXEMAY\obj\Debug\QLXEMAY.frmNhanVien.resources
