@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>QLXEMAY</RootNamespace>
     <AssemblyName>QLXEMAY</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -102,6 +102,12 @@
     <Compile Include="frmKhachHang.Designer.cs">
       <DependentUpon>frmKhachHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmLOAIXE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLOAIXE.Designer.cs">
+      <DependentUpon>frmLOAIXE.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,14 +132,12 @@
     <Compile Include="frmXeMay.Designer.cs">
       <DependentUpon>frmXeMay.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\CHITIETHOADON.cs" />
-    <Compile Include="Model\HOADON.cs" />
-    <Compile Include="Model\KHACHHANG.cs" />
-    <Compile Include="Model\LOAIXE.cs" />
-    <Compile Include="Model\NHACUNGCAP.cs" />
-    <Compile Include="Model\NHANVIEN.cs" />
-    <Compile Include="Model\XEMAY.cs" />
-    <Compile Include="Model\XeMayDBConText.cs" />
+    <Compile Include="KETNOI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KETNOI.Designer.cs">
+      <DependentUpon>KETNOI.cs</DependentUpon>
+    </Compile>
     <Compile Include="myClass.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -142,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmKhachHang.resx">
       <DependentUpon>frmKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLOAIXE.resx">
+      <DependentUpon>frmLOAIXE.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -154,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmXeMay.resx">
       <DependentUpon>frmXeMay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KETNOI.resx">
+      <DependentUpon>KETNOI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -228,6 +238,34 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Search-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sua.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\them.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thoat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xoa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\huybo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\luu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
+      <Project>{058ebd74-1c55-4d1a-969e-7609bb65e7b3}</Project>
+      <Name>BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataLayer\DataLayer.csproj">
+      <Project>{487bd4d1-acf7-48f7-a96f-5155ad1e6563}</Project>
+      <Name>DataLayer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

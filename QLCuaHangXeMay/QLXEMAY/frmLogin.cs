@@ -91,7 +91,11 @@ namespace QLXEMAY
         private void txtMK_Click(object sender, EventArgs e)
         {
             txtMK.Text = "";
-            
+        }
+
+        private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

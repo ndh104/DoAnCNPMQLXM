@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="967d87436d33497ea665da847290453c" Name="Diagram1">
+        <EntityTypeShape EntityType="QUANLYXEMAY.CHITIETHOADON" Width="1.5" PointX="5.25" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUANLYXEMAY.HOADON" Width="1.5" PointX="4" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUANLYXEMAY.KHACHHANG" Width="1.5" PointX="0.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUANLYXEMAY.LOAIXE" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUANLYXEMAY.NHACUNGCAP" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUANLYXEMAY.NHANVIEN" Width="1.5" PointX="0.75" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUANLYXEMAY.XEMAY" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="QUANLYXEMAY.FK__CHITIETHOA__MAHD__300424B4" ManuallyRouted="false" />
+        <AssociationConnector Association="QUANLYXEMAY.FK__CHITIETHOA__MAXE__31EC6D26" ManuallyRouted="false" />
+        <AssociationConnector Association="QUANLYXEMAY.FK__HOADON__MAKH__33D4B598" ManuallyRouted="false" />
+        <AssociationConnector Association="QUANLYXEMAY.FK__HOADON__MANV__34C8D9D1" ManuallyRouted="false" />
+        <AssociationConnector Association="QUANLYXEMAY.FK__XEMAY__MALOAI__30F848ED" ManuallyRouted="false" />
+        <AssociationConnector Association="QUANLYXEMAY.FK__XEMAY__MANCC__32E0915F" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

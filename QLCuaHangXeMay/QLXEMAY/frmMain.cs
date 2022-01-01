@@ -13,6 +13,7 @@ namespace QLXEMAY
 {
     public partial class frmMain : DevExpress.XtraEditors.XtraForm
     {
+        public bool isClose = true;
         public frmMain()
         {
             InitializeComponent();
@@ -21,7 +22,7 @@ namespace QLXEMAY
         private void btnXeMay_Click(object sender, EventArgs e)
         {
             frmXeMay frm = new frmXeMay();
-            frm.Show();
+            frm.ShowDialog();
         }
 
         private void btnXuatHoaDon_Click(object sender, EventArgs e)
@@ -52,14 +53,21 @@ namespace QLXEMAY
 
         }
 
-        private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
+
+        private void btnDX_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            isClose = false;
+            this.Close();
+            frmLogin frm = new frmLogin();
+            frm.Show();
         }
 
-        private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
+        private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            if (isClose == true)
+            {
+                Application.Exit();
+            }
         }
     }
 }

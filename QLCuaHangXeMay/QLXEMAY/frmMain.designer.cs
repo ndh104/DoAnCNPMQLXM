@@ -54,7 +54,7 @@ namespace QLXEMAY
             this.btnThongKe});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(995, 55);
+            this.toolStrip1.Size = new System.Drawing.Size(646, 55);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -107,6 +107,7 @@ namespace QLXEMAY
             this.btnDX.Size = new System.Drawing.Size(65, 52);
             this.btnDX.Text = "Đăng xuất";
             this.btnDX.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnDX.Click += new System.EventHandler(this.btnDX_Click);
             // 
             // btnXuatHoaDon
             // 
@@ -132,12 +133,11 @@ namespace QLXEMAY
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(995, 389);
+            this.ClientSize = new System.Drawing.Size(646, 462);
             this.Controls.Add(this.toolStrip1);
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CỬA HÀNG XE MÁY DUY MẠNH";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMain_FormClosed);
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.toolStrip1.ResumeLayout(false);

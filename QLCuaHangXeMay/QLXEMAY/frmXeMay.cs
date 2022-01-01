@@ -9,7 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using QLXEMAY.Model;
 using DevExpress.XtraGrid.Views.Grid;
 
 namespace QLXEMAY
@@ -20,6 +19,9 @@ namespace QLXEMAY
         {
             InitializeComponent();
         }
+        DataSet ds;
+        SqlDataAdapter sda;
+        SqlConnection cnt = new SqlConnection();
 
         bool cal(Int32 _Width, GridView _view)
         {
@@ -54,15 +56,78 @@ namespace QLXEMAY
         private void frmXeMay_Load(object sender, EventArgs e)
         {
             gcXeMay.DataSource = myClass.getData("select * from XEMAY a, NHACUNGCAP b where a.MANCC=b.MANCC");
+
+
+            gvXeMay.OptionsBehavior.Editable = false;
+            showHideButton(true);
             gvXeMay.ExpandAllGroups();
             loadHangXe();
-            cmbTinhTrang.Items.Add("Mới");
-            cmbTinhTrang.Items.Add("Like new");
-            cmbTinhTrang.Items.Add("99%");
-            cmbTinhTrang.Items.Add("Đi được 1000km");
-            cmbTinhTrang.Items.Add("Đi 1 năm");
+            //cmbTinhTrang.Items.Add("Mới");
+            //cmbTinhTrang.Items.Add("Like new");
+            //cmbTinhTrang.Items.Add("99%");
+            //cmbTinhTrang.Items.Add("Đi được 1000km");
+            //cmbTinhTrang.Items.Add("Đi 1 năm");
+        }
+        //hàm tạo kết nối
+        void taoKetNoi()
+        {
+            string str = @"Data Source=DESKTOP-IB4CE96\BIGBOSS;Initial Catalog=QUANLYXEMAY;Integrated Security=True";
+            cnt.ConnectionString = str;
+            cnt.Open();
+        }
+        //hàm load dữ liệu dùng dataset
+        DataSet getDataSet(string query)
+        {
+            taoKetNoi();
+            sda = new SqlDataAdapter(query, cnt);
+            SqlCommandBuilder commandBuilder = new SqlCommandBuilder(sda);
+            ds = new DataSet();
+            sda.Fill(ds, "XEMAY");
+            return ds;
+        }
+        void showHideButton(bool sh)
+        {
+            btnThem.Visible = sh;
+            btnSua.Visible = sh;
+            btnXoa.Visible = sh;
+            btnThoat.Visible = sh;
+            btnLuu.Visible = !sh;
+            btnHuy.Visible = !sh;
         }
 
+        private void gcXeMay_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            showHideButton(false);
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            showHideButton(false);
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            showHideButton(true);
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            showHideButton(true);
+        }
     }
 }

@@ -281,3 +281,11 @@ F:\DoAnCNPM\DoAnCNPM\DoAnCNPMQLXM\QLCuaHangXeMay\QLXEMAY\bin\Debug\de\DevExpress
 F:\DoAnCNPM\DoAnCNPM\DoAnCNPMQLXM\QLCuaHangXeMay\QLXEMAY\bin\Debug\es\DevExpress.XtraNavBar.v21.2.resources.dll
 F:\DoAnCNPM\DoAnCNPM\DoAnCNPMQLXM\QLCuaHangXeMay\QLXEMAY\bin\Debug\ja\DevExpress.XtraNavBar.v21.2.resources.dll
 F:\DoAnCNPM\DoAnCNPM\DoAnCNPMQLXM\QLCuaHangXeMay\QLXEMAY\bin\Debug\ru\DevExpress.XtraNavBar.v21.2.resources.dll
+F:\DoAnCNPM\DoAnCNPM\DoAnCNPMQLXM\QLCuaHangXeMay\QLXEMAY\bin\Debug\BusinessLayer.dll
+F:\DoAnCNPM\DoAnCNPM\DoAnCNPMQLXM\QLCuaHangXeMay\QLXEMAY\bin\Debug\DataLayer.dll
+F:\DoAnCNPM\DoAnCNPM\DoAnCNPMQLXM\QLCuaHangXeMay\QLXEMAY\bin\Debug\BusinessLayer.pdb
+F:\DoAnCNPM\DoAnCNPM\DoAnCNPMQLXM\QLCuaHangXeMay\QLXEMAY\bin\Debug\BusinessLayer.dll.config
+F:\DoAnCNPM\DoAnCNPM\DoAnCNPMQLXM\QLCuaHangXeMay\QLXEMAY\bin\Debug\DataLayer.pdb
+F:\DoAnCNPM\DoAnCNPM\DoAnCNPMQLXM\QLCuaHangXeMay\QLXEMAY\bin\Debug\DataLayer.dll.config
+F:\DoAnCNPM\DoAnCNPM\DoAnCNPMQLXM\QLCuaHangXeMay\QLXEMAY\obj\Debug\QLXEMAY.KETNOI.resources
+F:\DoAnCNPM\DoAnCNPM\DoAnCNPMQLXM\QLCuaHangXeMay\QLXEMAY\obj\Debug\QLXEMAY.frmLOAIXE.resources
