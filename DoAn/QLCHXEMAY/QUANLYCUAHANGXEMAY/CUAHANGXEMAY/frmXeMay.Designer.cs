@@ -29,15 +29,14 @@ namespace CUAHANGXEMAY
         /// </summary>
         private void InitializeComponent()
         {
-            this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.btnThem = new System.Windows.Forms.ToolStripButton();
-            this.btnSua = new System.Windows.Forms.ToolStripButton();
+            this.btnThoat = new System.Windows.Forms.ToolStripButton();
             this.btnXoa = new System.Windows.Forms.ToolStripButton();
+            this.btnSua = new System.Windows.Forms.ToolStripButton();
+            this.btnThem = new System.Windows.Forms.ToolStripButton();
             this.btnLuu = new System.Windows.Forms.ToolStripButton();
             this.btnHuy = new System.Windows.Forms.ToolStripButton();
-            this.btnThoat = new System.Windows.Forms.ToolStripButton();
-            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.gcXeMay = new DevExpress.XtraGrid.GridControl();
             this.gvXeMay = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.TENNCC = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -48,53 +47,35 @@ namespace CUAHANGXEMAY
             this.DUNGTICH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TINHTRANG = new DevExpress.XtraGrid.Columns.GridColumn();
             this.GIABAN = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtNCC = new System.Windows.Forms.TextBox();
-            this.txtMaXe = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtTenXe = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtLoaiXe = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtMauSac = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtDungTich = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.txtGiaBan = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.txtTinhTrang = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtGiaBan = new System.Windows.Forms.TextBox();
+            this.txtDungTich = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtMauSac = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtLoaiXe = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtTenXe = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtMaXe = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtNCC = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel1)).BeginInit();
             this.splitContainerControl1.Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel2)).BeginInit();
             this.splitContainerControl1.Panel2.SuspendLayout();
             this.splitContainerControl1.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
-            this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcXeMay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvXeMay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
+            this.groupControl1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // splitContainerControl1
-            // 
-            this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.splitContainerControl1.Location = new System.Drawing.Point(0, 54);
-            this.splitContainerControl1.Name = "splitContainerControl1";
-            // 
-            // splitContainerControl1.Panel1
-            // 
-            this.splitContainerControl1.Panel1.Controls.Add(this.gcXeMay);
-            this.splitContainerControl1.Panel1.Text = "Panel1";
-            // 
-            // splitContainerControl1.Panel2
-            // 
-            this.splitContainerControl1.Panel2.Controls.Add(this.groupControl1);
-            this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(1044, 401);
-            this.splitContainerControl1.SplitterPosition = 785;
-            this.splitContainerControl1.TabIndex = 1;
             // 
             // toolStrip1
             // 
@@ -113,16 +94,27 @@ namespace CUAHANGXEMAY
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // btnThem
+            // btnThoat
             // 
-            this.btnThem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.btnThem.Image = global::CUAHANGXEMAY.Properties.Resources.them;
-            this.btnThem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(41, 51);
-            this.btnThem.Text = "Thêm";
-            this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            this.btnThoat.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnThoat.Image = global::CUAHANGXEMAY.Properties.Resources.thoat;
+            this.btnThoat.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(41, 51);
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnXoa.Image = global::CUAHANGXEMAY.Properties.Resources.xoa;
+            this.btnXoa.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(36, 51);
+            this.btnXoa.Text = "Xoá";
+            this.btnXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -135,16 +127,16 @@ namespace CUAHANGXEMAY
             this.btnSua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
-            // btnXoa
+            // btnThem
             // 
-            this.btnXoa.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.btnXoa.Image = global::CUAHANGXEMAY.Properties.Resources.xoa;
-            this.btnXoa.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(36, 51);
-            this.btnXoa.Text = "Xoá";
-            this.btnXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            this.btnThem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnThem.Image = global::CUAHANGXEMAY.Properties.Resources.them;
+            this.btnThem.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(41, 51);
+            this.btnThem.Text = "Thêm";
+            this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnLuu
             // 
@@ -166,41 +158,24 @@ namespace CUAHANGXEMAY
             this.btnHuy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
-            // btnThoat
+            // splitContainerControl1
             // 
-            this.btnThoat.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.btnThoat.Image = global::CUAHANGXEMAY.Properties.Resources.thoat;
-            this.btnThoat.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(41, 51);
-            this.btnThoat.Text = "Thoát";
-            this.btnThoat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainerControl1.Location = new System.Drawing.Point(0, 54);
+            this.splitContainerControl1.Name = "splitContainerControl1";
             // 
-            // groupControl1
+            // splitContainerControl1.Panel1
             // 
-            this.groupControl1.Controls.Add(this.txtGiaBan);
-            this.groupControl1.Controls.Add(this.label8);
-            this.groupControl1.Controls.Add(this.txtTinhTrang);
-            this.groupControl1.Controls.Add(this.label7);
-            this.groupControl1.Controls.Add(this.txtDungTich);
-            this.groupControl1.Controls.Add(this.label6);
-            this.groupControl1.Controls.Add(this.txtMauSac);
-            this.groupControl1.Controls.Add(this.label5);
-            this.groupControl1.Controls.Add(this.txtLoaiXe);
-            this.groupControl1.Controls.Add(this.label4);
-            this.groupControl1.Controls.Add(this.txtTenXe);
-            this.groupControl1.Controls.Add(this.label3);
-            this.groupControl1.Controls.Add(this.txtMaXe);
-            this.groupControl1.Controls.Add(this.label2);
-            this.groupControl1.Controls.Add(this.txtNCC);
-            this.groupControl1.Controls.Add(this.label1);
-            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl1.Location = new System.Drawing.Point(0, 0);
-            this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(249, 401);
-            this.groupControl1.TabIndex = 0;
-            this.groupControl1.Text = "Thông tin";
+            this.splitContainerControl1.Panel1.Controls.Add(this.gcXeMay);
+            this.splitContainerControl1.Panel1.Text = "Panel1";
+            // 
+            // splitContainerControl1.Panel2
+            // 
+            this.splitContainerControl1.Panel2.Controls.Add(this.groupControl1);
+            this.splitContainerControl1.Panel2.Text = "Panel2";
+            this.splitContainerControl1.Size = new System.Drawing.Size(1044, 401);
+            this.splitContainerControl1.SplitterPosition = 785;
+            this.splitContainerControl1.TabIndex = 3;
             // 
             // gcXeMay
             // 
@@ -300,101 +275,46 @@ namespace CUAHANGXEMAY
             this.GIABAN.VisibleIndex = 7;
             this.GIABAN.Width = 172;
             // 
-            // label1
+            // groupControl1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 39);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nhà cung cấp";
+            this.groupControl1.Controls.Add(this.txtGiaBan);
+            this.groupControl1.Controls.Add(this.label8);
+            this.groupControl1.Controls.Add(this.txtTinhTrang);
+            this.groupControl1.Controls.Add(this.label7);
+            this.groupControl1.Controls.Add(this.txtDungTich);
+            this.groupControl1.Controls.Add(this.label6);
+            this.groupControl1.Controls.Add(this.txtMauSac);
+            this.groupControl1.Controls.Add(this.label5);
+            this.groupControl1.Controls.Add(this.txtLoaiXe);
+            this.groupControl1.Controls.Add(this.label4);
+            this.groupControl1.Controls.Add(this.txtTenXe);
+            this.groupControl1.Controls.Add(this.label3);
+            this.groupControl1.Controls.Add(this.txtMaXe);
+            this.groupControl1.Controls.Add(this.label2);
+            this.groupControl1.Controls.Add(this.txtNCC);
+            this.groupControl1.Controls.Add(this.label1);
+            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupControl1.Location = new System.Drawing.Point(0, 0);
+            this.groupControl1.Name = "groupControl1";
+            this.groupControl1.Size = new System.Drawing.Size(249, 401);
+            this.groupControl1.TabIndex = 0;
+            this.groupControl1.Text = "Thông tin";
             // 
-            // txtNCC
+            // txtGiaBan
             // 
-            this.txtNCC.Location = new System.Drawing.Point(89, 36);
-            this.txtNCC.Name = "txtNCC";
-            this.txtNCC.Size = new System.Drawing.Size(139, 21);
-            this.txtNCC.TabIndex = 1;
+            this.txtGiaBan.Location = new System.Drawing.Point(89, 325);
+            this.txtGiaBan.Name = "txtGiaBan";
+            this.txtGiaBan.Size = new System.Drawing.Size(139, 21);
+            this.txtGiaBan.TabIndex = 15;
             // 
-            // txtMaXe
+            // label8
             // 
-            this.txtMaXe.Location = new System.Drawing.Point(89, 74);
-            this.txtMaXe.Name = "txtMaXe";
-            this.txtMaXe.Size = new System.Drawing.Size(139, 21);
-            this.txtMaXe.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(47, 78);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(36, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Mã xe";
-            // 
-            // txtTenXe
-            // 
-            this.txtTenXe.Location = new System.Drawing.Point(89, 111);
-            this.txtTenXe.Name = "txtTenXe";
-            this.txtTenXe.Size = new System.Drawing.Size(139, 21);
-            this.txtTenXe.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(43, 115);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Tên xe";
-            // 
-            // txtLoaiXe
-            // 
-            this.txtLoaiXe.Location = new System.Drawing.Point(89, 153);
-            this.txtLoaiXe.Name = "txtLoaiXe";
-            this.txtLoaiXe.Size = new System.Drawing.Size(139, 21);
-            this.txtLoaiXe.TabIndex = 7;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(42, 157);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Loại xe";
-            // 
-            // txtMauSac
-            // 
-            this.txtMauSac.Location = new System.Drawing.Point(89, 195);
-            this.txtMauSac.Name = "txtMauSac";
-            this.txtMauSac.Size = new System.Drawing.Size(139, 21);
-            this.txtMauSac.TabIndex = 9;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(37, 199);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 13);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Màu sắc";
-            // 
-            // txtDungTich
-            // 
-            this.txtDungTich.Location = new System.Drawing.Point(89, 242);
-            this.txtDungTich.Name = "txtDungTich";
-            this.txtDungTich.Size = new System.Drawing.Size(139, 21);
-            this.txtDungTich.TabIndex = 11;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(31, 246);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 13);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Dung tích";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(40, 329);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(43, 13);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "Giá bán";
             // 
             // txtTinhTrang
             // 
@@ -412,51 +332,137 @@ namespace CUAHANGXEMAY
             this.label7.TabIndex = 12;
             this.label7.Text = "Tình trạng";
             // 
-            // label8
+            // txtDungTich
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(40, 329);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(43, 13);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "Giá bán";
+            this.txtDungTich.Location = new System.Drawing.Point(89, 242);
+            this.txtDungTich.Name = "txtDungTich";
+            this.txtDungTich.Size = new System.Drawing.Size(139, 21);
+            this.txtDungTich.TabIndex = 11;
             // 
-            // txtGiaBan
+            // label6
             // 
-            this.txtGiaBan.Location = new System.Drawing.Point(89, 325);
-            this.txtGiaBan.Name = "txtGiaBan";
-            this.txtGiaBan.Size = new System.Drawing.Size(139, 21);
-            this.txtGiaBan.TabIndex = 15;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(31, 246);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(52, 13);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Dung tích";
+            // 
+            // txtMauSac
+            // 
+            this.txtMauSac.Location = new System.Drawing.Point(89, 195);
+            this.txtMauSac.Name = "txtMauSac";
+            this.txtMauSac.Size = new System.Drawing.Size(139, 21);
+            this.txtMauSac.TabIndex = 9;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(37, 199);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(46, 13);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Màu sắc";
+            // 
+            // txtLoaiXe
+            // 
+            this.txtLoaiXe.Location = new System.Drawing.Point(89, 153);
+            this.txtLoaiXe.Name = "txtLoaiXe";
+            this.txtLoaiXe.Size = new System.Drawing.Size(139, 21);
+            this.txtLoaiXe.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(42, 157);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(41, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Loại xe";
+            // 
+            // txtTenXe
+            // 
+            this.txtTenXe.Location = new System.Drawing.Point(89, 111);
+            this.txtTenXe.Name = "txtTenXe";
+            this.txtTenXe.Size = new System.Drawing.Size(139, 21);
+            this.txtTenXe.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(43, 115);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(40, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Tên xe";
+            // 
+            // txtMaXe
+            // 
+            this.txtMaXe.Location = new System.Drawing.Point(89, 74);
+            this.txtMaXe.Name = "txtMaXe";
+            this.txtMaXe.Size = new System.Drawing.Size(139, 21);
+            this.txtMaXe.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(47, 78);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(36, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Mã xe";
+            // 
+            // txtNCC
+            // 
+            this.txtNCC.Location = new System.Drawing.Point(89, 36);
+            this.txtNCC.Name = "txtNCC";
+            this.txtNCC.Size = new System.Drawing.Size(139, 21);
+            this.txtNCC.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(11, 39);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(72, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Nhà cung cấp";
             // 
             // frmXeMay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1044, 455);
-            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.splitContainerControl1);
+            this.Controls.Add(this.toolStrip1);
             this.Name = "frmXeMay";
             this.Text = "QUẢN LÝ XE MÁY";
             this.Load += new System.EventHandler(this.frmXeMay_Load);
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel1)).EndInit();
             this.splitContainerControl1.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel2)).EndInit();
             this.splitContainerControl1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gcXeMay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvXeMay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gcXeMay)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvXeMay)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton btnThoat;
+        private System.Windows.Forms.ToolStripButton btnXoa;
+        private System.Windows.Forms.ToolStripButton btnSua;
+        private System.Windows.Forms.ToolStripButton btnThem;
+        private System.Windows.Forms.ToolStripButton btnLuu;
+        private System.Windows.Forms.ToolStripButton btnHuy;
         private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;
         private DevExpress.XtraGrid.GridControl gcXeMay;
         private DevExpress.XtraGrid.Views.Grid.GridView gvXeMay;
@@ -485,12 +491,5 @@ namespace CUAHANGXEMAY
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtNCC;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton btnThoat;
-        private System.Windows.Forms.ToolStripButton btnXoa;
-        private System.Windows.Forms.ToolStripButton btnSua;
-        private System.Windows.Forms.ToolStripButton btnThem;
-        private System.Windows.Forms.ToolStripButton btnLuu;
-        private System.Windows.Forms.ToolStripButton btnHuy;
     }
 }

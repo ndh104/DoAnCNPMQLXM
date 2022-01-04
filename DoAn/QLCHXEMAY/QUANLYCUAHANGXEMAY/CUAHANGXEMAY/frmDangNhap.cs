@@ -22,7 +22,7 @@ namespace CUAHANGXEMAY
         BUS_NHANVIEN _nhanvien;
         private void frmDangNhap_Load(object sender, EventArgs e)
         {
-
+            _nhanvien = new BUS_NHANVIEN();
         }
 
         private void lblThoat_Click(object sender, EventArgs e)
@@ -32,19 +32,30 @@ namespace CUAHANGXEMAY
         private void btnDN_Click(object sender, EventArgs e)
         {
             string tk = txtTK.Text;
-            string mk= txtMK.Text;
-            tb_NHANVIEN nv = _nhanvien.getItem(tk, mk);
-            if (nv.USERNAME.Equals(txtTK.Text)&&nv.PASSWORD.Equals(txtMK.Text))
+            string mk = txtMK.Text;
+            var nv = _nhanvien.getItem(tk, mk);
+            if (nv==null)
+            {
+                MessageBox.Show("Sai thông tin đăng nhập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
             {
                 MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 frmTrangChinh frm = new frmTrangChinh();
                 frm.Show();
                 this.Hide();
             }
-            else
-            {
-                MessageBox.Show("Sai thông tin đăng nhập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //if (nv.USERNAME.Equals(txtTK.Text) && nv.PASSWORD.Equals(txtMK.Text))
+            //{
+            //    MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    frmTrangChinh frm = new frmTrangChinh();
+            //    frm.Show();
+            //    this.Hide();
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Sai thông tin đăng nhập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
         }
     }
 }
