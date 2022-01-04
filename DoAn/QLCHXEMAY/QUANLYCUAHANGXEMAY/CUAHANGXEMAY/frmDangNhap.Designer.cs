@@ -149,7 +149,7 @@ namespace CUAHANGXEMAY
             // 
             // lblThoat
             // 
-            this.lblThoat.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
+            this.lblThoat.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("lblThoat.ImageOptions.SvgImage")));
             this.lblThoat.Location = new System.Drawing.Point(733, 12);
             this.lblThoat.Name = "lblThoat";
             this.lblThoat.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -162,8 +162,6 @@ namespace CUAHANGXEMAY
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Stretch;
-            this.BackgroundImageStore = global::CUAHANGXEMAY.Properties.Resources.cbrplus;
             this.ClientSize = new System.Drawing.Size(783, 468);
             this.ControlBox = false;
             this.Controls.Add(this.lblThoat);
