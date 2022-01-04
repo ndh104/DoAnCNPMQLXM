@@ -64,6 +64,7 @@ namespace CUAHANGXEMAY
             this.btnXeMay.Size = new System.Drawing.Size(50, 64);
             this.btnXeMay.Text = "Xe máy";
             this.btnXeMay.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnXeMay.Click += new System.EventHandler(this.btnXeMay_Click);
             // 
             // btnKhachHang
             // 

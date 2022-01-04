@@ -17,5 +17,11 @@ namespace CUAHANGXEMAY
         {
             InitializeComponent();
         }
+
+        private void btnXeMay_Click(object sender, EventArgs e)
+        {
+            frmXeMay frm = new frmXeMay();
+            frm.ShowDialog();
+        }
     }
 }

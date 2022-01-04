@@ -14,9 +14,17 @@ namespace BusinessLayer
         {
             db = Entities.CreateEntities();
         }
+        public tb_XEMAY getItem(string mx)
+        {
+            return db.tb_XEMAY.FirstOrDefault(x=>x.MAXE==mx);
+        }
         public List<tb_XEMAY> getAll()
         {
             return db.tb_XEMAY.ToList();
+        }
+        public List<tb_XEMAY> getAll(string maxe)
+        {
+            return db.tb_XEMAY.Where(x => x.MAXE == maxe).ToList();
         }
         public void them(tb_XEMAY xe)
         {
@@ -25,9 +33,9 @@ namespace BusinessLayer
                 db.tb_XEMAY.Add(xe);
                 db.SaveChanges();
             }
-            catch(Exception)
+            catch(Exception ex)
             {
-                Console.WriteLine("Có lỗi xảy ra trong quá trình xử lý dữ liệu");
+                throw new Exception("Có lỗi xảy ra trong quá trình xử lý dữ liệu" +ex.Message);
             }
         }
         public void capnhat(tb_XEMAY xe)
@@ -39,18 +47,21 @@ namespace BusinessLayer
             _xemay.MANCC = xe.MANCC;
             _xemay.MALOAI = xe.MALOAI;
             _xemay.GIABAN = xe.GIABAN;
+            _xemay.MANCC = xe.MANCC;
+            _xemay.MALOAI = xe.MALOAI; 
             try
             {
                 db.SaveChanges();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                Console.WriteLine("Có lỗi xảy ra trong quá trình xử lý dữ liệu");
+                throw new Exception("Có lỗi xảy ra trong quá trình xử lý dữ liệu" +ex.Message);
             }
         }
         public void xoa(string maxe)
         {
-            tb_XEMAY xe = db.tb_XEMAY.FirstOrDefault(x=>x.MAXE==maxe);
+            tb_XEMAY xe = db.tb_XEMAY.FirstOrDefault(x => x.MAXE == maxe);
+            
         }
         
     }

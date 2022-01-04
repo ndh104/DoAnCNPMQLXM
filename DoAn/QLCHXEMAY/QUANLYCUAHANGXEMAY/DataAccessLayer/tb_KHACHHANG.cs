@@ -18,5 +18,6 @@ namespace DataAccessLayer
         public string TENKH { get; set; }
         public string SDT { get; set; }
         public string DIACHI { get; set; }
+        public Nullable<bool> DISABLE { get; set; }
     }
 }

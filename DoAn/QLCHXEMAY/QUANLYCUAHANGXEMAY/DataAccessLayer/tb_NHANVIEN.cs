@@ -24,5 +24,6 @@ namespace DataAccessLayer
         public string CHUCVU { get; set; }
         public string USERNAME { get; set; }
         public string PASSWORD { get; set; }
+        public Nullable<bool> DISABLE { get; set; }
     }
 }

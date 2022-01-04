@@ -22,5 +22,6 @@ namespace DataAccessLayer
         public string TINHTRANG { get; set; }
         public string MALOAI { get; set; }
         public string MANCC { get; set; }
+        public Nullable<bool> DISABLE { get; set; }
     }
 }

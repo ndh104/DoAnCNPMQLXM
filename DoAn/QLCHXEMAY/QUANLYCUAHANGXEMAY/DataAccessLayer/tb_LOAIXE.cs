@@ -16,5 +16,6 @@ namespace DataAccessLayer
     {
         public string MALOAI { get; set; }
         public string TENLOAIXE { get; set; }
+        public Nullable<bool> DISABLE { get; set; }
     }
 }
