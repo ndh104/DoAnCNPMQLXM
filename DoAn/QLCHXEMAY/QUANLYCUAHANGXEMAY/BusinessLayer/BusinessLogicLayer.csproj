@@ -57,6 +57,7 @@
     <Compile Include="BUS_LOAIXE.cs" />
     <Compile Include="BUS_NHACUNGCAP.cs" />
     <Compile Include="BUS_NHANVIEN.cs" />
+    <Compile Include="BUS_OBJ_XEMAYFULL.cs" />
     <Compile Include="BUS_XEMAY.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

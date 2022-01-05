@@ -45,17 +45,14 @@ namespace CUAHANGXEMAY
                 frm.Show();
                 this.Hide();
             }
-            //if (nv.USERNAME.Equals(txtTK.Text) && nv.PASSWORD.Equals(txtMK.Text))
-            //{
-            //    MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //    frmTrangChinh frm = new frmTrangChinh();
-            //    frm.Show();
-            //    this.Hide();
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Sai thông tin đăng nhập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+        }
+
+        private void lblQuenMK_Click(object sender, EventArgs e)
+        {
+            this.Visible = false; 
+            frmQuenMatKhau frm = new frmQuenMatKhau();
+            frm.ShowDialog();
+            this.Visible = true;
         }
     }
 }

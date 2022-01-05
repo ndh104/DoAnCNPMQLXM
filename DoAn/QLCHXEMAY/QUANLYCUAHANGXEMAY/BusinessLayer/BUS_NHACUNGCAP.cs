@@ -19,5 +19,6 @@ namespace BusinessLayer
         {
             return db.tb_NHACUNGCAP.ToList();
         }
+        
     }
 }

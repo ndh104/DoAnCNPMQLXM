@@ -26,6 +26,37 @@ namespace BusinessLayer
         {
             return db.tb_XEMAY.Where(x => x.MAXE == maxe).ToList();
         }
+
+
+        public List<BUS_OBJ_XEMAYFULL> getAllFull()
+        {
+            var listxemay = db.tb_XEMAY.ToList();
+
+            List<BUS_OBJ_XEMAYFULL> listXeFull = new List<BUS_OBJ_XEMAYFULL>();
+            BUS_OBJ_XEMAYFULL objxe;
+
+            foreach (var item in listxemay)
+            {
+                objxe = new BUS_OBJ_XEMAYFULL();
+                objxe.MAXE = item.MAXE;
+                objxe.TENXE = item.TENXE;
+                objxe.GIABAN = item.GIABAN;
+                objxe.MAUSAC = item.MAUSAC;
+                objxe.MALOAI = item.MALOAI;
+                objxe.DUNGTICH = item.DUNGTICH;
+                objxe.TINHTRANG = item.TINHTRANG;
+                objxe.MANCC = item.MANCC;
+                objxe.DISABLE = item.DISABLE;
+                // lấy đối tượng loại xe từ bảng loại xe "tb_LOAIXE"
+                var loaixeLX = db.tb_LOAIXE.FirstOrDefault(x=>x.MALOAI==item.MALOAI);
+                objxe.TENLOAI = loaixeLX.TENLOAIXE;
+                //lấy đối tượng nhà cung cấp từ bảng "tb_NHACUNGCAP"
+                var nccNCC = db.tb_NHACUNGCAP.FirstOrDefault(x => x.MANCC == item.MANCC);
+                objxe.TENNCC = nccNCC.TENNCC;
+                listXeFull.Add(objxe);
+            }
+            return listXeFull.OrderBy(x => x.MAXE).ToList();
+        }
         public void them(tb_XEMAY xe)
         {
             try
@@ -58,10 +89,18 @@ namespace BusinessLayer
                 throw new Exception("Có lỗi xảy ra trong quá trình xử lý dữ liệu" +ex.Message);
             }
         }
-        public void xoa(string maxe)
+        public void del(string maxe)
         {
-            tb_XEMAY xe = db.tb_XEMAY.FirstOrDefault(x => x.MAXE == maxe);
-            
+            tb_XEMAY _xe = db.tb_XEMAY.FirstOrDefault(x => x.MAXE == maxe);
+            _xe.DISABLE = true;
+            try 
+            {
+                db.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Có lỗi xảy ra trong quá trình xử lý dữ liệu" + ex.Message);
+            }
         }
         
     }

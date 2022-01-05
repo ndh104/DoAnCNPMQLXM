@@ -39,6 +39,7 @@ namespace CUAHANGXEMAY
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.gcXeMay = new DevExpress.XtraGrid.GridControl();
             this.gvXeMay = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.DISABLE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TENNCC = new DevExpress.XtraGrid.Columns.GridColumn();
             this.MAXE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TENXE = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -48,6 +49,9 @@ namespace CUAHANGXEMAY
             this.TINHTRANG = new DevExpress.XtraGrid.Columns.GridColumn();
             this.GIABAN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.cbDisable = new System.Windows.Forms.CheckBox();
+            this.cbbLoaiXe = new System.Windows.Forms.ComboBox();
+            this.cbbNCC = new System.Windows.Forms.ComboBox();
             this.txtGiaBan = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtTinhTrang = new System.Windows.Forms.TextBox();
@@ -56,13 +60,11 @@ namespace CUAHANGXEMAY
             this.label6 = new System.Windows.Forms.Label();
             this.txtMauSac = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtLoaiXe = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtTenXe = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtMaXe = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtNCC = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
@@ -191,6 +193,7 @@ namespace CUAHANGXEMAY
             // gvXeMay
             // 
             this.gvXeMay.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.DISABLE,
             this.TENNCC,
             this.MAXE,
             this.TENXE,
@@ -201,6 +204,16 @@ namespace CUAHANGXEMAY
             this.GIABAN});
             this.gvXeMay.GridControl = this.gcXeMay;
             this.gvXeMay.Name = "gvXeMay";
+            this.gvXeMay.Click += new System.EventHandler(this.gvXeMay_Click);
+            // 
+            // DISABLE
+            // 
+            this.DISABLE.Caption = "DEL";
+            this.DISABLE.FieldName = "DISABLE";
+            this.DISABLE.Name = "DISABLE";
+            this.DISABLE.Visible = true;
+            this.DISABLE.VisibleIndex = 0;
+            this.DISABLE.Width = 36;
             // 
             // TENNCC
             // 
@@ -209,7 +222,7 @@ namespace CUAHANGXEMAY
             this.TENNCC.MaxWidth = 100;
             this.TENNCC.Name = "TENNCC";
             this.TENNCC.Visible = true;
-            this.TENNCC.VisibleIndex = 0;
+            this.TENNCC.VisibleIndex = 1;
             this.TENNCC.Width = 100;
             // 
             // MAXE
@@ -218,8 +231,8 @@ namespace CUAHANGXEMAY
             this.MAXE.FieldName = "MAXE";
             this.MAXE.Name = "MAXE";
             this.MAXE.Visible = true;
-            this.MAXE.VisibleIndex = 1;
-            this.MAXE.Width = 43;
+            this.MAXE.VisibleIndex = 2;
+            this.MAXE.Width = 53;
             // 
             // TENXE
             // 
@@ -227,17 +240,17 @@ namespace CUAHANGXEMAY
             this.TENXE.FieldName = "TENXE";
             this.TENXE.Name = "TENXE";
             this.TENXE.Visible = true;
-            this.TENXE.VisibleIndex = 2;
-            this.TENXE.Width = 142;
+            this.TENXE.VisibleIndex = 3;
+            this.TENXE.Width = 141;
             // 
             // TENLOAIXE
             // 
             this.TENLOAIXE.Caption = "Loại xe";
-            this.TENLOAIXE.FieldName = "TENLOAIXE";
+            this.TENLOAIXE.FieldName = "TENLOAI";
             this.TENLOAIXE.Name = "TENLOAIXE";
             this.TENLOAIXE.Visible = true;
-            this.TENLOAIXE.VisibleIndex = 3;
-            this.TENLOAIXE.Width = 82;
+            this.TENLOAIXE.VisibleIndex = 4;
+            this.TENLOAIXE.Width = 79;
             // 
             // MAUSAC
             // 
@@ -245,8 +258,8 @@ namespace CUAHANGXEMAY
             this.MAUSAC.FieldName = "MAUSAC";
             this.MAUSAC.Name = "MAUSAC";
             this.MAUSAC.Visible = true;
-            this.MAUSAC.VisibleIndex = 4;
-            this.MAUSAC.Width = 81;
+            this.MAUSAC.VisibleIndex = 5;
+            this.MAUSAC.Width = 82;
             // 
             // DUNGTICH
             // 
@@ -254,8 +267,8 @@ namespace CUAHANGXEMAY
             this.DUNGTICH.FieldName = "DUNGTICH";
             this.DUNGTICH.Name = "DUNGTICH";
             this.DUNGTICH.Visible = true;
-            this.DUNGTICH.VisibleIndex = 5;
-            this.DUNGTICH.Width = 63;
+            this.DUNGTICH.VisibleIndex = 6;
+            this.DUNGTICH.Width = 64;
             // 
             // TINHTRANG
             // 
@@ -263,20 +276,25 @@ namespace CUAHANGXEMAY
             this.TINHTRANG.FieldName = "TINHTRANG";
             this.TINHTRANG.Name = "TINHTRANG";
             this.TINHTRANG.Visible = true;
-            this.TINHTRANG.VisibleIndex = 6;
-            this.TINHTRANG.Width = 61;
+            this.TINHTRANG.VisibleIndex = 7;
+            this.TINHTRANG.Width = 71;
             // 
             // GIABAN
             // 
             this.GIABAN.Caption = "Giá bán";
+            this.GIABAN.DisplayFormat.FormatString = "0,0.##";
+            this.GIABAN.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.GIABAN.FieldName = "GIABAN";
             this.GIABAN.Name = "GIABAN";
             this.GIABAN.Visible = true;
-            this.GIABAN.VisibleIndex = 7;
-            this.GIABAN.Width = 172;
+            this.GIABAN.VisibleIndex = 8;
+            this.GIABAN.Width = 134;
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.cbDisable);
+            this.groupControl1.Controls.Add(this.cbbLoaiXe);
+            this.groupControl1.Controls.Add(this.cbbNCC);
             this.groupControl1.Controls.Add(this.txtGiaBan);
             this.groupControl1.Controls.Add(this.label8);
             this.groupControl1.Controls.Add(this.txtTinhTrang);
@@ -285,13 +303,11 @@ namespace CUAHANGXEMAY
             this.groupControl1.Controls.Add(this.label6);
             this.groupControl1.Controls.Add(this.txtMauSac);
             this.groupControl1.Controls.Add(this.label5);
-            this.groupControl1.Controls.Add(this.txtLoaiXe);
             this.groupControl1.Controls.Add(this.label4);
             this.groupControl1.Controls.Add(this.txtTenXe);
             this.groupControl1.Controls.Add(this.label3);
             this.groupControl1.Controls.Add(this.txtMaXe);
             this.groupControl1.Controls.Add(this.label2);
-            this.groupControl1.Controls.Add(this.txtNCC);
             this.groupControl1.Controls.Add(this.label1);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
@@ -299,6 +315,32 @@ namespace CUAHANGXEMAY
             this.groupControl1.Size = new System.Drawing.Size(249, 401);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Thông tin";
+            // 
+            // cbDisable
+            // 
+            this.cbDisable.AutoSize = true;
+            this.cbDisable.Location = new System.Drawing.Point(123, 361);
+            this.cbDisable.Name = "cbDisable";
+            this.cbDisable.Size = new System.Drawing.Size(67, 17);
+            this.cbDisable.TabIndex = 18;
+            this.cbDisable.Text = "DISABLE";
+            this.cbDisable.UseVisualStyleBackColor = true;
+            // 
+            // cbbLoaiXe
+            // 
+            this.cbbLoaiXe.FormattingEnabled = true;
+            this.cbbLoaiXe.Location = new System.Drawing.Point(90, 154);
+            this.cbbLoaiXe.Name = "cbbLoaiXe";
+            this.cbbLoaiXe.Size = new System.Drawing.Size(138, 21);
+            this.cbbLoaiXe.TabIndex = 17;
+            // 
+            // cbbNCC
+            // 
+            this.cbbNCC.FormattingEnabled = true;
+            this.cbbNCC.Location = new System.Drawing.Point(89, 36);
+            this.cbbNCC.Name = "cbbNCC";
+            this.cbbNCC.Size = new System.Drawing.Size(138, 21);
+            this.cbbNCC.TabIndex = 16;
             // 
             // txtGiaBan
             // 
@@ -364,13 +406,6 @@ namespace CUAHANGXEMAY
             this.label5.TabIndex = 8;
             this.label5.Text = "Màu sắc";
             // 
-            // txtLoaiXe
-            // 
-            this.txtLoaiXe.Location = new System.Drawing.Point(89, 153);
-            this.txtLoaiXe.Name = "txtLoaiXe";
-            this.txtLoaiXe.Size = new System.Drawing.Size(139, 21);
-            this.txtLoaiXe.TabIndex = 7;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -412,17 +447,10 @@ namespace CUAHANGXEMAY
             this.label2.TabIndex = 2;
             this.label2.Text = "Mã xe";
             // 
-            // txtNCC
-            // 
-            this.txtNCC.Location = new System.Drawing.Point(89, 36);
-            this.txtNCC.Name = "txtNCC";
-            this.txtNCC.Size = new System.Drawing.Size(139, 21);
-            this.txtNCC.TabIndex = 1;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 39);
+            this.label1.Location = new System.Drawing.Point(11, 40);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 13);
             this.label1.TabIndex = 0;
@@ -436,6 +464,7 @@ namespace CUAHANGXEMAY
             this.Controls.Add(this.splitContainerControl1);
             this.Controls.Add(this.toolStrip1);
             this.Name = "frmXeMay";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QUẢN LÝ XE MÁY";
             this.Load += new System.EventHandler(this.frmXeMay_Load);
             this.toolStrip1.ResumeLayout(false);
@@ -483,13 +512,15 @@ namespace CUAHANGXEMAY
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtMauSac;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtLoaiXe;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtTenXe;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtMaXe;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtNCC;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cbbNCC;
+        private System.Windows.Forms.ComboBox cbbLoaiXe;
+        private System.Windows.Forms.CheckBox cbDisable;
+        private DevExpress.XtraGrid.Columns.GridColumn DISABLE;
     }
 }

@@ -63,6 +63,16 @@ namespace CUAHANGXEMAY.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap background {
+            get {
+                object obj = ResourceManager.GetObject("background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Button_Add_icon {
             get {
                 object obj = ResourceManager.GetObject("Button-Add-icon", resourceCulture);
@@ -116,6 +126,16 @@ namespace CUAHANGXEMAY.Properties {
         internal static System.Drawing.Bitmap cbrplus1 {
             get {
                 object obj = ResourceManager.GetObject("cbrplus1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cbrremovebg {
+            get {
+                object obj = ResourceManager.GetObject("cbrremovebg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
