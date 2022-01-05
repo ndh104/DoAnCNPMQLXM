@@ -36,18 +36,18 @@ namespace CUAHANGXEMAY
             this.lblQuenMK = new System.Windows.Forms.Label();
             this.btnDN = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.svgImageBox2 = new DevExpress.XtraEditors.SvgImageBox();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.svgImageBox1 = new DevExpress.XtraEditors.SvgImageBox();
             this.txtTK = new System.Windows.Forms.TextBox();
             this.lblThoat = new DevExpress.XtraEditors.SimpleButton();
-            this.svgImageBox1 = new DevExpress.XtraEditors.SvgImageBox();
-            this.svgImageBox2 = new DevExpress.XtraEditors.SvgImageBox();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.svgImageBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.svgImageBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.svgImageBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -123,6 +123,16 @@ namespace CUAHANGXEMAY
             this.panelControl1.Size = new System.Drawing.Size(290, 32);
             this.panelControl1.TabIndex = 9;
             // 
+            // svgImageBox2
+            // 
+            this.svgImageBox2.BackColor = System.Drawing.Color.Transparent;
+            this.svgImageBox2.Location = new System.Drawing.Point(1, 0);
+            this.svgImageBox2.Name = "svgImageBox2";
+            this.svgImageBox2.Size = new System.Drawing.Size(36, 32);
+            this.svgImageBox2.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageBox2.SvgImage")));
+            this.svgImageBox2.TabIndex = 13;
+            this.svgImageBox2.Text = "svgImageBox2";
+            // 
             // panelControl2
             // 
             this.panelControl2.Appearance.BackColor = System.Drawing.Color.White;
@@ -133,6 +143,16 @@ namespace CUAHANGXEMAY
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(290, 32);
             this.panelControl2.TabIndex = 10;
+            // 
+            // svgImageBox1
+            // 
+            this.svgImageBox1.BackColor = System.Drawing.Color.Transparent;
+            this.svgImageBox1.Location = new System.Drawing.Point(0, 0);
+            this.svgImageBox1.Name = "svgImageBox1";
+            this.svgImageBox1.Size = new System.Drawing.Size(36, 32);
+            this.svgImageBox1.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageBox1.SvgImage")));
+            this.svgImageBox1.TabIndex = 12;
+            this.svgImageBox1.Text = "svgImageBox1";
             // 
             // txtTK
             // 
@@ -154,26 +174,6 @@ namespace CUAHANGXEMAY
             this.lblThoat.TabIndex = 11;
             this.lblThoat.Text = "simpleButton1";
             this.lblThoat.Click += new System.EventHandler(this.lblThoat_Click);
-            // 
-            // svgImageBox1
-            // 
-            this.svgImageBox1.BackColor = System.Drawing.Color.Transparent;
-            this.svgImageBox1.Location = new System.Drawing.Point(0, 0);
-            this.svgImageBox1.Name = "svgImageBox1";
-            this.svgImageBox1.Size = new System.Drawing.Size(36, 32);
-            this.svgImageBox1.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageBox1.SvgImage")));
-            this.svgImageBox1.TabIndex = 12;
-            this.svgImageBox1.Text = "svgImageBox1";
-            // 
-            // svgImageBox2
-            // 
-            this.svgImageBox2.BackColor = System.Drawing.Color.Transparent;
-            this.svgImageBox2.Location = new System.Drawing.Point(1, 0);
-            this.svgImageBox2.Name = "svgImageBox2";
-            this.svgImageBox2.Size = new System.Drawing.Size(36, 32);
-            this.svgImageBox2.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageBox2.SvgImage")));
-            this.svgImageBox2.TabIndex = 13;
-            this.svgImageBox2.Text = "svgImageBox2";
             // 
             // label1
             // 
@@ -206,15 +206,16 @@ namespace CUAHANGXEMAY
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmDangNhap_FormClosing);
             this.Load += new System.EventHandler(this.frmDangNhap_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.svgImageBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.svgImageBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.svgImageBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

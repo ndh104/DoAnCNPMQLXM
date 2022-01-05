@@ -27,7 +27,12 @@ namespace CUAHANGXEMAY
 
         private void lblThoat_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult tb = MessageBox.Show("Bạn có thật sự muốn thoát ?", "Thông báo",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (tb == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
         private void btnDN_Click(object sender, EventArgs e)
         {
@@ -46,13 +51,16 @@ namespace CUAHANGXEMAY
                 this.Hide();
             }
         }
-
         private void lblQuenMK_Click(object sender, EventArgs e)
         {
             this.Visible = false; 
             frmQuenMatKhau frm = new frmQuenMatKhau();
             frm.ShowDialog();
             this.Visible = true;
+        }
+
+        private void frmDangNhap_FormClosing(object sender, FormClosingEventArgs e)
+        { 
         }
     }
 }

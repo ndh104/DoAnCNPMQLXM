@@ -11,7 +11,7 @@
         <EntityTypeShape EntityType="CUAHANG.tb_NHACUNGCAP" Width="1.5" PointX="4.75" PointY="3.75" />
         <EntityTypeShape EntityType="CUAHANG.tb_NHANVIEN" Width="1.5" PointX="6.75" PointY="0.75" />
         <EntityTypeShape EntityType="CUAHANG.tb_XEMAY" Width="1.5" PointX="0.75" PointY="0.75" />
-        <EntityTypeShape EntityType="CUAHANG.tb_CHITIETHOADON" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="CUAHANG.tb_CHITIETHOADON" Width="1.5" PointX="0.75" PointY="4.125" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

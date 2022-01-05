@@ -51,7 +51,18 @@ namespace CUAHANGXEMAY
             showHideButton(true);
         }
 
-
+        void reset(bool t)
+        {
+            txtTenXe.Text = "";
+            txtMaXe.Text = "";
+            txtGiaBan.Text = "";
+            txtMauSac.Text = "";
+            txtTinhTrang.Text = "";
+            txtDungTich.Text = "";
+            cbbLoaiXe.Text = "";
+            cbbNCC.Text = "";
+            cbDisable.Checked = false;
+        }
         void showHideButton(bool sh)
         {
             btnThem.Visible = sh;
@@ -75,7 +86,12 @@ namespace CUAHANGXEMAY
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-
+            if (MessageBox.Show("Bạn có chắc chắn xóa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                _xemay.del(_maxe);
+            }
+            reset(true);
+            loadData();
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -89,11 +105,27 @@ namespace CUAHANGXEMAY
                 xe.DUNGTICH = txtDungTich.Text;
                 xe.TINHTRANG = txtTinhTrang.Text;
                 xe.GIABAN = decimal.Parse(txtGiaBan.Text);
-                xe.MALOAI = cbbNCC.SelectedValue.ToString();
-                xe.MANCC = cbbLoaiXe.SelectedValue.ToString();
+                xe.MALOAI = cbbLoaiXe.SelectedValue.ToString();
+                xe.MANCC = cbbNCC.SelectedValue.ToString();
                 xe.DISABLE = cbDisable.Checked;
+                _xemay.them(xe);
+            }
+            else
+            {
+                tb_XEMAY xe = _xemay.getItem(_maxe);
+                xe.MAXE = txtMaXe.Text;
+                xe.TENXE = txtTenXe.Text;
+                xe.MAUSAC = txtMauSac.Text;
+                xe.DUNGTICH = txtDungTich.Text;
+                xe.TINHTRANG = txtTinhTrang.Text;
+                xe.GIABAN = decimal.Parse(txtGiaBan.Text);
+                xe.MALOAI = cbbLoaiXe.SelectedValue.ToString();
+                xe.MANCC = cbbNCC.SelectedValue.ToString();
+                xe.DISABLE = cbDisable.Checked;
+                _xemay.capnhat(xe);
             }
             showHideButton(true);
+            loadData();
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
@@ -126,6 +158,23 @@ namespace CUAHANGXEMAY
                     cbbLoaiXe.Text = gvXeMay.GetFocusedRowCellValue("TENLOAI").ToString();
                     cbDisable.Checked = bool.Parse(gvXeMay.GetFocusedRowCellValue("DISABLE").ToString());
                 }
+            }
+        }
+        private void txtGiaBan_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtGiaBan.Text.Length>0)
+                {
+                    double a = double.Parse(txtGiaBan.Text);
+                    txtGiaBan.Text = a.ToString("N0");
+                    txtGiaBan.Focus();
+                    txtGiaBan.SelectionStart = txtGiaBan.Text.Length;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Dữ liệu nhập vào không hợp lệ!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

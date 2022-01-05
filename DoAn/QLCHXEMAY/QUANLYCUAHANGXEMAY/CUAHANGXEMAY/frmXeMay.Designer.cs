@@ -340,7 +340,7 @@ namespace CUAHANGXEMAY
             this.cbbNCC.Location = new System.Drawing.Point(89, 36);
             this.cbbNCC.Name = "cbbNCC";
             this.cbbNCC.Size = new System.Drawing.Size(138, 21);
-            this.cbbNCC.TabIndex = 16;
+            this.cbbNCC.TabIndex = 1;
             // 
             // txtGiaBan
             // 
@@ -348,6 +348,7 @@ namespace CUAHANGXEMAY
             this.txtGiaBan.Name = "txtGiaBan";
             this.txtGiaBan.Size = new System.Drawing.Size(139, 21);
             this.txtGiaBan.TabIndex = 15;
+            this.txtGiaBan.TextChanged += new System.EventHandler(this.txtGiaBan_TextChanged);
             // 
             // label8
             // 

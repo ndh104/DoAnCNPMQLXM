@@ -96,6 +96,16 @@ warning 6002: The table/view 'QLXEMAY.dbo.tb_CHITIETHOADON' does not have a prim
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="CHARTXE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="TENXE" Type="nvarchar" MaxLength="20" />
+                <Property Name="cc" Type="int" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
         <EntityContainer Name="CUAHANGStoreContainer">
           <EntitySet Name="tb_HOADON" EntityType="Self.tb_HOADON" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tb_KHACHHANG" EntityType="Self.tb_KHACHHANG" Schema="dbo" store:Type="Tables" />
@@ -128,6 +138,7 @@ warning 6002: The table/view 'QLXEMAY.dbo.tb_CHITIETHOADON' does not have a prim
           <EntitySet Name="tb_NHANVIEN" EntityType="CUAHANG.tb_NHANVIEN" />
           <EntitySet Name="tb_XEMAY" EntityType="CUAHANG.tb_XEMAY" />
           <EntitySet Name="tb_CHITIETHOADON" EntityType="CUAHANG.tb_CHITIETHOADON" />
+          <FunctionImport Name="CHARTXE" IsComposable="true" ReturnType="Collection(CUAHANG.CHARTXE_Result)" />
         </EntityContainer>
         <EntityType Name="tb_HOADON">
           <Key>
@@ -195,7 +206,7 @@ warning 6002: The table/view 'QLXEMAY.dbo.tb_CHITIETHOADON' does not have a prim
           <Property Name="MALOAI" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
           <Property Name="MANCC" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
           <Property Name="DISABLE" Type="Boolean" />
-        </EntityType>
+          </EntityType>
         <EntityType Name="tb_CHITIETHOADON">
           <Key>
             <PropertyRef Name="MAHD" />
@@ -206,6 +217,10 @@ warning 6002: The table/view 'QLXEMAY.dbo.tb_CHITIETHOADON' does not have a prim
           <Property Name="SOLUONG" Type="Int32" />
           <Property Name="DONGIA" Type="Decimal" Precision="18" Scale="0" />
         </EntityType>
+        <ComplexType Name="CHARTXE_Result">
+          <Property Type="String" Name="TENXE" Nullable="true" MaxLength="20" />
+          <Property Type="Int32" Name="cc" Nullable="true" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -295,6 +310,14 @@ warning 6002: The table/view 'QLXEMAY.dbo.tb_CHITIETHOADON' does not have a prim
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="CHARTXE" FunctionName="CUAHANG.Store.CHARTXE">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="CUAHANG.CHARTXE_Result">
+                <ScalarProperty Name="TENXE" ColumnName="TENXE" />
+                <ScalarProperty Name="cc" ColumnName="cc" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

@@ -8,6 +8,7 @@
     <EntitySet Name="tb_NHANVIEN" EntityType="CUAHANG.tb_NHANVIEN" />
     <EntitySet Name="tb_XEMAY" EntityType="CUAHANG.tb_XEMAY" />
     <EntitySet Name="tb_CHITIETHOADON" EntityType="CUAHANG.tb_CHITIETHOADON" />
+    <FunctionImport Name="CHARTXE" IsComposable="true" ReturnType="Collection(CUAHANG.CHARTXE_Result)" />
   </EntityContainer>
   <EntityType Name="tb_HOADON">
     <Key>
@@ -86,4 +87,8 @@
     <Property Name="SOLUONG" Type="Int32" />
     <Property Name="DONGIA" Type="Decimal" Precision="18" Scale="0" />
   </EntityType>
+  <ComplexType Name="CHARTXE_Result">
+    <Property Type="String" Name="TENXE" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="cc" Nullable="true" />
+  </ComplexType>
 </Schema>

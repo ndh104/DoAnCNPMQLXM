@@ -91,6 +91,16 @@ warning 6002: The table/view 'QLXEMAY.dbo.tb_CHITIETHOADON' does not have a prim
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Function Name="CHARTXE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="TENXE" Type="nvarchar" MaxLength="20" />
+          <Property Name="cc" Type="int" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
   <EntityContainer Name="CUAHANGStoreContainer">
     <EntitySet Name="tb_HOADON" EntityType="Self.tb_HOADON" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_KHACHHANG" EntityType="Self.tb_KHACHHANG" Schema="dbo" store:Type="Tables" />

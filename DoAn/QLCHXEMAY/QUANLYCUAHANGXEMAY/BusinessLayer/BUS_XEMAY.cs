@@ -48,7 +48,7 @@ namespace BusinessLayer
                 objxe.MANCC = item.MANCC;
                 objxe.DISABLE = item.DISABLE;
                 // lấy đối tượng loại xe từ bảng loại xe "tb_LOAIXE"
-                var loaixeLX = db.tb_LOAIXE.FirstOrDefault(x=>x.MALOAI==item.MALOAI);
+                var loaixeLX = db.tb_LOAIXE.FirstOrDefault(x => x.MALOAI == item.MALOAI);
                 objxe.TENLOAI = loaixeLX.TENLOAIXE;
                 //lấy đối tượng nhà cung cấp từ bảng "tb_NHACUNGCAP"
                 var nccNCC = db.tb_NHACUNGCAP.FirstOrDefault(x => x.MANCC == item.MANCC);
@@ -66,7 +66,7 @@ namespace BusinessLayer
             }
             catch(Exception ex)
             {
-                throw new Exception("Có lỗi xảy ra trong quá trình xử lý dữ liệu" +ex.Message);
+                throw new Exception("Có lỗi xảy ra trong quá trình xử lý dữ liệu!" +ex.Message);
             }
         }
         public void capnhat(tb_XEMAY xe)

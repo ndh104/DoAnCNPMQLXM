@@ -53,6 +53,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CHARTXE_Result.cs">
+      <DependentUpon>CUAHANG.tt</DependentUpon>
+    </Compile>
     <Compile Include="connect.cs" />
     <Compile Include="CUAHANG.Context.cs">
       <AutoGen>True</AutoGen>

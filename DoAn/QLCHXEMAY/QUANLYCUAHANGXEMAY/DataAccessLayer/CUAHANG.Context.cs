@@ -12,6 +12,8 @@ namespace DataAccessLayer
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class Entities : DbContext
     {
@@ -32,5 +34,11 @@ namespace DataAccessLayer
         public virtual DbSet<tb_NHANVIEN> tb_NHANVIEN { get; set; }
         public virtual DbSet<tb_XEMAY> tb_XEMAY { get; set; }
         public virtual DbSet<tb_CHITIETHOADON> tb_CHITIETHOADON { get; set; }
+    
+        [DbFunction("Entities", "CHARTXE")]
+        public virtual IQueryable<CHARTXE_Result> CHARTXE()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<CHARTXE_Result>("[Entities].[CHARTXE]()");
+        }
     }
 }
