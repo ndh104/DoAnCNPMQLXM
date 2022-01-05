@@ -23,5 +23,22 @@ namespace CUAHANGXEMAY
             frmXeMay frm = new frmXeMay();
             frm.ShowDialog();
         }
+
+        private void frmTrangChinh_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnNhanVien_Click(object sender, EventArgs e)
+        {
+            frmNhanVien frm_nhanvien = new frmNhanVien();
+            frm_nhanvien.ShowDialog();
+        }
+
+        private void btnKhachHang_Click(object sender, EventArgs e)
+        {
+            frmKhachHang frm_khachhang = new frmKhachHang();
+            frm_khachhang.ShowDialog();
+        }
     }
 }

@@ -20,8 +20,8 @@ namespace CUAHANGXEMAY
             InitializeComponent();
         }
         BUS_XEMAY _xemay;
-        BUS_LOAIXE _loaixe;
-        BUS_NHACUNGCAP _ncc;
+        //BUS_LOAIXE _loaixe;
+        //BUS_NHACUNGCAP _ncc;
         bool _them;
         void loadData()
         {

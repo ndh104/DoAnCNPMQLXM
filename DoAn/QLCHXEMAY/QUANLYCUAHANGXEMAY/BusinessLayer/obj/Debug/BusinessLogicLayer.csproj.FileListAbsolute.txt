@@ -28,3 +28,17 @@ F:\DoAnCNPM\DoAnCNPM\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\BusinessLaye
 F:\DoAnCNPM\DoAnCNPM\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\BusinessLayer\obj\Debug\BusinessLogicLayer.csproj.CopyComplete
 F:\DoAnCNPM\DoAnCNPM\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\BusinessLayer\obj\Debug\BusinessLayer.dll
 F:\DoAnCNPM\DoAnCNPM\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\BusinessLayer\obj\Debug\BusinessLayer.pdb
+D:\DoAnCNPMFinal\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\BusinessLayer\bin\Debug\BusinessLayer.dll.config
+D:\DoAnCNPMFinal\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\BusinessLayer\bin\Debug\BusinessLayer.dll
+D:\DoAnCNPMFinal\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\BusinessLayer\bin\Debug\BusinessLayer.pdb
+D:\DoAnCNPMFinal\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\BusinessLayer\bin\Debug\DataAccessLayer.dll
+D:\DoAnCNPMFinal\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\BusinessLayer\bin\Debug\EntityFramework.dll
+D:\DoAnCNPMFinal\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\BusinessLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\DoAnCNPMFinal\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\BusinessLayer\bin\Debug\DataAccessLayer.pdb
+D:\DoAnCNPMFinal\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\BusinessLayer\bin\Debug\DataAccessLayer.dll.config
+D:\DoAnCNPMFinal\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\BusinessLayer\bin\Debug\EntityFramework.xml
+D:\DoAnCNPMFinal\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\BusinessLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\DoAnCNPMFinal\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\BusinessLayer\obj\Debug\BusinessLogicLayer.csproj.AssemblyReference.cache
+D:\DoAnCNPMFinal\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\BusinessLayer\obj\Debug\BusinessLogicLayer.csproj.CoreCompileInputs.cache
+D:\DoAnCNPMFinal\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\BusinessLayer\obj\Debug\BusinessLayer.dll
+D:\DoAnCNPMFinal\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\BusinessLayer\obj\Debug\BusinessLayer.pdb

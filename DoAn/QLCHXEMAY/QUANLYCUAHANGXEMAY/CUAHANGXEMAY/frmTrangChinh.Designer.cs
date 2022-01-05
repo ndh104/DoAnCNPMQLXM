@@ -45,14 +45,15 @@ namespace CUAHANGXEMAY
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnXeMay,
-            this.btnKhachHang,
             this.btnNhanVien,
+            this.btnKhachHang,
             this.btnBanHang,
             this.btnBaoCao,
             this.btnDangXuat});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(690, 67);
+            this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.toolStrip1.Size = new System.Drawing.Size(1035, 77);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -61,7 +62,7 @@ namespace CUAHANGXEMAY
             this.btnXeMay.Image = global::CUAHANGXEMAY.Properties.Resources.motobike;
             this.btnXeMay.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnXeMay.Name = "btnXeMay";
-            this.btnXeMay.Size = new System.Drawing.Size(50, 64);
+            this.btnXeMay.Size = new System.Drawing.Size(75, 93);
             this.btnXeMay.Text = "Xe máy";
             this.btnXeMay.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnXeMay.Click += new System.EventHandler(this.btnXeMay_Click);
@@ -71,25 +72,27 @@ namespace CUAHANGXEMAY
             this.btnKhachHang.Image = global::CUAHANGXEMAY.Properties.Resources.customer;
             this.btnKhachHang.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnKhachHang.Name = "btnKhachHang";
-            this.btnKhachHang.Size = new System.Drawing.Size(74, 64);
+            this.btnKhachHang.Size = new System.Drawing.Size(108, 72);
             this.btnKhachHang.Text = "Khách hàng";
             this.btnKhachHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnKhachHang.Click += new System.EventHandler(this.btnKhachHang_Click);
             // 
             // btnNhanVien
             // 
             this.btnNhanVien.Image = global::CUAHANGXEMAY.Properties.Resources.nv;
             this.btnNhanVien.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnNhanVien.Name = "btnNhanVien";
-            this.btnNhanVien.Size = new System.Drawing.Size(65, 64);
+            this.btnNhanVien.Size = new System.Drawing.Size(95, 72);
             this.btnNhanVien.Text = "Nhân viên";
             this.btnNhanVien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnNhanVien.Click += new System.EventHandler(this.btnNhanVien_Click);
             // 
             // btnBanHang
             // 
             this.btnBanHang.Image = global::CUAHANGXEMAY.Properties.Resources.hoadon;
             this.btnBanHang.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnBanHang.Name = "btnBanHang";
-            this.btnBanHang.Size = new System.Drawing.Size(61, 64);
+            this.btnBanHang.Size = new System.Drawing.Size(90, 93);
             this.btnBanHang.Text = "Bán hàng";
             this.btnBanHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
@@ -98,7 +101,7 @@ namespace CUAHANGXEMAY
             this.btnBaoCao.Image = global::CUAHANGXEMAY.Properties.Resources.thongke;
             this.btnBaoCao.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnBaoCao.Name = "btnBaoCao";
-            this.btnBaoCao.Size = new System.Drawing.Size(53, 64);
+            this.btnBaoCao.Size = new System.Drawing.Size(79, 93);
             this.btnBaoCao.Text = "Báo cáo";
             this.btnBaoCao.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
@@ -108,19 +111,21 @@ namespace CUAHANGXEMAY
             this.btnDangXuat.Image = global::CUAHANGXEMAY.Properties.Resources.logout;
             this.btnDangXuat.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnDangXuat.Name = "btnDangXuat";
-            this.btnDangXuat.Size = new System.Drawing.Size(65, 64);
+            this.btnDangXuat.Size = new System.Drawing.Size(97, 93);
             this.btnDangXuat.Text = "Đăng xuất";
             this.btnDangXuat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // frmTrangChinh
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(690, 415);
+            this.ClientSize = new System.Drawing.Size(1035, 463);
             this.Controls.Add(this.toolStrip1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmTrangChinh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QUẢN LÝ CỬA HÀNG XE MÁY";
+            this.Load += new System.EventHandler(this.frmTrangChinh_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);

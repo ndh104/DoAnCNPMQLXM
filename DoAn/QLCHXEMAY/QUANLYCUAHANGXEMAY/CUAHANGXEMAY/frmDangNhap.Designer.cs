@@ -52,9 +52,10 @@ namespace CUAHANGXEMAY
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Tahoma", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Azure;
-            this.label1.Location = new System.Drawing.Point(111, 18);
+            this.label1.Location = new System.Drawing.Point(166, 26);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(193, 35);
+            this.label1.Size = new System.Drawing.Size(294, 53);
             this.label1.TabIndex = 0;
             this.label1.Text = "ĐĂNG NHẬP";
             // 
@@ -64,9 +65,10 @@ namespace CUAHANGXEMAY
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Azure;
-            this.label2.Location = new System.Drawing.Point(57, 82);
+            this.label2.Location = new System.Drawing.Point(86, 120);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 19);
+            this.label2.Size = new System.Drawing.Size(174, 29);
             this.label2.TabIndex = 1;
             this.label2.Text = "Tên đăng nhập";
             // 
@@ -76,9 +78,10 @@ namespace CUAHANGXEMAY
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Azure;
-            this.label3.Location = new System.Drawing.Point(57, 140);
+            this.label3.Location = new System.Drawing.Point(86, 205);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 19);
+            this.label3.Size = new System.Drawing.Size(112, 29);
             this.label3.TabIndex = 2;
             this.label3.Text = "Mật khẩu";
             // 
@@ -87,9 +90,10 @@ namespace CUAHANGXEMAY
             this.txtMK.BackColor = System.Drawing.SystemColors.Control;
             this.txtMK.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMK.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMK.Location = new System.Drawing.Point(6, 6);
+            this.txtMK.Location = new System.Drawing.Point(9, 9);
+            this.txtMK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMK.Name = "txtMK";
-            this.txtMK.Size = new System.Drawing.Size(276, 20);
+            this.txtMK.Size = new System.Drawing.Size(414, 29);
             this.txtMK.TabIndex = 4;
             this.txtMK.UseSystemPasswordChar = true;
             // 
@@ -99,9 +103,10 @@ namespace CUAHANGXEMAY
             this.lblQuenMK.BackColor = System.Drawing.Color.Transparent;
             this.lblQuenMK.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuenMK.ForeColor = System.Drawing.Color.Blue;
-            this.lblQuenMK.Location = new System.Drawing.Point(12, 440);
+            this.lblQuenMK.Location = new System.Drawing.Point(18, 643);
+            this.lblQuenMK.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblQuenMK.Name = "lblQuenMK";
-            this.lblQuenMK.Size = new System.Drawing.Size(126, 19);
+            this.lblQuenMK.Size = new System.Drawing.Size(188, 29);
             this.lblQuenMK.TabIndex = 7;
             this.lblQuenMK.Text = "Quên mật khẩu?";
             // 
@@ -110,9 +115,10 @@ namespace CUAHANGXEMAY
             this.btnDN.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDN.Appearance.Options.UseFont = true;
             this.btnDN.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnDN.Location = new System.Drawing.Point(61, 224);
+            this.btnDN.Location = new System.Drawing.Point(92, 327);
+            this.btnDN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDN.Name = "btnDN";
-            this.btnDN.Size = new System.Drawing.Size(290, 41);
+            this.btnDN.Size = new System.Drawing.Size(435, 60);
             this.btnDN.TabIndex = 8;
             this.btnDN.Text = "ĐĂNG NHẬP";
             this.btnDN.Click += new System.EventHandler(this.btnDN_Click);
@@ -122,9 +128,10 @@ namespace CUAHANGXEMAY
             this.panelControl1.Appearance.BackColor = System.Drawing.Color.White;
             this.panelControl1.Appearance.Options.UseBackColor = true;
             this.panelControl1.Controls.Add(this.txtMK);
-            this.panelControl1.Location = new System.Drawing.Point(61, 162);
+            this.panelControl1.Location = new System.Drawing.Point(92, 237);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(290, 32);
+            this.panelControl1.Size = new System.Drawing.Size(435, 47);
             this.panelControl1.TabIndex = 9;
             // 
             // panelControl2
@@ -132,9 +139,10 @@ namespace CUAHANGXEMAY
             this.panelControl2.Appearance.BackColor = System.Drawing.Color.White;
             this.panelControl2.Appearance.Options.UseBackColor = true;
             this.panelControl2.Controls.Add(this.txtTK);
-            this.panelControl2.Location = new System.Drawing.Point(61, 105);
+            this.panelControl2.Location = new System.Drawing.Point(92, 153);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(290, 32);
+            this.panelControl2.Size = new System.Drawing.Size(435, 47);
             this.panelControl2.TabIndex = 10;
             // 
             // txtTK
@@ -142,27 +150,31 @@ namespace CUAHANGXEMAY
             this.txtTK.BackColor = System.Drawing.SystemColors.Control;
             this.txtTK.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTK.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTK.Location = new System.Drawing.Point(6, 6);
+            this.txtTK.Location = new System.Drawing.Point(9, 9);
+            this.txtTK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTK.Name = "txtTK";
-            this.txtTK.Size = new System.Drawing.Size(276, 20);
+            this.txtTK.Size = new System.Drawing.Size(414, 29);
             this.txtTK.TabIndex = 4;
             // 
             // lblThoat
             // 
             this.lblThoat.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("lblThoat.ImageOptions.SvgImage")));
-            this.lblThoat.Location = new System.Drawing.Point(733, 12);
+            this.lblThoat.Location = new System.Drawing.Point(1100, 18);
+            this.lblThoat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lblThoat.Name = "lblThoat";
             this.lblThoat.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.lblThoat.Size = new System.Drawing.Size(38, 38);
+            this.lblThoat.Size = new System.Drawing.Size(57, 56);
             this.lblThoat.TabIndex = 11;
             this.lblThoat.Text = "simpleButton1";
             this.lblThoat.Click += new System.EventHandler(this.lblThoat_Click);
             // 
             // frmDangNhap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.Appearance.Options.UseBackColor = true;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(783, 468);
+            this.ClientSize = new System.Drawing.Size(606, 454);
             this.ControlBox = false;
             this.Controls.Add(this.lblThoat);
             this.Controls.Add(this.panelControl2);
@@ -173,6 +185,7 @@ namespace CUAHANGXEMAY
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmDangNhap_Load);

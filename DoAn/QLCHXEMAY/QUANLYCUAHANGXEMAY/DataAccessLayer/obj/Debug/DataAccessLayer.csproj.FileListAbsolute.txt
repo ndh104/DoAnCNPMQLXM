@@ -22,3 +22,15 @@ F:\DoAnCNPM\DoAnCNPM\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\DataAccessLa
 F:\DoAnCNPM\DoAnCNPM\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
 F:\DoAnCNPM\DoAnCNPM\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 F:\DoAnCNPM\DoAnCNPM\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+D:\DoAnCNPMFinal\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\DataAccessLayer\bin\Debug\DataAccessLayer.dll.config
+D:\DoAnCNPMFinal\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\DoAnCNPMFinal\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\DoAnCNPMFinal\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\DataAccessLayer\bin\Debug\EntityFramework.dll
+D:\DoAnCNPMFinal\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\DoAnCNPMFinal\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\DataAccessLayer\bin\Debug\EntityFramework.xml
+D:\DoAnCNPMFinal\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\DoAnCNPMFinal\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.AssemblyReference.cache
+D:\DoAnCNPMFinal\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+D:\DoAnCNPMFinal\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
+D:\DoAnCNPMFinal\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+D:\DoAnCNPMFinal\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
