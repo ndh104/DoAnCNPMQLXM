@@ -309,6 +309,48 @@
   <ItemGroup>
     <None Include="Resources\xuathd.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6738165.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\771208.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7712081.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1371251.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4666276.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9579709.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9126264.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tgweoMP.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hinh-nen-laptop-full-hd-35.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\honda-bikes-icon-large-750x450.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2970268.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2179357.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\46662761.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7005829.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

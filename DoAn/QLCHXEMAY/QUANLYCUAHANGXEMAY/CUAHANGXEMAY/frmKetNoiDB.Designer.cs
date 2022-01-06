@@ -60,16 +60,18 @@ namespace CUAHANGXEMAY
             this.groupControl1.Controls.Add(this.label1);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(409, 246);
+            this.groupControl1.Size = new System.Drawing.Size(614, 360);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Thông tin";
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(279, 185);
+            this.btnThoat.Location = new System.Drawing.Point(418, 270);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(64, 42);
+            this.btnThoat.Size = new System.Drawing.Size(96, 61);
             this.btnThoat.TabIndex = 11;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
@@ -77,9 +79,10 @@ namespace CUAHANGXEMAY
             // 
             // btnLuu
             // 
-            this.btnLuu.Location = new System.Drawing.Point(201, 185);
+            this.btnLuu.Location = new System.Drawing.Point(302, 270);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(64, 42);
+            this.btnLuu.Size = new System.Drawing.Size(96, 61);
             this.btnLuu.TabIndex = 10;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
@@ -87,9 +90,10 @@ namespace CUAHANGXEMAY
             // 
             // btnKiemTra
             // 
-            this.btnKiemTra.Location = new System.Drawing.Point(123, 185);
+            this.btnKiemTra.Location = new System.Drawing.Point(184, 270);
+            this.btnKiemTra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnKiemTra.Name = "btnKiemTra";
-            this.btnKiemTra.Size = new System.Drawing.Size(64, 42);
+            this.btnKiemTra.Size = new System.Drawing.Size(96, 61);
             this.btnKiemTra.TabIndex = 9;
             this.btnKiemTra.Text = "Kiểm tra";
             this.btnKiemTra.UseVisualStyleBackColor = true;
@@ -98,79 +102,89 @@ namespace CUAHANGXEMAY
             // cbDatabase
             // 
             this.cbDatabase.FormattingEnabled = true;
-            this.cbDatabase.Location = new System.Drawing.Point(123, 143);
+            this.cbDatabase.Location = new System.Drawing.Point(184, 209);
+            this.cbDatabase.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbDatabase.Name = "cbDatabase";
-            this.cbDatabase.Size = new System.Drawing.Size(221, 21);
+            this.cbDatabase.Size = new System.Drawing.Size(330, 27);
             this.cbDatabase.TabIndex = 8;
             this.cbDatabase.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cbDatabase_MouseClick);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(49, 147);
+            this.label4.Location = new System.Drawing.Point(74, 215);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 13);
+            this.label4.Size = new System.Drawing.Size(73, 19);
             this.label4.TabIndex = 7;
             this.label4.Text = "Database";
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(123, 107);
+            this.txtPassword.Location = new System.Drawing.Point(184, 156);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(221, 21);
+            this.txtPassword.Size = new System.Drawing.Size(330, 27);
             this.txtPassword.TabIndex = 6;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(49, 111);
+            this.label3.Location = new System.Drawing.Point(74, 162);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 13);
+            this.label3.Size = new System.Drawing.Size(76, 19);
             this.label3.TabIndex = 5;
             this.label3.Text = "Password";
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(123, 71);
+            this.txtUsername.Location = new System.Drawing.Point(184, 104);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(221, 21);
+            this.txtUsername.Size = new System.Drawing.Size(330, 27);
             this.txtUsername.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(47, 75);
+            this.label2.Location = new System.Drawing.Point(70, 110);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 13);
+            this.label2.Size = new System.Drawing.Size(80, 19);
             this.label2.TabIndex = 3;
             this.label2.Text = "Username";
             // 
             // txtServer
             // 
-            this.txtServer.Location = new System.Drawing.Point(123, 35);
+            this.txtServer.Location = new System.Drawing.Point(184, 51);
+            this.txtServer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtServer.Name = "txtServer";
-            this.txtServer.Size = new System.Drawing.Size(221, 21);
+            this.txtServer.Size = new System.Drawing.Size(330, 27);
             this.txtServer.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(63, 39);
+            this.label1.Location = new System.Drawing.Point(94, 57);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 13);
+            this.label1.Size = new System.Drawing.Size(54, 19);
             this.label1.TabIndex = 1;
             this.label1.Text = "Server";
             // 
             // frmKetNoiDB
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(409, 246);
+            this.ClientSize = new System.Drawing.Size(614, 360);
             this.Controls.Add(this.groupControl1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmKetNoiDB";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KẾT NỐI DATABASE";
             this.Load += new System.EventHandler(this.frmKetNoiDB_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
