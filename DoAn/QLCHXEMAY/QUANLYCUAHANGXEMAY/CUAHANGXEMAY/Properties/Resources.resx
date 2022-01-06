@@ -121,6 +121,9 @@
   <data name="delete-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delete-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="homepage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\homepage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="cbrplus1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cbrplus1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -135,6 +138,9 @@
   </data>
   <data name="nv" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nv.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="support" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\support.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CBRjpg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CBRjpg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,11 +160,17 @@
   <data name="homepagepromax" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\homepagepromax.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="backgroundnomoto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backgroundnomoto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="cbrplus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cbrplus.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="key" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\key.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="printer1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\printer1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cbrremovebg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cbrremovebg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,11 +178,11 @@
   <data name="Pencil-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Pencil-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="xuathoadon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\xuathoadon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Button-Close-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Button-Close-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="huybo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\huybo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="thongke" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\thongke.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,8 +199,8 @@
   <data name="dangnhap" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dangnhap.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="support" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\support.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="banhang" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\banhang.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="xoa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\xoa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -211,13 +223,16 @@
   <data name="thoat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\thoat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="homepage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\homepage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="huybo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\huybo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="printer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\printer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="them" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\them.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="backgroundnomoto" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\backgroundnomoto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="xuathd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\xuathd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

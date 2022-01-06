@@ -17,5 +17,24 @@ namespace CUAHANGXEMAY
         {
             InitializeComponent();
         }
+
+
+
+
+
+
+        void showHideButton(bool sh)
+        {
+            btnThemHoaDon.Visible = sh;
+            btnXoa.Visible = sh;
+            btnThoat.Visible = sh;
+            btnXuatHD.Visible = !sh;
+            btnHuy.Visible = !sh;
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

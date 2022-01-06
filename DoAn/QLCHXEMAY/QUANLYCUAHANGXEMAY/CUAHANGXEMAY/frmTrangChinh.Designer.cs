@@ -100,7 +100,7 @@ namespace CUAHANGXEMAY
             // btnBanHang
             // 
             this.btnBanHang.AutoSize = false;
-            this.btnBanHang.Image = global::CUAHANGXEMAY.Properties.Resources.hoadon;
+            this.btnBanHang.Image = global::CUAHANGXEMAY.Properties.Resources.banhang;
             this.btnBanHang.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnBanHang.Name = "btnBanHang";
             this.btnBanHang.Size = new System.Drawing.Size(74, 64);
@@ -138,7 +138,7 @@ namespace CUAHANGXEMAY
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(78, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(910, 34);
+            this.panel1.Size = new System.Drawing.Size(957, 34);
             this.panel1.TabIndex = 2;
             // 
             // labelControl1
@@ -159,7 +159,7 @@ namespace CUAHANGXEMAY
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(78, 34);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(910, 410);
+            this.panel2.Size = new System.Drawing.Size(957, 410);
             this.panel2.TabIndex = 3;
             // 
             // chartControl1
@@ -168,7 +168,7 @@ namespace CUAHANGXEMAY
             this.chartControl1.Location = new System.Drawing.Point(0, 0);
             this.chartControl1.Name = "chartControl1";
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
-            this.chartControl1.Size = new System.Drawing.Size(910, 410);
+            this.chartControl1.Size = new System.Drawing.Size(957, 410);
             this.chartControl1.TabIndex = 2;
             // 
             // frmTrangChinh
@@ -177,7 +177,7 @@ namespace CUAHANGXEMAY
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Tile;
             this.BackgroundImageStore = global::CUAHANGXEMAY.Properties.Resources.backgroundnomoto;
-            this.ClientSize = new System.Drawing.Size(988, 444);
+            this.ClientSize = new System.Drawing.Size(1035, 444);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.toolStrip1);

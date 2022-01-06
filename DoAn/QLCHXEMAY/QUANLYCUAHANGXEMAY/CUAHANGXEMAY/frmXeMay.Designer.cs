@@ -180,7 +180,7 @@ namespace CUAHANGXEMAY
             // 
             this.splitContainerControl1.Panel2.Controls.Add(this.groupControl1);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(1089, 401);
+            this.splitContainerControl1.Size = new System.Drawing.Size(1089, 391);
             this.splitContainerControl1.SplitterPosition = 816;
             this.splitContainerControl1.TabIndex = 3;
             // 
@@ -190,7 +190,7 @@ namespace CUAHANGXEMAY
             this.gcXeMay.Location = new System.Drawing.Point(0, 0);
             this.gcXeMay.MainView = this.gvXeMay;
             this.gcXeMay.Name = "gcXeMay";
-            this.gcXeMay.Size = new System.Drawing.Size(816, 401);
+            this.gcXeMay.Size = new System.Drawing.Size(816, 391);
             this.gcXeMay.TabIndex = 2;
             this.gcXeMay.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvXeMay});
@@ -317,7 +317,7 @@ namespace CUAHANGXEMAY
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(263, 401);
+            this.groupControl1.Size = new System.Drawing.Size(263, 391);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Thông tin";
             // 
@@ -466,7 +466,7 @@ namespace CUAHANGXEMAY
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1089, 455);
+            this.ClientSize = new System.Drawing.Size(1089, 445);
             this.Controls.Add(this.splitContainerControl1);
             this.Controls.Add(this.toolStrip1);
             this.Name = "frmXeMay";

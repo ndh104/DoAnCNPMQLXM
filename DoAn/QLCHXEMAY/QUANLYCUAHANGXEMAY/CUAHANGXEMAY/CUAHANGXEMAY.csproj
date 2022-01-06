@@ -294,6 +294,21 @@
   <ItemGroup>
     <None Include="Resources\backgroundnomoto.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banhang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xuathoadon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xuathd.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
