@@ -22,6 +22,7 @@ namespace CUAHANGXEMAY
         BUS_NHACUNGCAP _ncc;
         BUS_XEMAY _xemay;
         BUS_LOAIXE _loaixe;
+        BUS_MAUSAC _mauxe;
         string _maxe;
         bool _them;
         void loadData()
@@ -55,7 +56,6 @@ namespace CUAHANGXEMAY
         {
             txtTenXe.Text = "";
             txtGiaBan.Text = "";
-            txtMauSac.Text = "";
             txtTinhTrang.Text = "";
             txtDungTich.Text = "";
             cbbLoaiXe.Text = "";
@@ -67,7 +67,6 @@ namespace CUAHANGXEMAY
             txtTenXe.Enabled = en;
             txtMaXe.Enabled = en;
             txtGiaBan.Enabled = en;
-            txtMauSac.Enabled = en;
             txtTinhTrang.Enabled = en;
             txtDungTich.Enabled = en;
             cbbLoaiXe.Enabled = en;
@@ -96,6 +95,7 @@ namespace CUAHANGXEMAY
             showHideButton(false);
             enable(true);
             reset();
+            cbDisable.Enabled = true;
             txtMaXe.Enabled = false;
         }
 
@@ -111,12 +111,13 @@ namespace CUAHANGXEMAY
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
+            tb_CHITIETMAUXE mau = new tb_CHITIETMAUXE();
             if (_them)
             {
+
                 tb_XEMAY xe = new tb_XEMAY();
                 xe.MAXE = txtMaXe.Text;
                 xe.TENXE = txtTenXe.Text;
-                xe.MAUSAC = txtMauSac.Text;
                 xe.DUNGTICH = txtDungTich.Text;
                 xe.TINHTRANG = txtTinhTrang.Text;
                 xe.GIABAN = decimal.Parse(txtGiaBan.Text);
@@ -128,9 +129,7 @@ namespace CUAHANGXEMAY
             else
             {
                 tb_XEMAY xe = _xemay.getItem(_maxe);
-                xe.MAXE = txtMaXe.Text;
                 xe.TENXE = txtTenXe.Text;
-                xe.MAUSAC = txtMauSac.Text;
                 xe.DUNGTICH = txtDungTich.Text;
                 xe.TINHTRANG = txtTinhTrang.Text;
                 xe.GIABAN = decimal.Parse(txtGiaBan.Text);
@@ -170,7 +169,6 @@ namespace CUAHANGXEMAY
                     txtMaXe.Text = gvXeMay.GetFocusedRowCellValue("MAXE").ToString();
                     txtTenXe.Text = gvXeMay.GetFocusedRowCellValue("TENXE").ToString();
                     txtGiaBan.Text = gvXeMay.GetFocusedRowCellValue("GIABAN").ToString();
-                    txtMauSac.Text = gvXeMay.GetFocusedRowCellValue("MAUSAC").ToString();
                     txtDungTich.Text = gvXeMay.GetFocusedRowCellValue("DUNGTICH").ToString();
                     txtTinhTrang.Text = gvXeMay.GetFocusedRowCellValue("TINHTRANG").ToString();
                     cbbNCC.Text = gvXeMay.GetFocusedRowCellValue("TENNCC").ToString();

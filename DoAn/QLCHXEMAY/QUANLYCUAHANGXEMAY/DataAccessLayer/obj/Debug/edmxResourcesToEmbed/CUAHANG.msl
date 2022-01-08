@@ -1,6 +1,33 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="CUAHANGStoreContainer" CdmEntityContainer="Entities">
+    <FunctionImportMapping FunctionImportName="CHARTXE" FunctionName="CUAHANG.Store.CHARTXE">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CUAHANG.CHARTXE_Result">
+          <ScalarProperty Name="TENXE" ColumnName="TENXE" />
+          <ScalarProperty Name="cc" ColumnName="cc" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="tb_CHITIETHOADON">
+      <EntityTypeMapping TypeName="CUAHANG.tb_CHITIETHOADON">
+        <MappingFragment StoreEntitySet="tb_CHITIETHOADON">
+          <ScalarProperty Name="TONGTIEN" ColumnName="TONGTIEN" />
+          <ScalarProperty Name="SOLUONG" ColumnName="SOLUONG" />
+          <ScalarProperty Name="IDCHITIETMAUXE" ColumnName="IDCHITIETMAUXE" />
+          <ScalarProperty Name="MAHD" ColumnName="MAHD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_CHITIETMAUXE">
+      <EntityTypeMapping TypeName="CUAHANG.tb_CHITIETMAUXE">
+        <MappingFragment StoreEntitySet="tb_CHITIETMAUXE">
+          <ScalarProperty Name="IDCHITIETXE" ColumnName="IDCHITIETXE" />
+          <ScalarProperty Name="IDMAU" ColumnName="IDMAU" />
+          <ScalarProperty Name="MAXE" ColumnName="MAXE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="tb_HOADON">
       <EntityTypeMapping TypeName="CUAHANG.tb_HOADON">
         <MappingFragment StoreEntitySet="tb_HOADON">
@@ -28,6 +55,14 @@
           <ScalarProperty Name="DISABLE" ColumnName="DISABLE" />
           <ScalarProperty Name="TENLOAIXE" ColumnName="TENLOAIXE" />
           <ScalarProperty Name="MALOAI" ColumnName="MALOAI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_MAUSAC">
+      <EntityTypeMapping TypeName="CUAHANG.tb_MAUSAC">
+        <MappingFragment StoreEntitySet="tb_MAUSAC">
+          <ScalarProperty Name="TENMAU" ColumnName="TENMAU" />
+          <ScalarProperty Name="IDMAU" ColumnName="IDMAU" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -63,34 +98,15 @@
       <EntityTypeMapping TypeName="CUAHANG.tb_XEMAY">
         <MappingFragment StoreEntitySet="tb_XEMAY">
           <ScalarProperty Name="DISABLE" ColumnName="DISABLE" />
-          <ScalarProperty Name="MANCC" ColumnName="MANCC" />
-          <ScalarProperty Name="MALOAI" ColumnName="MALOAI" />
+          <ScalarProperty Name="GIABAN" ColumnName="GIABAN" />
           <ScalarProperty Name="TINHTRANG" ColumnName="TINHTRANG" />
           <ScalarProperty Name="DUNGTICH" ColumnName="DUNGTICH" />
-          <ScalarProperty Name="MAUSAC" ColumnName="MAUSAC" />
-          <ScalarProperty Name="GIABAN" ColumnName="GIABAN" />
+          <ScalarProperty Name="MANCC" ColumnName="MANCC" />
+          <ScalarProperty Name="MALOAI" ColumnName="MALOAI" />
           <ScalarProperty Name="TENXE" ColumnName="TENXE" />
           <ScalarProperty Name="MAXE" ColumnName="MAXE" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="tb_CHITIETHOADON">
-      <EntityTypeMapping TypeName="CUAHANG.tb_CHITIETHOADON">
-        <MappingFragment StoreEntitySet="tb_CHITIETHOADON">
-          <ScalarProperty Name="DONGIA" ColumnName="DONGIA" />
-          <ScalarProperty Name="SOLUONG" ColumnName="SOLUONG" />
-          <ScalarProperty Name="MAXE" ColumnName="MAXE" />
-          <ScalarProperty Name="MAHD" ColumnName="MAHD" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <FunctionImportMapping FunctionImportName="CHARTXE" FunctionName="CUAHANG.Store.CHARTXE">
-      <ResultMapping>
-        <ComplexTypeMapping TypeName="CUAHANG.CHARTXE_Result">
-          <ScalarProperty Name="TENXE" ColumnName="TENXE" />
-          <ScalarProperty Name="cc" ColumnName="cc" />
-        </ComplexTypeMapping>
-      </ResultMapping>
-    </FunctionImportMapping>
   </EntityContainerMapping>
 </Mapping>

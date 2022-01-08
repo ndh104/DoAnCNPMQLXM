@@ -157,6 +157,12 @@
   <data name="4666276" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\4666276.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="7005829" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\7005829.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="xuathoadoncolor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\xuathoadoncolor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="logout" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -181,6 +187,9 @@
   <data name="printer1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\printer1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="xoacolor1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\xoacolor1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="46662761" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\46662761.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -199,20 +208,29 @@
   <data name="Button-Close-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Button-Close-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="laphoadoncolor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\laphoadoncolor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Button-Add-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button-Add-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="xuathd" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\xuathd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cbrplus1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cbrplus1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="7712081" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\7712081.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="9579709" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\9579709.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="dangnhap1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dangnhap1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="printercolor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\printercolor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="honda-bikes-icon-large-750x450" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\honda-bikes-icon-large-750x450.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="huycolor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\huycolor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="2179357" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2179357.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -229,8 +247,8 @@
   <data name="2970268" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2970268.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="9579709" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\9579709.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="7712081" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\7712081.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="nv" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nv.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -250,8 +268,11 @@
   <data name="statistical" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\statistical.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Button-Add-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Button-Add-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="dangnhap1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dangnhap1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="luucolor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\luucolor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CBRjpg1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CBRjpg1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -261,6 +282,9 @@
   </data>
   <data name="huybo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\huybo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="xoacolor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\xoacolor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="printer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\printer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -274,7 +298,7 @@
   <data name="banhang" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\banhang.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="7005829" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\7005829.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="xuathdcolor1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\xuathdcolor1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

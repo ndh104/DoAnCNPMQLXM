@@ -31,17 +31,14 @@ namespace BusinessLayer
         public List<BUS_OBJ_XEMAYFULL> getAllFull()
         {
             var listxemay = db.tb_XEMAY.ToList();
-
             List<BUS_OBJ_XEMAYFULL> listXeFull = new List<BUS_OBJ_XEMAYFULL>();
             BUS_OBJ_XEMAYFULL objxe;
-
             foreach (var item in listxemay)
             {
                 objxe = new BUS_OBJ_XEMAYFULL();
                 objxe.MAXE = item.MAXE;
                 objxe.TENXE = item.TENXE;
                 objxe.GIABAN = item.GIABAN;
-                objxe.MAUSAC = item.MAUSAC;
                 objxe.MALOAI = item.MALOAI;
                 objxe.DUNGTICH = item.DUNGTICH;
                 objxe.TINHTRANG = item.TINHTRANG;
@@ -71,9 +68,8 @@ namespace BusinessLayer
         }
         public void capnhat(tb_XEMAY xe)
         {
-            tb_XEMAY _xemay = db.tb_XEMAY.FirstOrDefault(x=>x.MAXE==xe.MAXE);
+            tb_XEMAY _xemay = db.tb_XEMAY.FirstOrDefault(x => x.MAXE == xe.MAXE);
             _xemay.TENXE = xe.TENXE;
-            _xemay.MAUSAC = xe.MAUSAC;
             _xemay.TINHTRANG = xe.TINHTRANG;
             _xemay.MANCC = xe.MANCC;
             _xemay.MALOAI = xe.MALOAI;

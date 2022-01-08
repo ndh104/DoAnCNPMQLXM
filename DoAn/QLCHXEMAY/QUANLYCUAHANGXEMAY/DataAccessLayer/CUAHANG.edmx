@@ -5,17 +5,23 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="CUAHANG.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'QLXEMAY.dbo.tb_CHITIETHOADON' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="tb_CHITIETHOADON">
           <Key>
             <PropertyRef Name="MAHD" />
-            <PropertyRef Name="MAXE" />
+            <PropertyRef Name="IDCHITIETMAUXE" />
           </Key>
           <Property Name="MAHD" Type="char" MaxLength="5" Nullable="false" />
-          <Property Name="MAXE" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="IDCHITIETMAUXE" Type="int" Nullable="false" />
           <Property Name="SOLUONG" Type="int" />
-          <Property Name="DONGIA" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="TONGTIEN" Type="numeric" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="tb_CHITIETMAUXE">
+          <Key>
+            <PropertyRef Name="IDCHITIETXE" />
+          </Key>
+          <Property Name="MAXE" Type="nchar" MaxLength="5" Nullable="false" />
+          <Property Name="IDMAU" Type="int" Nullable="false" />
+          <Property Name="IDCHITIETXE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
         </EntityType>
         <EntityType Name="tb_HOADON">
           <Key>
@@ -43,6 +49,13 @@ warning 6002: The table/view 'QLXEMAY.dbo.tb_CHITIETHOADON' does not have a prim
           <Property Name="MALOAI" Type="char" MaxLength="5" Nullable="false" />
           <Property Name="TENLOAIXE" Type="nvarchar" MaxLength="15" />
           <Property Name="DISABLE" Type="bit" />
+        </EntityType>
+        <EntityType Name="tb_MAUSAC">
+          <Key>
+            <PropertyRef Name="IDMAU" />
+          </Key>
+          <Property Name="IDMAU" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TENMAU" Type="nvarchar" MaxLength="20" />
         </EntityType>
         <EntityType Name="tb_NHACUNGCAP">
           <Key>
@@ -75,27 +88,14 @@ warning 6002: The table/view 'QLXEMAY.dbo.tb_CHITIETHOADON' does not have a prim
             <PropertyRef Name="MAXE" />
           </Key>
           <Property Name="MAXE" Type="char" MaxLength="5" Nullable="false" />
-          <Property Name="TENXE" Type="nvarchar" MaxLength="20" />
-          <Property Name="GIABAN" Type="money" />
-          <Property Name="MAUSAC" Type="nvarchar" MaxLength="20" />
-          <Property Name="DUNGTICH" Type="nvarchar" MaxLength="5" />
-          <Property Name="TINHTRANG" Type="nvarchar" MaxLength="3" />
+          <Property Name="TENXE" Type="nvarchar" MaxLength="50" />
           <Property Name="MALOAI" Type="char" MaxLength="5" Nullable="false" />
           <Property Name="MANCC" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="DUNGTICH" Type="nvarchar" MaxLength="5" />
+          <Property Name="TINHTRANG" Type="nvarchar" MaxLength="3" />
+          <Property Name="GIABAN" Type="money" />
           <Property Name="DISABLE" Type="bit" />
         </EntityType>
-        <Association Name="FK_tb_XEMAY_tb_XEMAY">
-          <End Role="tb_XEMAY" Type="Self.tb_XEMAY" Multiplicity="1" />
-          <End Role="tb_XEMAY1" Type="Self.tb_XEMAY" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="tb_XEMAY">
-              <PropertyRef Name="MAXE" />
-            </Principal>
-            <Dependent Role="tb_XEMAY1">
-              <PropertyRef Name="MAXE" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Function Name="CHARTXE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <ReturnType>
             <CollectionType>
@@ -107,39 +107,54 @@ warning 6002: The table/view 'QLXEMAY.dbo.tb_CHITIETHOADON' does not have a prim
           </ReturnType>
         </Function>
         <EntityContainer Name="CUAHANGStoreContainer">
+          <EntitySet Name="tb_CHITIETHOADON" EntityType="Self.tb_CHITIETHOADON" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_CHITIETMAUXE" EntityType="Self.tb_CHITIETMAUXE" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tb_HOADON" EntityType="Self.tb_HOADON" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tb_KHACHHANG" EntityType="Self.tb_KHACHHANG" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tb_LOAIXE" EntityType="Self.tb_LOAIXE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_MAUSAC" EntityType="Self.tb_MAUSAC" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tb_NHACUNGCAP" EntityType="Self.tb_NHACUNGCAP" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tb_NHANVIEN" EntityType="Self.tb_NHANVIEN" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tb_XEMAY" EntityType="Self.tb_XEMAY" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="tb_CHITIETHOADON" EntityType="Self.tb_CHITIETHOADON" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [tb_CHITIETHOADON].[MAHD] AS [MAHD], 
-    [tb_CHITIETHOADON].[MAXE] AS [MAXE], 
-    [tb_CHITIETHOADON].[SOLUONG] AS [SOLUONG], 
-    [tb_CHITIETHOADON].[DONGIA] AS [DONGIA]
-    FROM [dbo].[tb_CHITIETHOADON] AS [tb_CHITIETHOADON]</DefiningQuery>
-          </EntitySet>
-          <AssociationSet Name="FK_tb_XEMAY_tb_XEMAY" Association="Self.FK_tb_XEMAY_tb_XEMAY">
-            <End Role="tb_XEMAY" EntitySet="tb_XEMAY" />
-            <End Role="tb_XEMAY1" EntitySet="tb_XEMAY" />
-          </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="CUAHANG" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <FunctionImport Name="CHARTXE" IsComposable="true" ReturnType="Collection(CUAHANG.CHARTXE_Result)" />
+          <EntitySet Name="tb_CHITIETHOADON" EntityType="CUAHANG.tb_CHITIETHOADON" />
+          <EntitySet Name="tb_CHITIETMAUXE" EntityType="CUAHANG.tb_CHITIETMAUXE" />
           <EntitySet Name="tb_HOADON" EntityType="CUAHANG.tb_HOADON" />
           <EntitySet Name="tb_KHACHHANG" EntityType="CUAHANG.tb_KHACHHANG" />
           <EntitySet Name="tb_LOAIXE" EntityType="CUAHANG.tb_LOAIXE" />
+          <EntitySet Name="tb_MAUSAC" EntityType="CUAHANG.tb_MAUSAC" />
           <EntitySet Name="tb_NHACUNGCAP" EntityType="CUAHANG.tb_NHACUNGCAP" />
           <EntitySet Name="tb_NHANVIEN" EntityType="CUAHANG.tb_NHANVIEN" />
           <EntitySet Name="tb_XEMAY" EntityType="CUAHANG.tb_XEMAY" />
-          <EntitySet Name="tb_CHITIETHOADON" EntityType="CUAHANG.tb_CHITIETHOADON" />
-          <FunctionImport Name="CHARTXE" IsComposable="true" ReturnType="Collection(CUAHANG.CHARTXE_Result)" />
-        </EntityContainer>
+          </EntityContainer>
+        <ComplexType Name="CHARTXE_Result">
+          <Property Type="String" Name="TENXE" Nullable="true" MaxLength="20" />
+          <Property Type="Int32" Name="cc" Nullable="true" />
+        </ComplexType>
+        <EntityType Name="tb_CHITIETHOADON">
+          <Key>
+            <PropertyRef Name="MAHD" />
+            <PropertyRef Name="IDCHITIETMAUXE" />
+          </Key>
+          <Property Name="MAHD" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="IDCHITIETMAUXE" Type="Int32" Nullable="false" />
+          <Property Name="SOLUONG" Type="Int32" />
+          <Property Name="TONGTIEN" Type="Decimal" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="tb_CHITIETMAUXE">
+          <Key>
+            <PropertyRef Name="IDCHITIETXE" />
+          </Key>
+          <Property Name="MAXE" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="true" />
+          <Property Name="IDMAU" Type="Int32" Nullable="false" />
+          <Property Name="IDCHITIETXE" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
         <EntityType Name="tb_HOADON">
           <Key>
             <PropertyRef Name="MAHD" />
@@ -166,6 +181,13 @@ warning 6002: The table/view 'QLXEMAY.dbo.tb_CHITIETHOADON' does not have a prim
           <Property Name="MALOAI" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
           <Property Name="TENLOAIXE" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
           <Property Name="DISABLE" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="tb_MAUSAC">
+          <Key>
+            <PropertyRef Name="IDMAU" />
+          </Key>
+          <Property Name="IDMAU" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TENMAU" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="tb_NHACUNGCAP">
           <Key>
@@ -198,35 +220,47 @@ warning 6002: The table/view 'QLXEMAY.dbo.tb_CHITIETHOADON' does not have a prim
             <PropertyRef Name="MAXE" />
           </Key>
           <Property Name="MAXE" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
-          <Property Name="TENXE" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="GIABAN" Type="Decimal" Precision="19" Scale="4" />
-          <Property Name="MAUSAC" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="DUNGTICH" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
-          <Property Name="TINHTRANG" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="TENXE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="MALOAI" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
           <Property Name="MANCC" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="DUNGTICH" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="TINHTRANG" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="GIABAN" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="DISABLE" Type="Boolean" />
-          </EntityType>
-        <EntityType Name="tb_CHITIETHOADON">
-          <Key>
-            <PropertyRef Name="MAHD" />
-            <PropertyRef Name="MAXE" />
-          </Key>
-          <Property Name="MAHD" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
-          <Property Name="MAXE" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
-          <Property Name="SOLUONG" Type="Int32" />
-          <Property Name="DONGIA" Type="Decimal" Precision="18" Scale="0" />
         </EntityType>
-        <ComplexType Name="CHARTXE_Result">
-          <Property Type="String" Name="TENXE" Nullable="true" MaxLength="20" />
-          <Property Type="Int32" Name="cc" Nullable="true" />
-        </ComplexType>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="CUAHANGStoreContainer" CdmEntityContainer="Entities">
+          <FunctionImportMapping FunctionImportName="CHARTXE" FunctionName="CUAHANG.Store.CHARTXE">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="CUAHANG.CHARTXE_Result">
+                <ScalarProperty Name="TENXE" ColumnName="TENXE" />
+                <ScalarProperty Name="cc" ColumnName="cc" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="tb_CHITIETHOADON">
+            <EntityTypeMapping TypeName="CUAHANG.tb_CHITIETHOADON">
+              <MappingFragment StoreEntitySet="tb_CHITIETHOADON">
+                <ScalarProperty Name="TONGTIEN" ColumnName="TONGTIEN" />
+                <ScalarProperty Name="SOLUONG" ColumnName="SOLUONG" />
+                <ScalarProperty Name="IDCHITIETMAUXE" ColumnName="IDCHITIETMAUXE" />
+                <ScalarProperty Name="MAHD" ColumnName="MAHD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_CHITIETMAUXE">
+            <EntityTypeMapping TypeName="CUAHANG.tb_CHITIETMAUXE">
+              <MappingFragment StoreEntitySet="tb_CHITIETMAUXE">
+                <ScalarProperty Name="IDCHITIETXE" ColumnName="IDCHITIETXE" />
+                <ScalarProperty Name="IDMAU" ColumnName="IDMAU" />
+                <ScalarProperty Name="MAXE" ColumnName="MAXE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="tb_HOADON">
             <EntityTypeMapping TypeName="CUAHANG.tb_HOADON">
               <MappingFragment StoreEntitySet="tb_HOADON">
@@ -254,6 +288,14 @@ warning 6002: The table/view 'QLXEMAY.dbo.tb_CHITIETHOADON' does not have a prim
                 <ScalarProperty Name="DISABLE" ColumnName="DISABLE" />
                 <ScalarProperty Name="TENLOAIXE" ColumnName="TENLOAIXE" />
                 <ScalarProperty Name="MALOAI" ColumnName="MALOAI" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_MAUSAC">
+            <EntityTypeMapping TypeName="CUAHANG.tb_MAUSAC">
+              <MappingFragment StoreEntitySet="tb_MAUSAC">
+                <ScalarProperty Name="TENMAU" ColumnName="TENMAU" />
+                <ScalarProperty Name="IDMAU" ColumnName="IDMAU" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -289,36 +331,17 @@ warning 6002: The table/view 'QLXEMAY.dbo.tb_CHITIETHOADON' does not have a prim
             <EntityTypeMapping TypeName="CUAHANG.tb_XEMAY">
               <MappingFragment StoreEntitySet="tb_XEMAY">
                 <ScalarProperty Name="DISABLE" ColumnName="DISABLE" />
-                <ScalarProperty Name="MANCC" ColumnName="MANCC" />
-                <ScalarProperty Name="MALOAI" ColumnName="MALOAI" />
+                <ScalarProperty Name="GIABAN" ColumnName="GIABAN" />
                 <ScalarProperty Name="TINHTRANG" ColumnName="TINHTRANG" />
                 <ScalarProperty Name="DUNGTICH" ColumnName="DUNGTICH" />
-                <ScalarProperty Name="MAUSAC" ColumnName="MAUSAC" />
-                <ScalarProperty Name="GIABAN" ColumnName="GIABAN" />
+                <ScalarProperty Name="MANCC" ColumnName="MANCC" />
+                <ScalarProperty Name="MALOAI" ColumnName="MALOAI" />
                 <ScalarProperty Name="TENXE" ColumnName="TENXE" />
                 <ScalarProperty Name="MAXE" ColumnName="MAXE" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="tb_CHITIETHOADON">
-            <EntityTypeMapping TypeName="CUAHANG.tb_CHITIETHOADON">
-              <MappingFragment StoreEntitySet="tb_CHITIETHOADON">
-                <ScalarProperty Name="DONGIA" ColumnName="DONGIA" />
-                <ScalarProperty Name="SOLUONG" ColumnName="SOLUONG" />
-                <ScalarProperty Name="MAXE" ColumnName="MAXE" />
-                <ScalarProperty Name="MAHD" ColumnName="MAHD" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="CHARTXE" FunctionName="CUAHANG.Store.CHARTXE">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="CUAHANG.CHARTXE_Result">
-                <ScalarProperty Name="TENXE" ColumnName="TENXE" />
-                <ScalarProperty Name="cc" ColumnName="cc" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
-        </EntityContainerMapping>
+          </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
   </edmx:Runtime>

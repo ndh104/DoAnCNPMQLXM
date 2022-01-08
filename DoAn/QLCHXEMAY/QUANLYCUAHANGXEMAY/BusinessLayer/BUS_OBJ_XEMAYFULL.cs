@@ -11,7 +11,6 @@ namespace BusinessLayer
         public string MAXE { get; set; }
         public string TENXE { get; set; }
         public Nullable<decimal> GIABAN { get; set; }
-        public string MAUSAC { get; set; }
         public string DUNGTICH { get; set; }
         public string TINHTRANG { get; set; }
         public string MALOAI { get; set; }

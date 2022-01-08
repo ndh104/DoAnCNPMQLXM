@@ -15,8 +15,8 @@ namespace DataAccessLayer
     public partial class tb_CHITIETHOADON
     {
         public string MAHD { get; set; }
-        public string MAXE { get; set; }
+        public int IDCHITIETMAUXE { get; set; }
         public Nullable<int> SOLUONG { get; set; }
-        public Nullable<decimal> DONGIA { get; set; }
+        public Nullable<decimal> TONGTIEN { get; set; }
     }
 }

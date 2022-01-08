@@ -27,13 +27,15 @@ namespace DataAccessLayer
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<tb_CHITIETHOADON> tb_CHITIETHOADON { get; set; }
+        public virtual DbSet<tb_CHITIETMAUXE> tb_CHITIETMAUXE { get; set; }
         public virtual DbSet<tb_HOADON> tb_HOADON { get; set; }
         public virtual DbSet<tb_KHACHHANG> tb_KHACHHANG { get; set; }
         public virtual DbSet<tb_LOAIXE> tb_LOAIXE { get; set; }
+        public virtual DbSet<tb_MAUSAC> tb_MAUSAC { get; set; }
         public virtual DbSet<tb_NHACUNGCAP> tb_NHACUNGCAP { get; set; }
         public virtual DbSet<tb_NHANVIEN> tb_NHANVIEN { get; set; }
         public virtual DbSet<tb_XEMAY> tb_XEMAY { get; set; }
-        public virtual DbSet<tb_CHITIETHOADON> tb_CHITIETHOADON { get; set; }
     
         [DbFunction("Entities", "CHARTXE")]
         public virtual IQueryable<CHARTXE_Result> CHARTXE()

@@ -1,16 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="CUAHANG.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'QLXEMAY.dbo.tb_CHITIETHOADON' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="tb_CHITIETHOADON">
     <Key>
       <PropertyRef Name="MAHD" />
-      <PropertyRef Name="MAXE" />
+      <PropertyRef Name="IDCHITIETMAUXE" />
     </Key>
     <Property Name="MAHD" Type="char" MaxLength="5" Nullable="false" />
-    <Property Name="MAXE" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="IDCHITIETMAUXE" Type="int" Nullable="false" />
     <Property Name="SOLUONG" Type="int" />
-    <Property Name="DONGIA" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="TONGTIEN" Type="numeric" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="tb_CHITIETMAUXE">
+    <Key>
+      <PropertyRef Name="IDCHITIETXE" />
+    </Key>
+    <Property Name="MAXE" Type="nchar" MaxLength="5" Nullable="false" />
+    <Property Name="IDMAU" Type="int" Nullable="false" />
+    <Property Name="IDCHITIETXE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
   </EntityType>
   <EntityType Name="tb_HOADON">
     <Key>
@@ -38,6 +44,13 @@ warning 6002: The table/view 'QLXEMAY.dbo.tb_CHITIETHOADON' does not have a prim
     <Property Name="MALOAI" Type="char" MaxLength="5" Nullable="false" />
     <Property Name="TENLOAIXE" Type="nvarchar" MaxLength="15" />
     <Property Name="DISABLE" Type="bit" />
+  </EntityType>
+  <EntityType Name="tb_MAUSAC">
+    <Key>
+      <PropertyRef Name="IDMAU" />
+    </Key>
+    <Property Name="IDMAU" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TENMAU" Type="nvarchar" MaxLength="20" />
   </EntityType>
   <EntityType Name="tb_NHACUNGCAP">
     <Key>
@@ -70,27 +83,14 @@ warning 6002: The table/view 'QLXEMAY.dbo.tb_CHITIETHOADON' does not have a prim
       <PropertyRef Name="MAXE" />
     </Key>
     <Property Name="MAXE" Type="char" MaxLength="5" Nullable="false" />
-    <Property Name="TENXE" Type="nvarchar" MaxLength="20" />
-    <Property Name="GIABAN" Type="money" />
-    <Property Name="MAUSAC" Type="nvarchar" MaxLength="20" />
-    <Property Name="DUNGTICH" Type="nvarchar" MaxLength="5" />
-    <Property Name="TINHTRANG" Type="nvarchar" MaxLength="3" />
+    <Property Name="TENXE" Type="nvarchar" MaxLength="50" />
     <Property Name="MALOAI" Type="char" MaxLength="5" Nullable="false" />
     <Property Name="MANCC" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="DUNGTICH" Type="nvarchar" MaxLength="5" />
+    <Property Name="TINHTRANG" Type="nvarchar" MaxLength="3" />
+    <Property Name="GIABAN" Type="money" />
     <Property Name="DISABLE" Type="bit" />
   </EntityType>
-  <Association Name="FK_tb_XEMAY_tb_XEMAY">
-    <End Role="tb_XEMAY" Type="Self.tb_XEMAY" Multiplicity="1" />
-    <End Role="tb_XEMAY1" Type="Self.tb_XEMAY" Multiplicity="0..1" />
-    <ReferentialConstraint>
-      <Principal Role="tb_XEMAY">
-        <PropertyRef Name="MAXE" />
-      </Principal>
-      <Dependent Role="tb_XEMAY1">
-        <PropertyRef Name="MAXE" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Function Name="CHARTXE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <ReturnType>
       <CollectionType>
@@ -102,23 +102,14 @@ warning 6002: The table/view 'QLXEMAY.dbo.tb_CHITIETHOADON' does not have a prim
     </ReturnType>
   </Function>
   <EntityContainer Name="CUAHANGStoreContainer">
+    <EntitySet Name="tb_CHITIETHOADON" EntityType="Self.tb_CHITIETHOADON" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_CHITIETMAUXE" EntityType="Self.tb_CHITIETMAUXE" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_HOADON" EntityType="Self.tb_HOADON" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_KHACHHANG" EntityType="Self.tb_KHACHHANG" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_LOAIXE" EntityType="Self.tb_LOAIXE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_MAUSAC" EntityType="Self.tb_MAUSAC" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_NHACUNGCAP" EntityType="Self.tb_NHACUNGCAP" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_NHANVIEN" EntityType="Self.tb_NHANVIEN" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_XEMAY" EntityType="Self.tb_XEMAY" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="tb_CHITIETHOADON" EntityType="Self.tb_CHITIETHOADON" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [tb_CHITIETHOADON].[MAHD] AS [MAHD], 
-    [tb_CHITIETHOADON].[MAXE] AS [MAXE], 
-    [tb_CHITIETHOADON].[SOLUONG] AS [SOLUONG], 
-    [tb_CHITIETHOADON].[DONGIA] AS [DONGIA]
-    FROM [dbo].[tb_CHITIETHOADON] AS [tb_CHITIETHOADON]</DefiningQuery>
-    </EntitySet>
-    <AssociationSet Name="FK_tb_XEMAY_tb_XEMAY" Association="Self.FK_tb_XEMAY_tb_XEMAY">
-      <End Role="tb_XEMAY" EntitySet="tb_XEMAY" />
-      <End Role="tb_XEMAY1" EntitySet="tb_XEMAY" />
-    </AssociationSet>
   </EntityContainer>
 </Schema>

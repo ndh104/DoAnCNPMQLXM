@@ -78,6 +78,9 @@
     <Compile Include="tb_CHITIETHOADON.cs">
       <DependentUpon>CUAHANG.tt</DependentUpon>
     </Compile>
+    <Compile Include="tb_CHITIETMAUXE.cs">
+      <DependentUpon>CUAHANG.tt</DependentUpon>
+    </Compile>
     <Compile Include="tb_HOADON.cs">
       <DependentUpon>CUAHANG.tt</DependentUpon>
     </Compile>
@@ -85,6 +88,9 @@
       <DependentUpon>CUAHANG.tt</DependentUpon>
     </Compile>
     <Compile Include="tb_LOAIXE.cs">
+      <DependentUpon>CUAHANG.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_MAUSAC.cs">
       <DependentUpon>CUAHANG.tt</DependentUpon>
     </Compile>
     <Compile Include="tb_NHACUNGCAP.cs">

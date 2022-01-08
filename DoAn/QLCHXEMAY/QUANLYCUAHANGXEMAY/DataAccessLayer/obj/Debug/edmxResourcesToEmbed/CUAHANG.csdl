@@ -1,15 +1,39 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="CUAHANG" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="CHARTXE" IsComposable="true" ReturnType="Collection(CUAHANG.CHARTXE_Result)" />
+    <EntitySet Name="tb_CHITIETHOADON" EntityType="CUAHANG.tb_CHITIETHOADON" />
+    <EntitySet Name="tb_CHITIETMAUXE" EntityType="CUAHANG.tb_CHITIETMAUXE" />
     <EntitySet Name="tb_HOADON" EntityType="CUAHANG.tb_HOADON" />
     <EntitySet Name="tb_KHACHHANG" EntityType="CUAHANG.tb_KHACHHANG" />
     <EntitySet Name="tb_LOAIXE" EntityType="CUAHANG.tb_LOAIXE" />
+    <EntitySet Name="tb_MAUSAC" EntityType="CUAHANG.tb_MAUSAC" />
     <EntitySet Name="tb_NHACUNGCAP" EntityType="CUAHANG.tb_NHACUNGCAP" />
     <EntitySet Name="tb_NHANVIEN" EntityType="CUAHANG.tb_NHANVIEN" />
     <EntitySet Name="tb_XEMAY" EntityType="CUAHANG.tb_XEMAY" />
-    <EntitySet Name="tb_CHITIETHOADON" EntityType="CUAHANG.tb_CHITIETHOADON" />
-    <FunctionImport Name="CHARTXE" IsComposable="true" ReturnType="Collection(CUAHANG.CHARTXE_Result)" />
   </EntityContainer>
+  <ComplexType Name="CHARTXE_Result">
+    <Property Type="String" Name="TENXE" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="cc" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="tb_CHITIETHOADON">
+    <Key>
+      <PropertyRef Name="MAHD" />
+      <PropertyRef Name="IDCHITIETMAUXE" />
+    </Key>
+    <Property Name="MAHD" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="IDCHITIETMAUXE" Type="Int32" Nullable="false" />
+    <Property Name="SOLUONG" Type="Int32" />
+    <Property Name="TONGTIEN" Type="Decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="tb_CHITIETMAUXE">
+    <Key>
+      <PropertyRef Name="IDCHITIETXE" />
+    </Key>
+    <Property Name="MAXE" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="true" />
+    <Property Name="IDMAU" Type="Int32" Nullable="false" />
+    <Property Name="IDCHITIETXE" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
   <EntityType Name="tb_HOADON">
     <Key>
       <PropertyRef Name="MAHD" />
@@ -36,6 +60,13 @@
     <Property Name="MALOAI" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
     <Property Name="TENLOAIXE" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
     <Property Name="DISABLE" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="tb_MAUSAC">
+    <Key>
+      <PropertyRef Name="IDMAU" />
+    </Key>
+    <Property Name="IDMAU" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TENMAU" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="tb_NHACUNGCAP">
     <Key>
@@ -68,27 +99,12 @@
       <PropertyRef Name="MAXE" />
     </Key>
     <Property Name="MAXE" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
-    <Property Name="TENXE" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-    <Property Name="GIABAN" Type="Decimal" Precision="19" Scale="4" />
-    <Property Name="MAUSAC" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-    <Property Name="DUNGTICH" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
-    <Property Name="TINHTRANG" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="TENXE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="MALOAI" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
     <Property Name="MANCC" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="DUNGTICH" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="TINHTRANG" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="GIABAN" Type="Decimal" Precision="19" Scale="4" />
     <Property Name="DISABLE" Type="Boolean" />
   </EntityType>
-  <EntityType Name="tb_CHITIETHOADON">
-    <Key>
-      <PropertyRef Name="MAHD" />
-      <PropertyRef Name="MAXE" />
-    </Key>
-    <Property Name="MAHD" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
-    <Property Name="MAXE" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
-    <Property Name="SOLUONG" Type="Int32" />
-    <Property Name="DONGIA" Type="Decimal" Precision="18" Scale="0" />
-  </EntityType>
-  <ComplexType Name="CHARTXE_Result">
-    <Property Type="String" Name="TENXE" Nullable="true" MaxLength="20" />
-    <Property Type="Int32" Name="cc" Nullable="true" />
-  </ComplexType>
 </Schema>
