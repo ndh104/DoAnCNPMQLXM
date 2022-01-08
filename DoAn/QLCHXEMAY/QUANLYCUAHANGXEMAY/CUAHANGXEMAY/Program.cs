@@ -18,7 +18,7 @@ namespace CUAHANGXEMAY
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmXeMay());
+            Application.Run(new frmDangNhap());
         }
     }
 }

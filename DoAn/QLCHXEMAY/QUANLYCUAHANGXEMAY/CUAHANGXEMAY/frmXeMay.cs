@@ -22,7 +22,6 @@ namespace CUAHANGXEMAY
         BUS_NHACUNGCAP _ncc;
         BUS_XEMAY _xemay;
         BUS_LOAIXE _loaixe;
-        BUS_MAUSAC _mauxe;
         string _maxe;
         bool _them;
         void loadData()

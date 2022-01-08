@@ -19,36 +19,61 @@ namespace BusinessLayer
         {
             return db.tb_CHITIETHOADON.ToList();
         }
-        public List<BUS_OBJ_HOADON> getAllFull()
+        public List<tb_CHITIETMAUXE>getAllMauXe(string maxe)
         {
-            var listhoadon = db.tb_HOADON.ToList();
-            List<BUS_OBJ_HOADON> listHDFUll = new List<BUS_OBJ_HOADON>();
-            BUS_OBJ_HOADON objhoadon;
-            foreach (var item in listhoadon)
+            return db.tb_CHITIETMAUXE.Where(x => x.MAXE == maxe).ToList();
+        }
+        public List<BUS_OBJ_CHITIETMAUXE> getAllMauXeFull()
+        {
+            var listmausac = db.tb_CHITIETMAUXE.ToList();
+            List<BUS_OBJ_CHITIETMAUXE> listMauSacFull = new List<BUS_OBJ_CHITIETMAUXE>();
+            BUS_OBJ_CHITIETMAUXE objmausac;
+            foreach (var item in listmausac)
             {
-                objhoadon = new BUS_OBJ_HOADON();
-                objhoadon.MAHD = item.MAHD;
-                objhoadon.NGAYLAP = item.NGAYLAP;
-                objhoadon.MANV = item.MANV;
-                objhoadon.MAKH = item.MAKH;
-                //lấy đối tượng chi tiết hoá đơn từ bảng "tb_CHITIETHOADON"
-                var cthd = db.tb_CHITIETHOADON.FirstOrDefault(x => x.MAHD == item.MAHD);
-                //objhoadon.DONGIA = cthd.DONGIA;
-                objhoadon.SOLUONG = cthd.SOLUONG;
-                //lấy đối tượng nhân viên từ bảng "tb_NHANVIEN"
-                var nhanvien = db.tb_NHANVIEN.FirstOrDefault(x => x.MANV == item.MANV);
-                objhoadon.TENNV = nhanvien.TENNV;
-                //lấy đối tượng khách hàng từ bảng "tb_KHACHANG"
-                var khachhang = db.tb_KHACHHANG.FirstOrDefault(x => x.MAKH == item.MAKH);
-                objhoadon.TENKH = khachhang.TENKH;
-                //lấy đối tượng xe từ bảng "tb_XEMAY"
-                //var xeXEMAY = db.tb_XEMAY.FirstOrDefault(x => x.MAXE == cthd.MAXE);
-                //objhoadon.TENXE = xeXEMAY.TENXE;
-                //objhoadon.MAUSAC = xeXEMAY.MAUSAC;
-                //objhoadon.GIABAN = xeXEMAY.GIABAN;
-                listHDFUll.Add(objhoadon);
+                objmausac = new BUS_OBJ_CHITIETMAUXE();
+                objmausac.IDMAU = item.IDMAU;
+                objmausac.MAXE = item.MAXE;
+                objmausac.IDCHITIETXE = item.IDCHITIETXE;
+                var mausac = db.tb_MAUSAC.FirstOrDefault(x => x.IDMAU == item.IDMAU);
+                objmausac.TENMAU = mausac.TENMAU;
+                var xe = db.tb_XEMAY.FirstOrDefault(x => x.MAXE == item.MAXE);
+                objmausac.TENXE = xe.TENXE;
+                listMauSacFull.Add(objmausac);
             }
-            return listHDFUll.OrderBy(x => x.NGAYLAP).ToList();
+            return listMauSacFull.ToList();
+        }
+        public List<BUS_OBJ_BANHANG> getAllFull()
+        {
+            var listcthd = db.tb_CHITIETHOADON.ToList();
+            List<BUS_OBJ_BANHANG> listCTHDFUll = new List<BUS_OBJ_BANHANG>();
+            BUS_OBJ_BANHANG objbanhang;
+            foreach (var item in listcthd)
+            {
+                objbanhang = new BUS_OBJ_BANHANG();
+                objbanhang.MAHD = item.MAHD;
+                objbanhang.SOLUONG = item.SOLUONG;
+                objbanhang.TONGTIEN = item.TONGTIEN;
+                //lấy đối tượng hoá đơn từ bảng "tb_HOADON"
+                var hoadon = db.tb_HOADON.FirstOrDefault(x => x.MAHD == item.MAHD);
+                objbanhang.NGAYLAP = hoadon.NGAYLAP;
+                //lấy đối tượng nhân viên từ bảng "tb_NHANVIEN"
+                var nhanvien = db.tb_NHANVIEN.FirstOrDefault(x => x.MANV == hoadon.MANV);
+                objbanhang.TENNV = nhanvien.TENNV;
+                //lấy đối tượng khách hàng từ bảng "tb_KHACHANG"
+                var khachhang = db.tb_KHACHHANG.FirstOrDefault(x => x.MAKH == hoadon.MAKH);
+                objbanhang.TENKH = khachhang.TENKH;
+                //Lấy đối tượng từ bảng "tb_CHITIETMAUSAC"
+                var xeCTMAUXE = db.tb_CHITIETMAUXE.FirstOrDefault(x => x.IDCHITIETXE == item.IDCHITIETXE);
+                //Lấy đối tượng từ bảng "tb_MAUSAC"
+                var xeMAUSAC = db.tb_MAUSAC.FirstOrDefault(x => x.IDMAU == xeCTMAUXE.IDMAU);
+                objbanhang.TENMAU = xeMAUSAC.TENMAU;
+                //lấy đối tượng xe từ bảng "tb_XEMAY"
+                var xeXEMAY = db.tb_XEMAY.FirstOrDefault(x => x.MAXE == xeCTMAUXE.MAXE);
+                objbanhang.TENXE = xeXEMAY.TENXE;
+                objbanhang.GIABAN = xeXEMAY.GIABAN;
+                listCTHDFUll.Add(objbanhang);
+            }
+            return listCTHDFUll.OrderBy(x => x.NGAYLAP).ToList();
         }
         public void themCTHD(tb_CHITIETHOADON cthd)
         {

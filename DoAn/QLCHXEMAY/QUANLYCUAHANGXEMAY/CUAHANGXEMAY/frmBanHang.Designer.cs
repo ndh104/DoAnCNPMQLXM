@@ -38,10 +38,10 @@ namespace CUAHANGXEMAY
             this.TENNV = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TENKH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TENXE = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.MAUSAC = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TENMAU = new DevExpress.XtraGrid.Columns.GridColumn();
             this.GIABAN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.SOLUONG = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.DONGIA = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TONGTIEN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.gcBanHang = new DevExpress.XtraGrid.GridControl();
             this.gvBanHang = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -55,16 +55,16 @@ namespace CUAHANGXEMAY
             this.SOLUONGBAN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.THANHTIEN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.cbbMauSac = new System.Windows.Forms.ComboBox();
+            this.cbbTenKH = new System.Windows.Forms.ComboBox();
+            this.txtThanhTien = new DevExpress.XtraEditors.LabelControl();
+            this.txtGiaBan = new DevExpress.XtraEditors.LabelControl();
+            this.cbbTenXe = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtGiaBan = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.separatorControl1 = new DevExpress.XtraEditors.SeparatorControl();
-            this.txtTenNV = new System.Windows.Forms.TextBox();
             this.txtSoLuong = new System.Windows.Forms.TextBox();
-            this.txtMauSac = new System.Windows.Forms.TextBox();
             this.dtpNgayLap = new System.Windows.Forms.DateTimePicker();
-            this.txtThanhTien = new System.Windows.Forms.TextBox();
-            this.txtTenKH = new System.Windows.Forms.TextBox();
             this.txtMaHD = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -81,7 +81,7 @@ namespace CUAHANGXEMAY
             this.btnHuy = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnXuatHD = new System.Windows.Forms.ToolStripButton();
-            this.cbbTenXe = new System.Windows.Forms.ComboBox();
+            this.lblNhanVien = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
@@ -104,7 +104,7 @@ namespace CUAHANGXEMAY
             this.xtraTabControl1.Location = new System.Drawing.Point(0, 0);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl1.Size = new System.Drawing.Size(1118, 470);
+            this.xtraTabControl1.Size = new System.Drawing.Size(1118, 442);
             this.xtraTabControl1.TabIndex = 6;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -114,7 +114,7 @@ namespace CUAHANGXEMAY
             // 
             this.xtraTabPage1.Controls.Add(this.gcHoaDon);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1116, 445);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1116, 417);
             this.xtraTabPage1.Text = "Thông tin hoá đơn";
             // 
             // gcHoaDon
@@ -124,7 +124,7 @@ namespace CUAHANGXEMAY
             this.gcHoaDon.Location = new System.Drawing.Point(0, 0);
             this.gcHoaDon.MainView = this.gvHoaDon;
             this.gcHoaDon.Name = "gcHoaDon";
-            this.gcHoaDon.Size = new System.Drawing.Size(1116, 445);
+            this.gcHoaDon.Size = new System.Drawing.Size(1116, 417);
             this.gcHoaDon.TabIndex = 9;
             this.gcHoaDon.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvHoaDon});
@@ -139,10 +139,10 @@ namespace CUAHANGXEMAY
             this.TENNV,
             this.TENKH,
             this.TENXE,
-            this.MAUSAC,
+            this.TENMAU,
             this.GIABAN,
             this.SOLUONG,
-            this.DONGIA});
+            this.TONGTIEN});
             this.gvHoaDon.GridControl = this.gcHoaDon;
             this.gvHoaDon.Name = "gvHoaDon";
             this.gvHoaDon.OptionsView.ShowFooter = true;
@@ -193,18 +193,20 @@ namespace CUAHANGXEMAY
             this.TENXE.VisibleIndex = 4;
             this.TENXE.Width = 108;
             // 
-            // MAUSAC
+            // TENMAU
             // 
-            this.MAUSAC.Caption = "Màu sắc";
-            this.MAUSAC.FieldName = "MAUSAC";
-            this.MAUSAC.Name = "MAUSAC";
-            this.MAUSAC.Visible = true;
-            this.MAUSAC.VisibleIndex = 5;
-            this.MAUSAC.Width = 99;
+            this.TENMAU.Caption = "Màu sắc";
+            this.TENMAU.FieldName = "TENMAU";
+            this.TENMAU.Name = "TENMAU";
+            this.TENMAU.Visible = true;
+            this.TENMAU.VisibleIndex = 5;
+            this.TENMAU.Width = 99;
             // 
             // GIABAN
             // 
             this.GIABAN.Caption = "Giá bán(VND)";
+            this.GIABAN.DisplayFormat.FormatString = "0,0";
+            this.GIABAN.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.GIABAN.FieldName = "GIABAN";
             this.GIABAN.Name = "GIABAN";
             this.GIABAN.Visible = true;
@@ -220,18 +222,18 @@ namespace CUAHANGXEMAY
             this.SOLUONG.VisibleIndex = 7;
             this.SOLUONG.Width = 92;
             // 
-            // DONGIA
+            // TONGTIEN
             // 
-            this.DONGIA.Caption = "Tổng tiền (VND)";
-            this.DONGIA.DisplayFormat.FormatString = "0,0";
-            this.DONGIA.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.DONGIA.FieldName = "DONGIA";
-            this.DONGIA.Name = "DONGIA";
-            this.DONGIA.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "DONGIA", "Tổng tiền={0:n0}")});
-            this.DONGIA.Visible = true;
-            this.DONGIA.VisibleIndex = 8;
-            this.DONGIA.Width = 137;
+            this.TONGTIEN.Caption = "Tổng tiền (VND)";
+            this.TONGTIEN.DisplayFormat.FormatString = "0,0";
+            this.TONGTIEN.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.TONGTIEN.FieldName = "TONGTIEN";
+            this.TONGTIEN.Name = "TONGTIEN";
+            this.TONGTIEN.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TONGTIEN", "Tổng tiền={0:n0}")});
+            this.TONGTIEN.Visible = true;
+            this.TONGTIEN.VisibleIndex = 8;
+            this.TONGTIEN.Width = 137;
             // 
             // xtraTabPage2
             // 
@@ -239,7 +241,7 @@ namespace CUAHANGXEMAY
             this.xtraTabPage2.Controls.Add(this.groupControl1);
             this.xtraTabPage2.Controls.Add(this.toolStrip1);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(1116, 445);
+            this.xtraTabPage2.Size = new System.Drawing.Size(1116, 417);
             this.xtraTabPage2.Text = "Bán hàng";
             // 
             // gcBanHang
@@ -248,7 +250,7 @@ namespace CUAHANGXEMAY
             this.gcBanHang.Location = new System.Drawing.Point(0, 228);
             this.gcBanHang.MainView = this.gvBanHang;
             this.gcBanHang.Name = "gcBanHang";
-            this.gcBanHang.Size = new System.Drawing.Size(1116, 217);
+            this.gcBanHang.Size = new System.Drawing.Size(1116, 189);
             this.gcBanHang.TabIndex = 12;
             this.gcBanHang.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvBanHang});
@@ -344,7 +346,7 @@ namespace CUAHANGXEMAY
             // THANHTIEN
             // 
             this.THANHTIEN.Caption = "Thành tiền";
-            this.THANHTIEN.FieldName = "DONGIA";
+            this.THANHTIEN.FieldName = "TONGTIEN";
             this.THANHTIEN.Name = "THANHTIEN";
             this.THANHTIEN.Visible = true;
             this.THANHTIEN.VisibleIndex = 8;
@@ -363,17 +365,17 @@ namespace CUAHANGXEMAY
             this.groupControl1.Appearance.Options.UseForeColor = true;
             this.groupControl1.Appearance.Options.UseTextOptions = true;
             this.groupControl1.AppearanceCaption.Options.UseTextOptions = true;
+            this.groupControl1.Controls.Add(this.lblNhanVien);
+            this.groupControl1.Controls.Add(this.cbbMauSac);
+            this.groupControl1.Controls.Add(this.cbbTenKH);
+            this.groupControl1.Controls.Add(this.txtThanhTien);
+            this.groupControl1.Controls.Add(this.txtGiaBan);
             this.groupControl1.Controls.Add(this.cbbTenXe);
             this.groupControl1.Controls.Add(this.label10);
-            this.groupControl1.Controls.Add(this.txtGiaBan);
             this.groupControl1.Controls.Add(this.label9);
             this.groupControl1.Controls.Add(this.separatorControl1);
-            this.groupControl1.Controls.Add(this.txtTenNV);
             this.groupControl1.Controls.Add(this.txtSoLuong);
-            this.groupControl1.Controls.Add(this.txtMauSac);
             this.groupControl1.Controls.Add(this.dtpNgayLap);
-            this.groupControl1.Controls.Add(this.txtThanhTien);
-            this.groupControl1.Controls.Add(this.txtTenKH);
             this.groupControl1.Controls.Add(this.txtMaHD);
             this.groupControl1.Controls.Add(this.label8);
             this.groupControl1.Controls.Add(this.label7);
@@ -390,6 +392,54 @@ namespace CUAHANGXEMAY
             this.groupControl1.TabIndex = 11;
             this.groupControl1.Text = "Thông tin hoá đơn";
             // 
+            // cbbMauSac
+            // 
+            this.cbbMauSac.FormattingEnabled = true;
+            this.cbbMauSac.Location = new System.Drawing.Point(817, 68);
+            this.cbbMauSac.Name = "cbbMauSac";
+            this.cbbMauSac.Size = new System.Drawing.Size(167, 24);
+            this.cbbMauSac.TabIndex = 25;
+            // 
+            // cbbTenKH
+            // 
+            this.cbbTenKH.FormattingEnabled = true;
+            this.cbbTenKH.Location = new System.Drawing.Point(523, 68);
+            this.cbbTenKH.Name = "cbbTenKH";
+            this.cbbTenKH.Size = new System.Drawing.Size(167, 24);
+            this.cbbTenKH.TabIndex = 24;
+            // 
+            // txtThanhTien
+            // 
+            this.txtThanhTien.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtThanhTien.Appearance.Options.UseFont = true;
+            this.txtThanhTien.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.txtThanhTien.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
+            this.txtThanhTien.Location = new System.Drawing.Point(817, 123);
+            this.txtThanhTien.Name = "txtThanhTien";
+            this.txtThanhTien.Size = new System.Drawing.Size(167, 23);
+            this.txtThanhTien.TabIndex = 22;
+            this.txtThanhTien.Text = "...";
+            // 
+            // txtGiaBan
+            // 
+            this.txtGiaBan.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGiaBan.Appearance.Options.UseFont = true;
+            this.txtGiaBan.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.txtGiaBan.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
+            this.txtGiaBan.Location = new System.Drawing.Point(187, 123);
+            this.txtGiaBan.Name = "txtGiaBan";
+            this.txtGiaBan.Size = new System.Drawing.Size(167, 23);
+            this.txtGiaBan.TabIndex = 21;
+            this.txtGiaBan.Text = "...";
+            // 
+            // cbbTenXe
+            // 
+            this.cbbTenXe.FormattingEnabled = true;
+            this.cbbTenXe.Location = new System.Drawing.Point(817, 31);
+            this.cbbTenXe.Name = "cbbTenXe";
+            this.cbbTenXe.Size = new System.Drawing.Size(167, 24);
+            this.cbbTenXe.TabIndex = 20;
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -399,15 +449,6 @@ namespace CUAHANGXEMAY
             this.label10.Size = new System.Drawing.Size(229, 16);
             this.label10.TabIndex = 19;
             this.label10.Text = "*Tổng tiền đã bao gồm thuế VAT 10%";
-            // 
-            // txtGiaBan
-            // 
-            this.txtGiaBan.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGiaBan.Location = new System.Drawing.Point(187, 123);
-            this.txtGiaBan.Name = "txtGiaBan";
-            this.txtGiaBan.Size = new System.Drawing.Size(167, 23);
-            this.txtGiaBan.TabIndex = 18;
-            this.txtGiaBan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label9
             // 
@@ -430,14 +471,6 @@ namespace CUAHANGXEMAY
             this.separatorControl1.Size = new System.Drawing.Size(1113, 20);
             this.separatorControl1.TabIndex = 16;
             // 
-            // txtTenNV
-            // 
-            this.txtTenNV.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenNV.Location = new System.Drawing.Point(523, 31);
-            this.txtTenNV.Name = "txtTenNV";
-            this.txtTenNV.Size = new System.Drawing.Size(167, 23);
-            this.txtTenNV.TabIndex = 15;
-            // 
             // txtSoLuong
             // 
             this.txtSoLuong.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -445,15 +478,8 @@ namespace CUAHANGXEMAY
             this.txtSoLuong.Name = "txtSoLuong";
             this.txtSoLuong.Size = new System.Drawing.Size(167, 23);
             this.txtSoLuong.TabIndex = 13;
+            this.txtSoLuong.Text = "1";
             this.txtSoLuong.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtMauSac
-            // 
-            this.txtMauSac.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMauSac.Location = new System.Drawing.Point(817, 68);
-            this.txtMauSac.Name = "txtMauSac";
-            this.txtMauSac.Size = new System.Drawing.Size(167, 23);
-            this.txtMauSac.TabIndex = 12;
             // 
             // dtpNgayLap
             // 
@@ -464,23 +490,6 @@ namespace CUAHANGXEMAY
             this.dtpNgayLap.Size = new System.Drawing.Size(167, 23);
             this.dtpNgayLap.TabIndex = 11;
             this.dtpNgayLap.Value = new System.DateTime(2022, 1, 7, 0, 0, 0, 0);
-            // 
-            // txtThanhTien
-            // 
-            this.txtThanhTien.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtThanhTien.Location = new System.Drawing.Point(817, 123);
-            this.txtThanhTien.Name = "txtThanhTien";
-            this.txtThanhTien.Size = new System.Drawing.Size(167, 23);
-            this.txtThanhTien.TabIndex = 10;
-            this.txtThanhTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtTenKH
-            // 
-            this.txtTenKH.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenKH.Location = new System.Drawing.Point(523, 68);
-            this.txtTenKH.Name = "txtTenKH";
-            this.txtTenKH.Size = new System.Drawing.Size(167, 23);
-            this.txtTenKH.TabIndex = 9;
             // 
             // txtMaHD
             // 
@@ -660,19 +669,23 @@ namespace CUAHANGXEMAY
             this.btnXuatHD.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnXuatHD.Click += new System.EventHandler(this.btnXuatHD_Click);
             // 
-            // cbbTenXe
+            // lblNhanVien
             // 
-            this.cbbTenXe.FormattingEnabled = true;
-            this.cbbTenXe.Location = new System.Drawing.Point(817, 31);
-            this.cbbTenXe.Name = "cbbTenXe";
-            this.cbbTenXe.Size = new System.Drawing.Size(167, 24);
-            this.cbbTenXe.TabIndex = 20;
+            this.lblNhanVien.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNhanVien.Appearance.Options.UseFont = true;
+            this.lblNhanVien.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblNhanVien.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
+            this.lblNhanVien.Location = new System.Drawing.Point(523, 31);
+            this.lblNhanVien.Name = "lblNhanVien";
+            this.lblNhanVien.Size = new System.Drawing.Size(167, 23);
+            this.lblNhanVien.TabIndex = 26;
+            this.lblNhanVien.Text = "...";
             // 
             // frmBanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1118, 470);
+            this.ClientSize = new System.Drawing.Size(1118, 442);
             this.Controls.Add(this.xtraTabControl1);
             this.Name = "frmBanHang";
             this.Text = "BÁN HÀNG";
@@ -706,22 +719,17 @@ namespace CUAHANGXEMAY
         private DevExpress.XtraGrid.Columns.GridColumn TENNV;
         private DevExpress.XtraGrid.Columns.GridColumn TENKH;
         private DevExpress.XtraGrid.Columns.GridColumn TENXE;
-        private DevExpress.XtraGrid.Columns.GridColumn MAUSAC;
+        private DevExpress.XtraGrid.Columns.GridColumn TENMAU;
         private DevExpress.XtraGrid.Columns.GridColumn GIABAN;
         private DevExpress.XtraGrid.Columns.GridColumn SOLUONG;
-        private DevExpress.XtraGrid.Columns.GridColumn DONGIA;
+        private DevExpress.XtraGrid.Columns.GridColumn TONGTIEN;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage2;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtGiaBan;
         private System.Windows.Forms.Label label9;
         private DevExpress.XtraEditors.SeparatorControl separatorControl1;
-        private System.Windows.Forms.TextBox txtTenNV;
         private System.Windows.Forms.TextBox txtSoLuong;
-        private System.Windows.Forms.TextBox txtMauSac;
         private System.Windows.Forms.DateTimePicker dtpNgayLap;
-        private System.Windows.Forms.TextBox txtThanhTien;
-        private System.Windows.Forms.TextBox txtTenKH;
         private System.Windows.Forms.TextBox txtMaHD;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -750,5 +758,10 @@ namespace CUAHANGXEMAY
         private System.Windows.Forms.ToolStripButton btnLuu;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ComboBox cbbTenXe;
+        private DevExpress.XtraEditors.LabelControl txtThanhTien;
+        private DevExpress.XtraEditors.LabelControl txtGiaBan;
+        private System.Windows.Forms.ComboBox cbbMauSac;
+        private System.Windows.Forms.ComboBox cbbTenKH;
+        private DevExpress.XtraEditors.LabelControl lblNhanVien;
     }
 }

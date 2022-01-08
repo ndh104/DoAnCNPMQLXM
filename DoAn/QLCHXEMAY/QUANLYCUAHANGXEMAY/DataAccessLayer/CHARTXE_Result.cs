@@ -13,7 +13,7 @@ namespace DataAccessLayer
     
     public partial class CHARTXE_Result
     {
+        public Nullable<int> SOLUONG { get; set; }
         public string TENXE { get; set; }
-        public Nullable<int> cc { get; set; }
     }
 }

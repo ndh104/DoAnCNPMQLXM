@@ -27,6 +27,10 @@ namespace BusinessLayer
             return db.tb_NHANVIEN.FirstOrDefault(x=> x.USERNAME == tk && x.MANV == manv && x.TENNV == hoten 
                                                  && x.NGAYSINH == ngaysinh && x.CMND == cmnd && x.SDT == sdt);
         }
+        public tb_NHANVIEN getItemNV(string tk)
+        {
+            return db.tb_NHANVIEN.FirstOrDefault(x => x.USERNAME == tk);
+        }
         public void capNhatMatKhau(string tk, string mk)
         {
             tb_NHANVIEN _nhanvien = db.tb_NHANVIEN.FirstOrDefault(x => x.USERNAME == tk); //lấy ra nhân viên có "USERNAME" = "tk"

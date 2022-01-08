@@ -4,16 +4,16 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="85421fbccfb04cdf970532dbc5a131fe" Name="Diagram1">
-        <EntityTypeShape EntityType="CUAHANG.tb_CHITIETHOADON" Width="1.5" PointX="0.75" PointY="0.75" />
-        <EntityTypeShape EntityType="CUAHANG.tb_CHITIETMAUXE" Width="1.5" PointX="2.75" PointY="0.75" />
-        <EntityTypeShape EntityType="CUAHANG.tb_HOADON" Width="1.5" PointX="0.75" PointY="3.75" />
-        <EntityTypeShape EntityType="CUAHANG.tb_KHACHHANG" Width="1.5" PointX="2.75" PointY="3.75" />
-        <EntityTypeShape EntityType="CUAHANG.tb_LOAIXE" Width="1.5" PointX="4.75" PointY="0.75" />
-        <EntityTypeShape EntityType="CUAHANG.tb_MAUSAC" Width="1.5" PointX="4.75" PointY="3.75" />
-        <EntityTypeShape EntityType="CUAHANG.tb_NHACUNGCAP" Width="1.5" PointX="6.75" PointY="0.75" />
-        <EntityTypeShape EntityType="CUAHANG.tb_NHANVIEN" Width="1.5" PointX="0.75" PointY="6.75" />
-        <EntityTypeShape EntityType="CUAHANG.tb_XEMAY" Width="1.5" PointX="2.75" PointY="6.75" />
+      <Diagram DiagramId="f0856c87761a42d9a69a7976917966f3" Name="Diagram1">
+        <EntityTypeShape EntityType="CUAHANG.tb_CHITIETHOADON" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CUAHANG.tb_CHITIETMAUXE" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CUAHANG.tb_HOADON" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CUAHANG.tb_KHACHHANG" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CUAHANG.tb_LOAIXE" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CUAHANG.tb_MAUSAC" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CUAHANG.tb_NHACUNGCAP" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CUAHANG.tb_NHANVIEN" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CUAHANG.tb_XEMAY" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

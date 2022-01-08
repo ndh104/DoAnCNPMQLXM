@@ -7,12 +7,12 @@ using DataAccessLayer;
 
 namespace BusinessLayer
 {
-    public class BUS_OBJ_HOADON
+    public class BUS_OBJ_BANHANG
     {
         public string MAHD { get; set; }
         public string MAXE { get; set; }
         public int? SOLUONG { get; set; }
-        public decimal? DONGIA { get; set; }
+        public decimal? TONGTIEN { get; set; }
         public DateTime? NGAYLAP { get; set; }
         public string MAKH { get; set; }
         public string MANV { get; set; }
@@ -20,6 +20,7 @@ namespace BusinessLayer
         public string TENNV { get; set; }
         public string TENXE { get; set; }
         public decimal? GIABAN { get; set; }
-        public string MAUSAC { get; set; }
+        public int IDCHITIETMAU { get; set; }
+        public string TENMAU { get; set; }
     }
 }

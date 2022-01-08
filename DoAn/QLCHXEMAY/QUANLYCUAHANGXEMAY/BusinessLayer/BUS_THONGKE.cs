@@ -23,7 +23,7 @@ namespace BusinessLayer
             {
                 objthongke = new BUS_OBJ_THONGKE();
                 objthongke.tenXe = item.TENXE;
-                objthongke.soLuong = item.cc;
+                objthongke.soLuong = item.SOLUONG;
                 listThongKe.Add(objthongke);
             }
             return listThongKe;

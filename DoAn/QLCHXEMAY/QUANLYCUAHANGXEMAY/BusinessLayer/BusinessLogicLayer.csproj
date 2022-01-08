@@ -59,7 +59,7 @@
     <Compile Include="BUS_NHACUNGCAP.cs" />
     <Compile Include="BUS_NHANVIEN.cs" />
     <Compile Include="BUS_OBJ_CHITIETMAUXE.cs" />
-    <Compile Include="BUS_OBJ_HOADON.cs" />
+    <Compile Include="BUS_OBJ_BANHANG.cs" />
     <Compile Include="BUS_OBJ_THONGKE.cs" />
     <Compile Include="BUS_OBJ_XEMAYFULL.cs" />
     <Compile Include="BUS_THONGKE.cs" />

@@ -20,17 +20,5 @@ namespace BusinessLayer
         {
             return db.tb_HOADON.ToList();
         }
-        public void themHD(tb_HOADON hd)
-        {
-            try
-            {
-                db.tb_HOADON.Add(hd);
-                db.SaveChanges();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Có lỗi xảy ra trong quá trình xử lý dữ liệu!" + ex.Message);
-            }
-        }
     }
 }

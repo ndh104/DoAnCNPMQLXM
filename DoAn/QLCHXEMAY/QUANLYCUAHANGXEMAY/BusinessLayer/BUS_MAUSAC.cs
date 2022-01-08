@@ -18,6 +18,6 @@ namespace BusinessLayer
         public List<tb_MAUSAC> getAll()
         {
             return db.tb_MAUSAC.ToList();
-        } 
+        }
     }
 }
