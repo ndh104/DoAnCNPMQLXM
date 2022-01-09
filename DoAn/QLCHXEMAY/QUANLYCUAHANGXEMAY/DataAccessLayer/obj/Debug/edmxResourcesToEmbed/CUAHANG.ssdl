@@ -101,6 +101,17 @@
       </CollectionType>
     </ReturnType>
   </Function>
+  <Function Name="MAUXETHEOMAXE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="maxe" Type="nvarchar" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="IDMAU" Type="int" Nullable="false" />
+          <Property Name="TENMAU" Type="nvarchar" MaxLength="20" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
   <EntityContainer Name="CUAHANGStoreContainer">
     <EntitySet Name="tb_CHITIETHOADON" EntityType="Self.tb_CHITIETHOADON" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_CHITIETMAUXE" EntityType="Self.tb_CHITIETMAUXE" Schema="dbo" store:Type="Tables" />

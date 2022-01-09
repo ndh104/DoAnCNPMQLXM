@@ -341,6 +341,7 @@ namespace CUAHANGXEMAY
             this.txtGiaBan.Name = "txtGiaBan";
             this.txtGiaBan.Size = new System.Drawing.Size(139, 21);
             this.txtGiaBan.TabIndex = 15;
+            this.txtGiaBan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtGiaBan.TextChanged += new System.EventHandler(this.txtGiaBan_TextChanged);
             // 
             // label8

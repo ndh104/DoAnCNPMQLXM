@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="CUAHANG.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="CUAHANG.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="tb_CHITIETHOADON">
           <Key>
             <PropertyRef Name="MAHD" />
@@ -106,6 +106,17 @@
             </CollectionType>
           </ReturnType>
         </Function>
+        <Function Name="MAUXETHEOMAXE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="maxe" Type="nvarchar" Mode="In" />
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="IDMAU" Type="int" Nullable="false" />
+                <Property Name="TENMAU" Type="nvarchar" MaxLength="20" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
         <EntityContainer Name="CUAHANGStoreContainer">
           <EntitySet Name="tb_CHITIETHOADON" EntityType="Self.tb_CHITIETHOADON" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tb_CHITIETMAUXE" EntityType="Self.tb_CHITIETMAUXE" Schema="dbo" store:Type="Tables" />
@@ -117,8 +128,7 @@
           <EntitySet Name="tb_NHANVIEN" EntityType="Self.tb_NHANVIEN" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tb_XEMAY" EntityType="Self.tb_XEMAY" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="CUAHANG" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -228,7 +238,14 @@
           <EntitySet Name="tb_NHANVIEN" EntityType="Self.tb_NHANVIEN" />
           <EntitySet Name="tb_XEMAY" EntityType="Self.tb_XEMAY" />
           <FunctionImport Name="CHARTXE" IsComposable="true" ReturnType="Collection(CUAHANG.CHARTXE_Result)" />
+          <FunctionImport Name="MAUXETHEOMAXE" IsComposable="true" ReturnType="Collection(CUAHANG.MAUXETHEOMAXE_Result)">
+            <Parameter Name="maxe" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
+        <ComplexType Name="MAUXETHEOMAXE_Result">
+          <Property Type="Int32" Name="IDMAU" Nullable="false" />
+          <Property Type="String" Name="TENMAU" Nullable="true" MaxLength="20" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -339,6 +356,14 @@
               <ComplexTypeMapping TypeName="CUAHANG.CHARTXE_Result">
                 <ScalarProperty Name="SOLUONG" ColumnName="SOLUONG" />
                 <ScalarProperty Name="TENXE" ColumnName="TENXE" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="MAUXETHEOMAXE" FunctionName="CUAHANG.Store.MAUXETHEOMAXE">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="CUAHANG.MAUXETHEOMAXE_Result">
+                <ScalarProperty Name="IDMAU" ColumnName="IDMAU" />
+                <ScalarProperty Name="TENMAU" ColumnName="TENMAU" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

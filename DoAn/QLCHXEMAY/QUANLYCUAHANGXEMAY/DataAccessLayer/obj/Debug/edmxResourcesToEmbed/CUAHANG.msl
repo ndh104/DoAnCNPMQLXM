@@ -108,5 +108,13 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="MAUXETHEOMAXE" FunctionName="CUAHANG.Store.MAUXETHEOMAXE">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CUAHANG.MAUXETHEOMAXE_Result">
+          <ScalarProperty Name="IDMAU" ColumnName="IDMAU" />
+          <ScalarProperty Name="TENMAU" ColumnName="TENMAU" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
   </EntityContainerMapping>
 </Mapping>

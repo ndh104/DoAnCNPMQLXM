@@ -42,5 +42,15 @@ namespace DataAccessLayer
         {
             return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<CHARTXE_Result>("[Entities].[CHARTXE]()");
         }
+    
+        [DbFunction("Entities", "MAUXETHEOMAXE")]
+        public virtual IQueryable<MAUXETHEOMAXE_Result> MAUXETHEOMAXE(string maxe)
+        {
+            var maxeParameter = maxe != null ?
+                new ObjectParameter("maxe", maxe) :
+                new ObjectParameter("maxe", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<MAUXETHEOMAXE_Result>("[Entities].[MAUXETHEOMAXE](@maxe)", maxeParameter);
+        }
     }
 }

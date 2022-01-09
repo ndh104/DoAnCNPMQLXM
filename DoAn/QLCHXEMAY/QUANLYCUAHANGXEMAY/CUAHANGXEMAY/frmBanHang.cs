@@ -10,6 +10,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DataAccessLayer;
 using BusinessLayer;
+using CrystalDecisions.Windows.Forms;
+using CrystalDecisions.Shared;
+using CrystalDecisions.CrystalReports.Engine;
 
 namespace CUAHANGXEMAY
 {
@@ -24,6 +27,7 @@ namespace CUAHANGXEMAY
         BUS_XEMAY _xemay;
         BUS_KHACHHANG _khachhang;
         BUS_NHANVIEN _nhanvien;
+        BUS_CHITIETMAUXE _ctmauxe;
         string maxe;
         bool _them;
         string _mahd;
@@ -32,18 +36,28 @@ namespace CUAHANGXEMAY
         {
             _hoadon = new BUS_HOADON();
             _cthoadon = new BUS_CHITIETHOADON();
+            _ctmauxe = new BUS_CHITIETMAUXE();
             loadData();
             showHideButton(true);
+            enable(false);
             cbbTenXe.SelectedValueChanged += CbbTenXe_SelectedValueChanged;
+            txtSoLuong.TextChanged += TxtSoLuong_TextChanged;
+            dtpNgayLap.Value = DateTime.Now.Date;
+        }
+
+        private void TxtSoLuong_TextChanged(object sender, EventArgs e)
+        {
+            txtThanhTien.Text = (double.Parse(txtGiaBan.Text) * double.Parse(txtSoLuong.Text) * 1.1).ToString();
         }
 
         private void CbbTenXe_SelectedValueChanged(object sender, EventArgs e)
         {
-            _cthoadon = new BUS_CHITIETHOADON();
-            cbbMauSac.DataSource = _cthoadon.getAllMauXeFull();
+            cbbMauSac.DataSource = _cthoadon.fnn(cbbTenXe.SelectedValue.ToString());
             cbbMauSac.DisplayMember = "TENMAU";
             cbbMauSac.ValueMember = "IDMAU";
             cbbMauSac.Text = "Chọn màu";
+            txtGiaBan.Text = _xemay.getItem(cbbTenXe.SelectedValue.ToString()).GIABAN.ToString();
+            txtThanhTien.Text = (double.Parse(txtGiaBan.Text) * double.Parse(txtSoLuong.Text) * 1.1).ToString();
         }
 
         void reset()
@@ -64,7 +78,6 @@ namespace CUAHANGXEMAY
             txtMaHD.Enabled = en;
             txtGiaBan.Enabled = en;
             cbbMauSac.Enabled = en;
-            dtpNgayLap.Enabled = en;
             lblNhanVien.Enabled = en;
             cbbTenKH.Enabled = en;
             txtGiaBan.Enabled = en;
@@ -78,12 +91,15 @@ namespace CUAHANGXEMAY
             btnXuatHD.Visible = !sh;
             btnHuy.Visible = !sh;
         }
+
         frmDangNhap frm = (frmDangNhap)Application.OpenForms["frmDangNhap"];
         void loadData()
         {
             _cthoadon = new BUS_CHITIETHOADON();
             gcHoaDon.DataSource = _cthoadon.getAllFull();
             gvHoaDon.OptionsBehavior.Editable = false;
+
+            
 
             _nhanvien = new BUS_NHANVIEN();
             var nv = _nhanvien.getItemNV(frm._tk);
@@ -101,11 +117,13 @@ namespace CUAHANGXEMAY
             cbbTenKH.ValueMember = "MAKH";
             cbbTenKH.Text = "Chọn khách hàng";
 
-            cbbMauSac.DataSource = _cthoadon.getAllMauXeFull();
+            cbbMauSac.DataSource = _cthoadon.fnn(cbbTenXe.SelectedValue.ToString());
             cbbMauSac.DisplayMember = "TENMAU";
             cbbMauSac.ValueMember = "IDMAU";
             cbbMauSac.Text = "Chọn màu";
 
+            txtGiaBan.Text = _xemay.getItem(cbbTenXe.SelectedValue.ToString()).GIABAN.ToString();
+            txtThanhTien.Text = (double.Parse(txtGiaBan.Text) * double.Parse(txtSoLuong.Text) * 1.1).ToString();
         }
         private void btnHuy_Click(object sender, EventArgs e)
         {
@@ -118,7 +136,37 @@ namespace CUAHANGXEMAY
         {
             
         }
-
+        private void xuatReport(string _tenReport, string _title)
+        {
+            Form frm = new Form();
+            CrystalReportViewer Crv = new CrystalReportViewer();
+            Crv.ShowGroupTreeButton = false;
+            Crv.ShowParameterPanelButton = false;
+            Crv.ToolPanelView = ToolPanelViewType.None;
+            TableLogOnInfo Thongtin;
+            ReportDocument doc = new ReportDocument();
+            doc.Load(System.Windows.Forms.Application.StartupPath + "\\Reports\\" + _tenReport + @".rpt");
+            Thongtin = doc.Database.Tables[0].LogOnInfo;
+            Thongtin.ConnectionInfo.ServerName = Connection._svname;
+            Thongtin.ConnectionInfo.UserID = Connection._usname;
+            Thongtin.ConnectionInfo.Password = Connection._pwrd;
+            Thongtin.ConnectionInfo.DatabaseName = Connection._dtbase;
+            doc.Database.Tables[0].ApplyLogOnInfo(Thongtin);
+            try
+            {
+                Crv.Dock = DockStyle.Fill;
+                Crv.ReportSource = doc;
+                frm.Controls.Add(Crv);
+                Crv.Refresh();
+                frm.Text = _title;
+                frm.WindowState = FormWindowState.Maximized;
+                frm.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+        }
         private void btnThemHoaDon_Click(object sender, EventArgs e)
         {
             _them = true;
@@ -130,19 +178,62 @@ namespace CUAHANGXEMAY
         {
             tb_CHITIETHOADON cthd = new tb_CHITIETHOADON();
             tb_HOADON hd = new tb_HOADON();
-            cthd.MAHD = txtMaHD.Text;
+            hd.MAHD = txtMaHD.Text;
             hd.NGAYLAP = DateTime.Now;
-            hd.MANV = "NV04";
-            hd.MAKH = "KH03";
-            //cthd.MAXE = cbbTenXe.SelectedValue.ToString();
-            //cthd.MAUSAC = txtMauSac.Text;
+            hd.MAKH = cbbTenKH.SelectedValue.ToString();
+            var nv = _nhanvien.getItemNV(frm._tk);
+            hd.MANV = nv.MANV;
+            cthd.MAHD = txtMaHD.Text;
             cthd.SOLUONG = int.Parse(txtSoLuong.Text);
-            //cthd.DONGIA = decimal.Parse(txtGiaBan.Text) * int.Parse(txtSoLuong.Text) *(11/10);
+            cthd.TONGTIEN = decimal.Parse(txtThanhTien.Text);
+            var ctmauxe = _ctmauxe.getItem(cbbTenXe.SelectedValue.ToString(), int.Parse(cbbMauSac.SelectedValue.ToString()));
+            cthd.IDCHITIETXE = ctmauxe.IDCHITIETXE;
+            _hoadon.themHD(hd);
             _cthoadon.themCTHD(cthd);
+            dtpNgayLap_ValueChanged(sender,e);
             _them = false;
             loadData();
             showHideButton(true);
             enable(false);
         }
+
+        private void txtGiaBan_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtGiaBan.Text.Length > 0)
+                {
+                    double a = double.Parse(txtGiaBan.Text);
+                    txtGiaBan.Text = a.ToString("N0");
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Dữ liệu nhập vào không hợp lệ!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void txtThanhTien_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtThanhTien.Text.Length > 0)
+                {
+                    double a = double.Parse(txtThanhTien.Text);
+                    txtThanhTien.Text = a.ToString("N0");
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Dữ liệu nhập vào không hợp lệ!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void dtpNgayLap_ValueChanged(object sender, EventArgs e)
+        {
+            gcBanHang.DataSource = _cthoadon.getAllFullTheoNgay(dtpNgayLap.Value);
+            gvBanHang.OptionsBehavior.Editable = false;
+        }
+
     }
 }

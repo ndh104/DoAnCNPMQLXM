@@ -16,7 +16,7 @@ namespace BusinessLayer
         }
         public tb_XEMAY getItem(string mx)
         {
-            return db.tb_XEMAY.FirstOrDefault(x=>x.MAXE==mx);
+            return db.tb_XEMAY.FirstOrDefault(x => x.MAXE == mx);
         }
         public List<tb_XEMAY> getAll()
         {
@@ -26,7 +26,6 @@ namespace BusinessLayer
         {
             return db.tb_XEMAY.Where(x => x.MAXE == maxe).ToList();
         }
-
 
         public List<BUS_OBJ_XEMAYFULL> getAllFull()
         {

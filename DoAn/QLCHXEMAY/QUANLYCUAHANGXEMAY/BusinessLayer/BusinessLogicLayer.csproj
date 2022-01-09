@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BUS_CHITIETHOADON.cs" />
+    <Compile Include="BUS_CHITIETMAUXE.cs" />
     <Compile Include="BUS_HOADON.cs" />
     <Compile Include="BUS_KHACHHANG.cs" />
     <Compile Include="BUS_LOAIXE.cs" />

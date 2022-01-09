@@ -106,5 +106,12 @@
     <EntitySet Name="tb_NHANVIEN" EntityType="Self.tb_NHANVIEN" />
     <EntitySet Name="tb_XEMAY" EntityType="Self.tb_XEMAY" />
     <FunctionImport Name="CHARTXE" IsComposable="true" ReturnType="Collection(CUAHANG.CHARTXE_Result)" />
+    <FunctionImport Name="MAUXETHEOMAXE" IsComposable="true" ReturnType="Collection(CUAHANG.MAUXETHEOMAXE_Result)">
+      <Parameter Name="maxe" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
+  <ComplexType Name="MAUXETHEOMAXE_Result">
+    <Property Type="Int32" Name="IDMAU" Nullable="false" />
+    <Property Type="String" Name="TENMAU" Nullable="true" MaxLength="20" />
+  </ComplexType>
 </Schema>

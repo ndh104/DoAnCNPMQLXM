@@ -74,6 +74,9 @@
     </Compile>
     <Compile Include="Encryptor.cs" />
     <Compile Include="Entities.cs" />
+    <Compile Include="MAUXETHEOMAXE_Result.cs">
+      <DependentUpon>CUAHANG.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="tb_CHITIETHOADON.cs">
       <DependentUpon>CUAHANG.tt</DependentUpon>
