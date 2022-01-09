@@ -19,6 +19,56 @@ namespace BusinessLayer
         {
             return db.tb_NHACUNGCAP.ToList();
         }
-        
+
+        public tb_NHACUNGCAP getItem(string mancc)
+        {
+            return db.tb_NHACUNGCAP.FirstOrDefault(x => x.MANCC == mancc);
+        }
+
+        public void them(tb_NHACUNGCAP NCC)
+        {
+            try
+            {
+                db.tb_NHACUNGCAP.Add(NCC);
+                db.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Có lỗi xảy ra trong quá trình tải dữ liệu" + ex.Message);
+            }
+        }
+
+        public void capnhat(tb_NHACUNGCAP NCC)
+        {
+            tb_NHACUNGCAP _NCC = db.tb_NHACUNGCAP.FirstOrDefault(x => x.MANCC == NCC.MANCC);
+            _NCC.TENNCC = NCC.TENNCC;
+            _NCC.DIACHI = NCC.DIACHI;
+            _NCC.SDT = NCC.SDT;
+            _NCC.DISABLE = NCC.DISABLE;
+            try
+            {
+
+                db.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Có lỗi xảy ra trong quá trình tải dữ liệu" + ex.Message);
+            }
+
+        }
+        public void xoa(string mancc)
+        {
+            tb_NHACUNGCAP NCC = db.tb_NHACUNGCAP.FirstOrDefault(x => x.MANCC == mancc);
+            NCC.DISABLE = true;
+            try
+            {
+
+                db.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Có lỗi xảy ra trong quá trình tải dữ liệu" + ex.Message);
+            }
+        }
     }
 }

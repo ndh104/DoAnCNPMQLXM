@@ -55,7 +55,6 @@ namespace CUAHANGXEMAY
             chkDisabled.Checked = false;
         }
         #endregion
-
         private void btnTrangChu_Click(object sender, EventArgs e)
         {
             this.Close();

@@ -43,3 +43,18 @@ D:\CONG_NGHE_PHAN_MEM\DOAN\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\Busine
 D:\CONG_NGHE_PHAN_MEM\DOAN\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\BusinessLayer\obj\Debug\BusinessLogicLayer.csproj.CopyComplete
 D:\CONG_NGHE_PHAN_MEM\DOAN\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\BusinessLayer\obj\Debug\BusinessLayer.dll
 D:\CONG_NGHE_PHAN_MEM\DOAN\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\Lucas\Desktop\do an 1\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\BusinessLayer\bin\Debug\BusinessLayer.dll.config
+C:\Users\Lucas\Desktop\do an 1\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Users\Lucas\Desktop\do an 1\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\Lucas\Desktop\do an 1\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\BusinessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\Lucas\Desktop\do an 1\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\BusinessLayer\bin\Debug\EntityFramework.dll
+C:\Users\Lucas\Desktop\do an 1\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\BusinessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Lucas\Desktop\do an 1\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\BusinessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\Lucas\Desktop\do an 1\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\BusinessLayer\bin\Debug\DataAccessLayer.dll.config
+C:\Users\Lucas\Desktop\do an 1\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\BusinessLayer\bin\Debug\EntityFramework.xml
+C:\Users\Lucas\Desktop\do an 1\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\BusinessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Lucas\Desktop\do an 1\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\BusinessLayer\obj\Debug\BusinessLogicLayer.csproj.AssemblyReference.cache
+C:\Users\Lucas\Desktop\do an 1\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\BusinessLayer\obj\Debug\BusinessLogicLayer.csproj.CoreCompileInputs.cache
+C:\Users\Lucas\Desktop\do an 1\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\BusinessLayer\obj\Debug\BusinessLogicLayer.csproj.CopyComplete
+C:\Users\Lucas\Desktop\do an 1\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\Lucas\Desktop\do an 1\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\BusinessLayer\obj\Debug\BusinessLayer.pdb
