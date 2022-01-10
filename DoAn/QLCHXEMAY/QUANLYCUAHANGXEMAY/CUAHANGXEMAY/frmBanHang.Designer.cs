@@ -31,17 +31,6 @@ namespace CUAHANGXEMAY
         {
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
-            this.gcHoaDon = new DevExpress.XtraGrid.GridControl();
-            this.gvHoaDon = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.MAHD = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.NGAYLAP = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.TENNV = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.TENKH = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.TENXE = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.TENMAU = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.GIABAN = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.SOLUONG = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.TONGTIEN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.gcBanHang = new DevExpress.XtraGrid.GridControl();
             this.gvBanHang = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -82,11 +71,22 @@ namespace CUAHANGXEMAY
             this.btnHuy = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnXuatHD = new System.Windows.Forms.ToolStripButton();
+            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
+            this.gcHoaDon = new DevExpress.XtraGrid.GridControl();
+            this.gvHoaDon = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.MAHD = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.NGAYLAP = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TENNV = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TENKH = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TENXE = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TENMAU = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.GIABAN = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.SOLUONG = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TONGTIEN = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnIn = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gcHoaDon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvHoaDon)).BeginInit();
             this.xtraTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcBanHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvBanHang)).BeginInit();
@@ -94,6 +94,9 @@ namespace CUAHANGXEMAY
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).BeginInit();
             this.toolStrip1.SuspendLayout();
+            this.toolStrip2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gcHoaDon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvHoaDon)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraTabControl1
@@ -115,127 +118,10 @@ namespace CUAHANGXEMAY
             // xtraTabPage1
             // 
             this.xtraTabPage1.Controls.Add(this.gcHoaDon);
+            this.xtraTabPage1.Controls.Add(this.toolStrip2);
             this.xtraTabPage1.Name = "xtraTabPage1";
             this.xtraTabPage1.Size = new System.Drawing.Size(1116, 546);
             this.xtraTabPage1.Text = "Danh sách hóa đơn";
-            // 
-            // gcHoaDon
-            // 
-            this.gcHoaDon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcHoaDon.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gcHoaDon.Location = new System.Drawing.Point(0, 0);
-            this.gcHoaDon.MainView = this.gvHoaDon;
-            this.gcHoaDon.Name = "gcHoaDon";
-            this.gcHoaDon.Size = new System.Drawing.Size(1116, 546);
-            this.gcHoaDon.TabIndex = 9;
-            this.gcHoaDon.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gvHoaDon});
-            // 
-            // gvHoaDon
-            // 
-            this.gvHoaDon.Appearance.HeaderPanel.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gvHoaDon.Appearance.HeaderPanel.Options.UseFont = true;
-            this.gvHoaDon.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.MAHD,
-            this.NGAYLAP,
-            this.TENNV,
-            this.TENKH,
-            this.TENXE,
-            this.TENMAU,
-            this.GIABAN,
-            this.SOLUONG,
-            this.TONGTIEN});
-            this.gvHoaDon.GridControl = this.gcHoaDon;
-            this.gvHoaDon.Name = "gvHoaDon";
-            this.gvHoaDon.OptionsView.ShowFooter = true;
-            // 
-            // MAHD
-            // 
-            this.MAHD.Caption = "Mã hoá đơn";
-            this.MAHD.FieldName = "MAHD";
-            this.MAHD.MaxWidth = 150;
-            this.MAHD.Name = "MAHD";
-            this.MAHD.Visible = true;
-            this.MAHD.VisibleIndex = 0;
-            this.MAHD.Width = 104;
-            // 
-            // NGAYLAP
-            // 
-            this.NGAYLAP.Caption = "Ngày lập";
-            this.NGAYLAP.FieldName = "NGAYLAP";
-            this.NGAYLAP.Name = "NGAYLAP";
-            this.NGAYLAP.Visible = true;
-            this.NGAYLAP.VisibleIndex = 1;
-            this.NGAYLAP.Width = 87;
-            // 
-            // TENNV
-            // 
-            this.TENNV.Caption = "Tên nhân viên";
-            this.TENNV.FieldName = "TENNV";
-            this.TENNV.Name = "TENNV";
-            this.TENNV.Visible = true;
-            this.TENNV.VisibleIndex = 2;
-            this.TENNV.Width = 124;
-            // 
-            // TENKH
-            // 
-            this.TENKH.Caption = "Tên khách hàng";
-            this.TENKH.FieldName = "TENKH";
-            this.TENKH.Name = "TENKH";
-            this.TENKH.Visible = true;
-            this.TENKH.VisibleIndex = 3;
-            this.TENKH.Width = 153;
-            // 
-            // TENXE
-            // 
-            this.TENXE.Caption = "Tên xe";
-            this.TENXE.FieldName = "TENXE";
-            this.TENXE.Name = "TENXE";
-            this.TENXE.Visible = true;
-            this.TENXE.VisibleIndex = 4;
-            this.TENXE.Width = 108;
-            // 
-            // TENMAU
-            // 
-            this.TENMAU.Caption = "Màu sắc";
-            this.TENMAU.FieldName = "TENMAU";
-            this.TENMAU.Name = "TENMAU";
-            this.TENMAU.Visible = true;
-            this.TENMAU.VisibleIndex = 5;
-            this.TENMAU.Width = 99;
-            // 
-            // GIABAN
-            // 
-            this.GIABAN.Caption = "Giá bán(VND)";
-            this.GIABAN.DisplayFormat.FormatString = "0,0";
-            this.GIABAN.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.GIABAN.FieldName = "GIABAN";
-            this.GIABAN.Name = "GIABAN";
-            this.GIABAN.Visible = true;
-            this.GIABAN.VisibleIndex = 6;
-            this.GIABAN.Width = 116;
-            // 
-            // SOLUONG
-            // 
-            this.SOLUONG.Caption = "Số lượng";
-            this.SOLUONG.FieldName = "SOLUONG";
-            this.SOLUONG.Name = "SOLUONG";
-            this.SOLUONG.Visible = true;
-            this.SOLUONG.VisibleIndex = 7;
-            this.SOLUONG.Width = 92;
-            // 
-            // TONGTIEN
-            // 
-            this.TONGTIEN.Caption = "Tổng tiền (VND)";
-            this.TONGTIEN.DisplayFormat.FormatString = "0,0";
-            this.TONGTIEN.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.TONGTIEN.FieldName = "TONGTIEN";
-            this.TONGTIEN.Name = "TONGTIEN";
-            this.TONGTIEN.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TONGTIEN", "Tổng tiền={0:n0}")});
-            this.TONGTIEN.Visible = true;
-            this.TONGTIEN.VisibleIndex = 8;
-            this.TONGTIEN.Width = 137;
             // 
             // xtraTabPage2
             // 
@@ -273,6 +159,7 @@ namespace CUAHANGXEMAY
             this.THANHTIEN});
             this.gvBanHang.GridControl = this.gcBanHang;
             this.gvBanHang.Name = "gvBanHang";
+            this.gvBanHang.Click += new System.EventHandler(this.gvBanHang_Click);
             // 
             // MAHOADON
             // 
@@ -352,6 +239,7 @@ namespace CUAHANGXEMAY
             // THANHTIEN
             // 
             this.THANHTIEN.Caption = "Thành tiền(VND)";
+            this.THANHTIEN.DisplayFormat.FormatString = "0,0";
             this.THANHTIEN.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.THANHTIEN.FieldName = "TONGTIEN";
             this.THANHTIEN.Name = "THANHTIEN";
@@ -691,6 +579,146 @@ namespace CUAHANGXEMAY
             this.btnXuatHD.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnXuatHD.Click += new System.EventHandler(this.btnXuatHD_Click);
             // 
+            // toolStrip2
+            // 
+            this.toolStrip2.AutoSize = false;
+            this.toolStrip2.ImageScalingSize = new System.Drawing.Size(50, 50);
+            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnIn});
+            this.toolStrip2.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip2.Name = "toolStrip2";
+            this.toolStrip2.Size = new System.Drawing.Size(1116, 55);
+            this.toolStrip2.TabIndex = 10;
+            this.toolStrip2.Text = "toolStrip2";
+            // 
+            // gcHoaDon
+            // 
+            this.gcHoaDon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gcHoaDon.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gcHoaDon.Location = new System.Drawing.Point(0, 55);
+            this.gcHoaDon.MainView = this.gvHoaDon;
+            this.gcHoaDon.Name = "gcHoaDon";
+            this.gcHoaDon.Size = new System.Drawing.Size(1116, 491);
+            this.gcHoaDon.TabIndex = 11;
+            this.gcHoaDon.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvHoaDon});
+            // 
+            // gvHoaDon
+            // 
+            this.gvHoaDon.Appearance.HeaderPanel.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gvHoaDon.Appearance.HeaderPanel.Options.UseFont = true;
+            this.gvHoaDon.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.MAHD,
+            this.NGAYLAP,
+            this.TENNV,
+            this.TENKH,
+            this.TENXE,
+            this.TENMAU,
+            this.GIABAN,
+            this.SOLUONG,
+            this.TONGTIEN});
+            this.gvHoaDon.GridControl = this.gcHoaDon;
+            this.gvHoaDon.Name = "gvHoaDon";
+            this.gvHoaDon.OptionsView.ShowFooter = true;
+            // 
+            // MAHD
+            // 
+            this.MAHD.Caption = "Mã hoá đơn";
+            this.MAHD.FieldName = "MAHD";
+            this.MAHD.MaxWidth = 150;
+            this.MAHD.Name = "MAHD";
+            this.MAHD.Visible = true;
+            this.MAHD.VisibleIndex = 0;
+            this.MAHD.Width = 104;
+            // 
+            // NGAYLAP
+            // 
+            this.NGAYLAP.Caption = "Ngày lập";
+            this.NGAYLAP.FieldName = "NGAYLAP";
+            this.NGAYLAP.Name = "NGAYLAP";
+            this.NGAYLAP.Visible = true;
+            this.NGAYLAP.VisibleIndex = 1;
+            this.NGAYLAP.Width = 87;
+            // 
+            // TENNV
+            // 
+            this.TENNV.Caption = "Tên nhân viên";
+            this.TENNV.FieldName = "TENNV";
+            this.TENNV.Name = "TENNV";
+            this.TENNV.Visible = true;
+            this.TENNV.VisibleIndex = 2;
+            this.TENNV.Width = 124;
+            // 
+            // TENKH
+            // 
+            this.TENKH.Caption = "Tên khách hàng";
+            this.TENKH.FieldName = "TENKH";
+            this.TENKH.Name = "TENKH";
+            this.TENKH.Visible = true;
+            this.TENKH.VisibleIndex = 3;
+            this.TENKH.Width = 153;
+            // 
+            // TENXE
+            // 
+            this.TENXE.Caption = "Tên xe";
+            this.TENXE.FieldName = "TENXE";
+            this.TENXE.Name = "TENXE";
+            this.TENXE.Visible = true;
+            this.TENXE.VisibleIndex = 4;
+            this.TENXE.Width = 108;
+            // 
+            // TENMAU
+            // 
+            this.TENMAU.Caption = "Màu sắc";
+            this.TENMAU.FieldName = "TENMAU";
+            this.TENMAU.Name = "TENMAU";
+            this.TENMAU.Visible = true;
+            this.TENMAU.VisibleIndex = 5;
+            this.TENMAU.Width = 99;
+            // 
+            // GIABAN
+            // 
+            this.GIABAN.Caption = "Giá bán(VND)";
+            this.GIABAN.DisplayFormat.FormatString = "0,0";
+            this.GIABAN.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.GIABAN.FieldName = "GIABAN";
+            this.GIABAN.Name = "GIABAN";
+            this.GIABAN.Visible = true;
+            this.GIABAN.VisibleIndex = 6;
+            this.GIABAN.Width = 116;
+            // 
+            // SOLUONG
+            // 
+            this.SOLUONG.Caption = "Số lượng";
+            this.SOLUONG.FieldName = "SOLUONG";
+            this.SOLUONG.Name = "SOLUONG";
+            this.SOLUONG.Visible = true;
+            this.SOLUONG.VisibleIndex = 7;
+            this.SOLUONG.Width = 92;
+            // 
+            // TONGTIEN
+            // 
+            this.TONGTIEN.Caption = "Tổng tiền (VND)";
+            this.TONGTIEN.DisplayFormat.FormatString = "0,0";
+            this.TONGTIEN.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.TONGTIEN.FieldName = "TONGTIEN";
+            this.TONGTIEN.Name = "TONGTIEN";
+            this.TONGTIEN.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TONGTIEN", "Tổng tiền={0:n0}")});
+            this.TONGTIEN.Visible = true;
+            this.TONGTIEN.VisibleIndex = 8;
+            this.TONGTIEN.Width = 137;
+            // 
+            // btnIn
+            // 
+            this.btnIn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIn.Image = global::CUAHANGXEMAY.Properties.Resources.printercolor;
+            this.btnIn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnIn.Name = "btnIn";
+            this.btnIn.Size = new System.Drawing.Size(213, 52);
+            this.btnIn.Text = "In danh sách hóa đơn";
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
+            // 
             // frmBanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -703,8 +731,6 @@ namespace CUAHANGXEMAY
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
             this.xtraTabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gcHoaDon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvHoaDon)).EndInit();
             this.xtraTabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gcBanHang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvBanHang)).EndInit();
@@ -714,6 +740,10 @@ namespace CUAHANGXEMAY
             ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.toolStrip2.ResumeLayout(false);
+            this.toolStrip2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gcHoaDon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvHoaDon)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -722,17 +752,6 @@ namespace CUAHANGXEMAY
 
         private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage1;
-        private DevExpress.XtraGrid.GridControl gcHoaDon;
-        private DevExpress.XtraGrid.Views.Grid.GridView gvHoaDon;
-        private DevExpress.XtraGrid.Columns.GridColumn MAHD;
-        private DevExpress.XtraGrid.Columns.GridColumn NGAYLAP;
-        private DevExpress.XtraGrid.Columns.GridColumn TENNV;
-        private DevExpress.XtraGrid.Columns.GridColumn TENKH;
-        private DevExpress.XtraGrid.Columns.GridColumn TENXE;
-        private DevExpress.XtraGrid.Columns.GridColumn TENMAU;
-        private DevExpress.XtraGrid.Columns.GridColumn GIABAN;
-        private DevExpress.XtraGrid.Columns.GridColumn SOLUONG;
-        private DevExpress.XtraGrid.Columns.GridColumn TONGTIEN;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage2;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private System.Windows.Forms.Label label10;
@@ -773,5 +792,18 @@ namespace CUAHANGXEMAY
         private System.Windows.Forms.ComboBox cbbMauSac;
         private System.Windows.Forms.ComboBox cbbTenKH;
         private DevExpress.XtraEditors.LabelControl lblNhanVien;
+        private DevExpress.XtraGrid.GridControl gcHoaDon;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvHoaDon;
+        private DevExpress.XtraGrid.Columns.GridColumn MAHD;
+        private DevExpress.XtraGrid.Columns.GridColumn NGAYLAP;
+        private DevExpress.XtraGrid.Columns.GridColumn TENNV;
+        private DevExpress.XtraGrid.Columns.GridColumn TENKH;
+        private DevExpress.XtraGrid.Columns.GridColumn TENXE;
+        private DevExpress.XtraGrid.Columns.GridColumn TENMAU;
+        private DevExpress.XtraGrid.Columns.GridColumn GIABAN;
+        private DevExpress.XtraGrid.Columns.GridColumn SOLUONG;
+        private DevExpress.XtraGrid.Columns.GridColumn TONGTIEN;
+        private System.Windows.Forms.ToolStrip toolStrip2;
+        private System.Windows.Forms.ToolStripButton btnIn;
     }
 }

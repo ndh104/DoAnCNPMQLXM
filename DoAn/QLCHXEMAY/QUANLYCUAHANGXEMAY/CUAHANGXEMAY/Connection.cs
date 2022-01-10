@@ -49,13 +49,5 @@ namespace CUAHANGXEMAY
         {
             return new DateTime(year, month, 1);
         }
-
-        public static void xuatReport(string khoa, string _reportName, string _tieude)
-        {
-            if (khoa != null)
-            {
-
-            }
-        }
     }
 }

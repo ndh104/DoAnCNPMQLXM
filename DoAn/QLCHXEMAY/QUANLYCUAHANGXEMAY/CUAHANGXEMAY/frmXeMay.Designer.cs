@@ -31,6 +31,7 @@ namespace CUAHANGXEMAY
         {
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnThoat = new System.Windows.Forms.ToolStripButton();
+            this.btnIn = new System.Windows.Forms.ToolStripButton();
             this.btnXoa = new System.Windows.Forms.ToolStripButton();
             this.btnSua = new System.Windows.Forms.ToolStripButton();
             this.btnThem = new System.Windows.Forms.ToolStripButton();
@@ -48,6 +49,7 @@ namespace CUAHANGXEMAY
             this.TINHTRANG = new DevExpress.XtraGrid.Columns.GridColumn();
             this.GIABAN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.btnQuanLyMauSac = new DevExpress.XtraEditors.SimpleButton();
             this.cbDisable = new System.Windows.Forms.CheckBox();
             this.cbbLoaiXe = new System.Windows.Forms.ComboBox();
             this.cbbNCC = new System.Windows.Forms.ComboBox();
@@ -83,6 +85,7 @@ namespace CUAHANGXEMAY
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnThoat,
+            this.btnIn,
             this.btnXoa,
             this.btnSua,
             this.btnThem,
@@ -98,7 +101,7 @@ namespace CUAHANGXEMAY
             // 
             this.btnThoat.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.btnThoat.AutoSize = false;
-            this.btnThoat.Image = global::CUAHANGXEMAY.Properties.Resources.thoat;
+            this.btnThoat.Image = global::CUAHANGXEMAY.Properties.Resources.thoatcolor;
             this.btnThoat.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(50, 51);
@@ -106,11 +109,23 @@ namespace CUAHANGXEMAY
             this.btnThoat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
+            // btnIn
+            // 
+            this.btnIn.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnIn.AutoSize = false;
+            this.btnIn.Image = global::CUAHANGXEMAY.Properties.Resources.printercolor;
+            this.btnIn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnIn.Name = "btnIn";
+            this.btnIn.Size = new System.Drawing.Size(50, 51);
+            this.btnIn.Text = "In";
+            this.btnIn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
+            // 
             // btnXoa
             // 
             this.btnXoa.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.btnXoa.AutoSize = false;
-            this.btnXoa.Image = global::CUAHANGXEMAY.Properties.Resources.xoa;
+            this.btnXoa.Image = global::CUAHANGXEMAY.Properties.Resources.xoacolor1;
             this.btnXoa.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(50, 51);
@@ -122,7 +137,7 @@ namespace CUAHANGXEMAY
             // 
             this.btnSua.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.btnSua.AutoSize = false;
-            this.btnSua.Image = global::CUAHANGXEMAY.Properties.Resources.sua;
+            this.btnSua.Image = global::CUAHANGXEMAY.Properties.Resources.suacolor;
             this.btnSua.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(50, 51);
@@ -134,7 +149,7 @@ namespace CUAHANGXEMAY
             // 
             this.btnThem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.btnThem.AutoSize = false;
-            this.btnThem.Image = global::CUAHANGXEMAY.Properties.Resources.them;
+            this.btnThem.Image = global::CUAHANGXEMAY.Properties.Resources.themcolor;
             this.btnThem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(50, 51);
@@ -145,7 +160,7 @@ namespace CUAHANGXEMAY
             // btnLuu
             // 
             this.btnLuu.AutoSize = false;
-            this.btnLuu.Image = global::CUAHANGXEMAY.Properties.Resources.luu;
+            this.btnLuu.Image = global::CUAHANGXEMAY.Properties.Resources.luucolor;
             this.btnLuu.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(50, 51);
@@ -155,7 +170,7 @@ namespace CUAHANGXEMAY
             // 
             // btnHuy
             // 
-            this.btnHuy.Image = global::CUAHANGXEMAY.Properties.Resources.huybo;
+            this.btnHuy.Image = global::CUAHANGXEMAY.Properties.Resources.huycolor;
             this.btnHuy.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(50, 51);
@@ -287,6 +302,7 @@ namespace CUAHANGXEMAY
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.btnQuanLyMauSac);
             this.groupControl1.Controls.Add(this.cbDisable);
             this.groupControl1.Controls.Add(this.cbbLoaiXe);
             this.groupControl1.Controls.Add(this.cbbNCC);
@@ -308,6 +324,18 @@ namespace CUAHANGXEMAY
             this.groupControl1.Size = new System.Drawing.Size(271, 391);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Thông tin";
+            // 
+            // btnQuanLyMauSac
+            // 
+            this.btnQuanLyMauSac.Appearance.ForeColor = System.Drawing.Color.Transparent;
+            this.btnQuanLyMauSac.Appearance.Options.UseForeColor = true;
+            this.btnQuanLyMauSac.ImageOptions.Image = global::CUAHANGXEMAY.Properties.Resources.quanlymauxe;
+            this.btnQuanLyMauSac.Location = new System.Drawing.Point(175, 346);
+            this.btnQuanLyMauSac.Name = "btnQuanLyMauSac";
+            this.btnQuanLyMauSac.Size = new System.Drawing.Size(91, 40);
+            this.btnQuanLyMauSac.TabIndex = 19;
+            this.btnQuanLyMauSac.Text = "simpleButton1";
+            this.btnQuanLyMauSac.Click += new System.EventHandler(this.btnQuanLyMauSac_Click);
             // 
             // cbDisable
             // 
@@ -508,5 +536,7 @@ namespace CUAHANGXEMAY
         private System.Windows.Forms.CheckBox cbDisable;
         private DevExpress.XtraGrid.Columns.GridColumn DISABLE;
         private DevExpress.XtraGrid.Columns.GridColumn MAUSAC;
+        private System.Windows.Forms.ToolStripButton btnIn;
+        private DevExpress.XtraEditors.SimpleButton btnQuanLyMauSac;
     }
 }

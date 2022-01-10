@@ -30,9 +30,11 @@ namespace CUAHANGXEMAY
         private void InitializeComponent()
         {
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.btnXeMay = new System.Windows.Forms.ToolStripButton();
             this.btnNhanVien = new System.Windows.Forms.ToolStripButton();
             this.btnKhachHang = new System.Windows.Forms.ToolStripButton();
+            this.btnNhaCungCap = new System.Windows.Forms.ToolStripButton();
+            this.btnXeMay = new System.Windows.Forms.ToolStripButton();
+            this.btnLoaiXe = new System.Windows.Forms.ToolStripButton();
             this.btnBanHang = new System.Windows.Forms.ToolStripButton();
             this.btnBaoCao = new System.Windows.Forms.ToolStripButton();
             this.btnDangXuat = new System.Windows.Forms.ToolStripButton();
@@ -51,11 +53,13 @@ namespace CUAHANGXEMAY
             this.toolStrip1.AutoSize = false;
             this.toolStrip1.BackColor = System.Drawing.Color.PeachPuff;
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(40, 40);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnXeMay,
             this.btnNhanVien,
             this.btnKhachHang,
+            this.btnNhaCungCap,
+            this.btnXeMay,
+            this.btnLoaiXe,
             this.btnBanHang,
             this.btnBaoCao,
             this.btnDangXuat});
@@ -65,18 +69,6 @@ namespace CUAHANGXEMAY
             this.toolStrip1.Size = new System.Drawing.Size(232, 756);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // btnXeMay
-            // 
-            this.btnXeMay.AutoSize = false;
-            this.btnXeMay.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXeMay.Image = global::CUAHANGXEMAY.Properties.Resources._9579709;
-            this.btnXeMay.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnXeMay.Name = "btnXeMay";
-            this.btnXeMay.Size = new System.Drawing.Size(130, 80);
-            this.btnXeMay.Text = "Xe máy";
-            this.btnXeMay.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnXeMay.Click += new System.EventHandler(this.btnXeMay_Click);
             // 
             // btnNhanVien
             // 
@@ -102,6 +94,42 @@ namespace CUAHANGXEMAY
             this.btnKhachHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnKhachHang.Click += new System.EventHandler(this.btnKhachHang_Click);
             // 
+            // btnNhaCungCap
+            // 
+            this.btnNhaCungCap.AutoSize = false;
+            this.btnNhaCungCap.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNhaCungCap.Image = global::CUAHANGXEMAY.Properties.Resources.nhacungcapcolor;
+            this.btnNhaCungCap.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnNhaCungCap.Name = "btnNhaCungCap";
+            this.btnNhaCungCap.Size = new System.Drawing.Size(130, 80);
+            this.btnNhaCungCap.Text = "Nhà cung cấp";
+            this.btnNhaCungCap.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnNhaCungCap.Click += new System.EventHandler(this.btnNhaCungCap_Click);
+            // 
+            // btnXeMay
+            // 
+            this.btnXeMay.AutoSize = false;
+            this.btnXeMay.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXeMay.Image = global::CUAHANGXEMAY.Properties.Resources._9579709;
+            this.btnXeMay.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnXeMay.Name = "btnXeMay";
+            this.btnXeMay.Size = new System.Drawing.Size(130, 80);
+            this.btnXeMay.Text = "Xe máy";
+            this.btnXeMay.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnXeMay.Click += new System.EventHandler(this.btnXeMay_Click);
+            // 
+            // btnLoaiXe
+            // 
+            this.btnLoaiXe.AutoSize = false;
+            this.btnLoaiXe.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoaiXe.Image = global::CUAHANGXEMAY.Properties.Resources.loaixecolor1;
+            this.btnLoaiXe.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnLoaiXe.Name = "btnLoaiXe";
+            this.btnLoaiXe.Size = new System.Drawing.Size(130, 80);
+            this.btnLoaiXe.Text = "Loại xe";
+            this.btnLoaiXe.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnLoaiXe.Click += new System.EventHandler(this.btnLoaiXe_Click);
+            // 
             // btnBanHang
             // 
             this.btnBanHang.AutoSize = false;
@@ -117,7 +145,7 @@ namespace CUAHANGXEMAY
             // btnBaoCao
             // 
             this.btnBaoCao.AutoSize = false;
-            this.btnBaoCao.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBaoCao.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBaoCao.Image = global::CUAHANGXEMAY.Properties.Resources._2970268;
             this.btnBaoCao.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnBaoCao.Name = "btnBaoCao";
@@ -225,5 +253,7 @@ namespace CUAHANGXEMAY
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private System.Windows.Forms.Panel panel2;
         private DevExpress.XtraCharts.ChartControl chartControl1;
+        private System.Windows.Forms.ToolStripButton btnNhaCungCap;
+        private System.Windows.Forms.ToolStripButton btnLoaiXe;
     }
 }

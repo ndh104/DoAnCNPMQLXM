@@ -82,9 +82,16 @@ namespace CUAHANGXEMAY
             frm.ShowDialog();
         }
 
-        private void panelControl1_Paint(object sender, PaintEventArgs e)
+        private void btnNhaCungCap_Click(object sender, EventArgs e)
         {
+            frmNhaCungCap frm = new frmNhaCungCap();
+            frm.ShowDialog();
+        }
 
+        private void btnLoaiXe_Click(object sender, EventArgs e)
+        {
+            frmLoaiXe frm = new frmLoaiXe();
+            frm.ShowDialog();
         }
     }
 }

@@ -48,7 +48,6 @@ namespace CUAHANGXEMAY
             }
             else
             {
-                MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 frmTrangChinh frm = new frmTrangChinh();
                 frm.Show();
                 this.Hide();

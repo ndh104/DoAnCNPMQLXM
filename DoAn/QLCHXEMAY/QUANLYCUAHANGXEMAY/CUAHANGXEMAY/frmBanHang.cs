@@ -43,11 +43,26 @@ namespace CUAHANGXEMAY
             cbbTenXe.SelectedValueChanged += CbbTenXe_SelectedValueChanged;
             txtSoLuong.TextChanged += TxtSoLuong_TextChanged;
             dtpNgayLap.Value = DateTime.Now.Date;
+            gcBanHang.DataSource = _cthoadon.getAllFullTheoNgay(dtpNgayLap.Value);
+            gvBanHang.OptionsBehavior.Editable = false;
         }
 
         private void TxtSoLuong_TextChanged(object sender, EventArgs e)
         {
             txtThanhTien.Text = (double.Parse(txtGiaBan.Text) * double.Parse(txtSoLuong.Text) * 1.1).ToString();
+            try
+            {
+                if (txtThanhTien.Text.Length > 0)
+                {
+                    double a = double.Parse(txtThanhTien.Text);
+                    txtThanhTien.Text = a.ToString("N0");
+                    txtThanhTien.Focus();
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Dữ liệu nhập vào không hợp lệ!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void CbbTenXe_SelectedValueChanged(object sender, EventArgs e)
@@ -134,7 +149,7 @@ namespace CUAHANGXEMAY
 
         private void btnXuatHD_Click(object sender, EventArgs e)
         {
-            
+            xuatReport("ReportHDXEMAY", "HÓA ĐƠN BÁN HÀNG");
         }
         private void xuatReport(string _tenReport, string _title)
         {
@@ -154,6 +169,7 @@ namespace CUAHANGXEMAY
             doc.Database.Tables[0].ApplyLogOnInfo(Thongtin);
             try
             {
+                doc.SetParameterValue("@MAHD", _mahd);
                 Crv.Dock = DockStyle.Fill;
                 Crv.ReportSource = doc;
                 frm.Controls.Add(Crv);
@@ -235,5 +251,50 @@ namespace CUAHANGXEMAY
             gvBanHang.OptionsBehavior.Editable = false;
         }
 
+        private void gvBanHang_Click(object sender, EventArgs e)
+        {
+            if (gvBanHang.RowCount > 0)
+            {
+                if (gvBanHang.GetFocusedRowCellValue("MAHD")!=null)
+                {
+                    _mahd = gvBanHang.GetFocusedRowCellValue("MAHD").ToString();
+                }
+            }
+        }
+        private void btnIn_Click(object sender, EventArgs e)
+        {
+            xuatReportDS("ReportDSHD","DANH SÁCH HÓA ĐƠN");
+        }
+        private void xuatReportDS(string _tenReport, string _title)
+        {
+            Form frm = new Form();
+            CrystalReportViewer Crv = new CrystalReportViewer();
+            Crv.ShowGroupTreeButton = false;
+            Crv.ShowParameterPanelButton = false;
+            Crv.ToolPanelView = ToolPanelViewType.None;
+            TableLogOnInfo Thongtin;
+            ReportDocument doc = new ReportDocument();
+            doc.Load(System.Windows.Forms.Application.StartupPath + "\\Reports\\" + _tenReport + @".rpt");
+            Thongtin = doc.Database.Tables[0].LogOnInfo;
+            Thongtin.ConnectionInfo.ServerName = Connection._svname;
+            Thongtin.ConnectionInfo.UserID = Connection._usname;
+            Thongtin.ConnectionInfo.Password = Connection._pwrd;
+            Thongtin.ConnectionInfo.DatabaseName = Connection._dtbase;
+            doc.Database.Tables[0].ApplyLogOnInfo(Thongtin);
+            try
+            {
+                Crv.Dock = DockStyle.Fill;
+                Crv.ReportSource = doc;
+                frm.Controls.Add(Crv);
+                Crv.Refresh();
+                frm.Text = _title;
+                frm.WindowState = FormWindowState.Maximized;
+                frm.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+        }
     }
 }

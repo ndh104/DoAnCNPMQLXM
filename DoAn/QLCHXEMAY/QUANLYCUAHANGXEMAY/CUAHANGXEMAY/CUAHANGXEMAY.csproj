@@ -91,6 +91,12 @@
     <Compile Include="frmBaoCao.Designer.cs">
       <DependentUpon>frmBaoCao.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmChiTietMauXe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChiTietMauXe.Designer.cs">
+      <DependentUpon>frmChiTietMauXe.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,12 @@
     </Compile>
     <Compile Include="frmLoaiXe.Designer.cs">
       <DependentUpon>frmLoaiXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMauSac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMauSac.Designer.cs">
+      <DependentUpon>frmMauSac.cs</DependentUpon>
     </Compile>
     <Compile Include="frmNhaCungCap.cs">
       <SubType>Form</SubType>
@@ -159,6 +171,9 @@
     <EmbeddedResource Include="frmBaoCao.resx">
       <DependentUpon>frmBaoCao.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmChiTietMauXe.resx">
+      <DependentUpon>frmChiTietMauXe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -170,6 +185,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmKhachHang.resx">
       <DependentUpon>frmKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoaiXe.resx">
+      <DependentUpon>frmLoaiXe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMauSac.resx">
+      <DependentUpon>frmMauSac.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNhaCungCap.resx">
+      <DependentUpon>frmNhaCungCap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmNhanVien.resx">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
@@ -395,6 +419,63 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\xuathdcolor1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\suacolor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\themcolor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thoatcolor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trangchucolor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nhacungcapcolor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loaixecolor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loaixecolor1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lưu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lưu1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hủy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quanlymau.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quanlymauxe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quanlymausac.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\poweroff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\poweroff1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pwo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgmausac.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\themmau.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Thêmmàu.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

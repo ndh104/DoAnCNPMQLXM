@@ -1,4 +1,7 @@
 ﻿using BusinessLayer;
+using CrystalDecisions.CrystalReports.Engine;
+using CrystalDecisions.Shared;
+using CrystalDecisions.Windows.Forms;
 using DataAccessLayer;
 using DevExpress.XtraEditors;
 using System;
@@ -179,6 +182,41 @@ namespace CUAHANGXEMAY
                 e.Graphics.DrawImage(img, e.Bounds.X, e.Bounds.Y);
                 e.Handled = true;
             }
+        }
+        private void xuatReport(string _tenReport, string _title)
+        {
+            Form frm = new Form();
+            CrystalReportViewer Crv = new CrystalReportViewer();
+            Crv.ShowGroupTreeButton = false;
+            Crv.ShowParameterPanelButton = false;
+            Crv.ToolPanelView = ToolPanelViewType.None;
+            TableLogOnInfo Thongtin;
+            ReportDocument doc = new ReportDocument();
+            doc.Load(System.Windows.Forms.Application.StartupPath + "\\Reports\\" + _tenReport + @".rpt");
+            Thongtin = doc.Database.Tables[0].LogOnInfo;
+            Thongtin.ConnectionInfo.ServerName = Connection._svname;
+            Thongtin.ConnectionInfo.UserID = Connection._usname;
+            Thongtin.ConnectionInfo.Password = Connection._pwrd;
+            Thongtin.ConnectionInfo.DatabaseName = Connection._dtbase;
+            doc.Database.Tables[0].ApplyLogOnInfo(Thongtin);
+            try
+            {
+                Crv.Dock = DockStyle.Fill;
+                Crv.ReportSource = doc;
+                frm.Controls.Add(Crv);
+                Crv.Refresh();
+                frm.Text = _title;
+                frm.WindowState = FormWindowState.Maximized;
+                frm.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+        }
+        private void btnIn_Click(object sender, EventArgs e)
+        {
+            xuatReport("ReportDSKH", "DANH SÁCH KHÁCH HÀNG");
         }
     }
 }

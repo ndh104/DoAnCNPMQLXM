@@ -10,6 +10,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessLayer;
 using DataAccessLayer;
+using CrystalDecisions.Windows.Forms;
+using CrystalDecisions.Shared;
+using CrystalDecisions.CrystalReports.Engine;
 
 namespace CUAHANGXEMAY
 {
@@ -110,7 +113,6 @@ namespace CUAHANGXEMAY
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            tb_CHITIETMAUXE mau = new tb_CHITIETMAUXE();
             if (_them)
             {
 
@@ -192,6 +194,47 @@ namespace CUAHANGXEMAY
             {
                 MessageBox.Show("Dữ liệu nhập vào không hợp lệ!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+        private void xuatReport(string _tenReport, string _title)
+        {
+            Form frm = new Form();
+            CrystalReportViewer Crv = new CrystalReportViewer();
+            Crv.ShowGroupTreeButton = false;
+            Crv.ShowParameterPanelButton = false;
+            Crv.ToolPanelView = ToolPanelViewType.None;
+            TableLogOnInfo Thongtin;
+            ReportDocument doc = new ReportDocument();
+            doc.Load(System.Windows.Forms.Application.StartupPath + "\\Reports\\" + _tenReport + @".rpt");
+            Thongtin = doc.Database.Tables[0].LogOnInfo;
+            Thongtin.ConnectionInfo.ServerName = Connection._svname;
+            Thongtin.ConnectionInfo.UserID = Connection._usname;
+            Thongtin.ConnectionInfo.Password = Connection._pwrd;
+            Thongtin.ConnectionInfo.DatabaseName = Connection._dtbase;
+            doc.Database.Tables[0].ApplyLogOnInfo(Thongtin);
+            try
+            {
+                Crv.Dock = DockStyle.Fill;
+                Crv.ReportSource = doc;
+                frm.Controls.Add(Crv);
+                Crv.Refresh();
+                frm.Text = _title;
+                frm.WindowState = FormWindowState.Maximized;
+                frm.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+        }
+        private void btnIn_Click(object sender, EventArgs e)
+        {
+            xuatReport("ReportDSXEMAY","DANH SÁCH XE MÁY");
+        }
+
+        private void btnQuanLyMauSac_Click(object sender, EventArgs e)
+        {
+            frmChiTietMauXe frm = new frmChiTietMauXe();
+            frm.ShowDialog();
         }
     }
 }
