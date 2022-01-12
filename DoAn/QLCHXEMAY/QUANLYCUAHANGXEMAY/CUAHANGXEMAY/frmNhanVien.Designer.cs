@@ -90,7 +90,7 @@ namespace CUAHANGXEMAY
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
-            this.toolStrip1.Size = new System.Drawing.Size(1443, 53);
+            this.toolStrip1.Size = new System.Drawing.Size(1378, 53);
             this.toolStrip1.TabIndex = 6;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -111,7 +111,7 @@ namespace CUAHANGXEMAY
             this.btnThemNV.Image = ((System.Drawing.Image)(resources.GetObject("btnThemNV.Image")));
             this.btnThemNV.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnThemNV.Name = "btnThemNV";
-            this.btnThemNV.Size = new System.Drawing.Size(172, 48);
+            this.btnThemNV.Size = new System.Drawing.Size(121, 50);
             this.btnThemNV.Text = "Thêm nhân viên";
             this.btnThemNV.Click += new System.EventHandler(this.btnThemNV_Click);
             // 
@@ -154,7 +154,7 @@ namespace CUAHANGXEMAY
             this.btnBoQua.Image = ((System.Drawing.Image)(resources.GetObject("btnBoQua.Image")));
             this.btnBoQua.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnBoQua.Name = "btnBoQua";
-            this.btnBoQua.Size = new System.Drawing.Size(98, 48);
+            this.btnBoQua.Size = new System.Drawing.Size(72, 50);
             this.btnBoQua.Text = "Bỏ qua";
             this.btnBoQua.Click += new System.EventHandler(this.btnBoQua_Click);
             // 
@@ -172,11 +172,11 @@ namespace CUAHANGXEMAY
             // gcNhanVien
             // 
             this.gcNhanVien.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcNhanVien.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.gcNhanVien.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.gcNhanVien.Location = new System.Drawing.Point(0, 53);
             this.gcNhanVien.MainView = this.gvNhanVien;
             this.gcNhanVien.Name = "gcNhanVien";
-            this.gcNhanVien.Size = new System.Drawing.Size(1443, 593);
+            this.gcNhanVien.Size = new System.Drawing.Size(1378, 593);
             this.gcNhanVien.TabIndex = 7;
             this.gcNhanVien.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvNhanVien});
@@ -321,7 +321,7 @@ namespace CUAHANGXEMAY
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupControl1.Location = new System.Drawing.Point(0, 401);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1443, 245);
+            this.groupControl1.Size = new System.Drawing.Size(1378, 245);
             this.groupControl1.TabIndex = 8;
             this.groupControl1.Text = "THÔNG TIN NHÂN VIÊN";
             // 
@@ -329,9 +329,9 @@ namespace CUAHANGXEMAY
             // 
             this.chkDisabled.AutoSize = true;
             this.chkDisabled.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkDisabled.Location = new System.Drawing.Point(863, 181);
+            this.chkDisabled.Location = new System.Drawing.Point(863, 185);
             this.chkDisabled.Name = "chkDisabled";
-            this.chkDisabled.Size = new System.Drawing.Size(102, 26);
+            this.chkDisabled.Size = new System.Drawing.Size(70, 18);
             this.chkDisabled.TabIndex = 21;
             this.chkDisabled.Text = "Disabled";
             this.chkDisabled.UseVisualStyleBackColor = true;
@@ -347,7 +347,7 @@ namespace CUAHANGXEMAY
             "Thu ngân"});
             this.cmbChucVu.Location = new System.Drawing.Point(1119, 183);
             this.cmbChucVu.Name = "cmbChucVu";
-            this.cmbChucVu.Size = new System.Drawing.Size(254, 30);
+            this.cmbChucVu.Size = new System.Drawing.Size(254, 22);
             this.cmbChucVu.TabIndex = 20;
             this.cmbChucVu.Text = "Quản lý";
             // 
@@ -356,7 +356,7 @@ namespace CUAHANGXEMAY
             this.dtpNgaySinh.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpNgaySinh.Location = new System.Drawing.Point(518, 122);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
-            this.dtpNgaySinh.Size = new System.Drawing.Size(444, 29);
+            this.dtpNgaySinh.Size = new System.Drawing.Size(444, 22);
             this.dtpNgaySinh.TabIndex = 19;
             // 
             // cmbGioiTinh
@@ -368,7 +368,7 @@ namespace CUAHANGXEMAY
             "Nữ"});
             this.cmbGioiTinh.Location = new System.Drawing.Point(203, 124);
             this.cmbGioiTinh.Name = "cmbGioiTinh";
-            this.cmbGioiTinh.Size = new System.Drawing.Size(147, 30);
+            this.cmbGioiTinh.Size = new System.Drawing.Size(147, 22);
             this.cmbGioiTinh.TabIndex = 18;
             this.cmbGioiTinh.Text = "Nam";
             // 
@@ -377,7 +377,7 @@ namespace CUAHANGXEMAY
             this.txtDiaChi.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiaChi.Location = new System.Drawing.Point(203, 183);
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(629, 29);
+            this.txtDiaChi.Size = new System.Drawing.Size(629, 22);
             this.txtDiaChi.TabIndex = 13;
             // 
             // txtSoDT
@@ -385,7 +385,7 @@ namespace CUAHANGXEMAY
             this.txtSoDT.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoDT.Location = new System.Drawing.Point(1119, 124);
             this.txtSoDT.Name = "txtSoDT";
-            this.txtSoDT.Size = new System.Drawing.Size(254, 29);
+            this.txtSoDT.Size = new System.Drawing.Size(254, 22);
             this.txtSoDT.TabIndex = 14;
             // 
             // txtCMND
@@ -393,7 +393,7 @@ namespace CUAHANGXEMAY
             this.txtCMND.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCMND.Location = new System.Drawing.Point(1119, 67);
             this.txtCMND.Name = "txtCMND";
-            this.txtCMND.Size = new System.Drawing.Size(254, 29);
+            this.txtCMND.Size = new System.Drawing.Size(254, 22);
             this.txtCMND.TabIndex = 15;
             // 
             // txtMaNV
@@ -401,7 +401,7 @@ namespace CUAHANGXEMAY
             this.txtMaNV.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaNV.Location = new System.Drawing.Point(203, 67);
             this.txtMaNV.Name = "txtMaNV";
-            this.txtMaNV.Size = new System.Drawing.Size(148, 29);
+            this.txtMaNV.Size = new System.Drawing.Size(148, 22);
             this.txtMaNV.TabIndex = 16;
             // 
             // txtTenNV
@@ -409,16 +409,16 @@ namespace CUAHANGXEMAY
             this.txtTenNV.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenNV.Location = new System.Drawing.Point(518, 67);
             this.txtTenNV.Name = "txtTenNV";
-            this.txtTenNV.Size = new System.Drawing.Size(447, 29);
+            this.txtTenNV.Size = new System.Drawing.Size(447, 22);
             this.txtTenNV.TabIndex = 17;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(971, 128);
+            this.label7.Location = new System.Drawing.Point(990, 127);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(114, 22);
+            this.label7.Size = new System.Drawing.Size(79, 14);
             this.label7.TabIndex = 5;
             this.label7.Text = "Số điện thoại";
             // 
@@ -426,9 +426,9 @@ namespace CUAHANGXEMAY
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(1005, 69);
+            this.label5.Location = new System.Drawing.Point(1012, 70);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(85, 22);
+            this.label5.Size = new System.Drawing.Size(57, 14);
             this.label5.TabIndex = 6;
             this.label5.Text = "Số CMND";
             // 
@@ -436,9 +436,9 @@ namespace CUAHANGXEMAY
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(47, 185);
+            this.label3.Location = new System.Drawing.Point(84, 186);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 22);
+            this.label3.Size = new System.Drawing.Size(42, 14);
             this.label3.TabIndex = 7;
             this.label3.Text = "Địa chỉ";
             // 
@@ -448,7 +448,7 @@ namespace CUAHANGXEMAY
             this.label8.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(401, 128);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(88, 22);
+            this.label8.Size = new System.Drawing.Size(59, 14);
             this.label8.TabIndex = 8;
             this.label8.Text = "Ngày sinh";
             // 
@@ -458,7 +458,7 @@ namespace CUAHANGXEMAY
             this.label6.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(1017, 185);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(75, 22);
+            this.label6.Size = new System.Drawing.Size(52, 14);
             this.label6.TabIndex = 9;
             this.label6.Text = "Chức vụ";
             // 
@@ -466,9 +466,9 @@ namespace CUAHANGXEMAY
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(47, 128);
+            this.label4.Location = new System.Drawing.Point(75, 128);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 22);
+            this.label4.Size = new System.Drawing.Size(51, 14);
             this.label4.TabIndex = 10;
             this.label4.Text = "Giới tính";
             // 
@@ -476,9 +476,9 @@ namespace CUAHANGXEMAY
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(361, 69);
+            this.label2.Location = new System.Drawing.Point(374, 69);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(123, 22);
+            this.label2.Size = new System.Drawing.Size(86, 14);
             this.label2.TabIndex = 11;
             this.label2.Text = "Tên nhân viên";
             // 
@@ -488,16 +488,16 @@ namespace CUAHANGXEMAY
             this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(47, 69);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 22);
+            this.label1.Size = new System.Drawing.Size(79, 14);
             this.label1.TabIndex = 12;
             this.label1.Text = "Mã nhân viên";
             // 
             // frmNhanVien
             // 
             this.Appearance.Options.UseFont = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1443, 646);
+            this.ClientSize = new System.Drawing.Size(1378, 646);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.gcNhanVien);
             this.Controls.Add(this.toolStrip1);

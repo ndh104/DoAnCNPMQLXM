@@ -42,6 +42,7 @@ namespace CUAHANGXEMAY
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panel2 = new System.Windows.Forms.Panel();
             this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
+            this.btnDoiMK = new System.Windows.Forms.ToolStripLabel();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -51,7 +52,8 @@ namespace CUAHANGXEMAY
             // toolStrip1
             // 
             this.toolStrip1.AutoSize = false;
-            this.toolStrip1.BackColor = System.Drawing.Color.PeachPuff;
+            this.toolStrip1.BackColor = System.Drawing.Color.Transparent;
+            this.toolStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Left;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(40, 40);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -62,11 +64,12 @@ namespace CUAHANGXEMAY
             this.btnLoaiXe,
             this.btnBanHang,
             this.btnBaoCao,
-            this.btnDangXuat});
+            this.btnDangXuat,
+            this.btnDoiMK});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 4, 0);
-            this.toolStrip1.Size = new System.Drawing.Size(232, 756);
+            this.toolStrip1.Size = new System.Drawing.Size(150, 756);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -169,13 +172,13 @@ namespace CUAHANGXEMAY
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.PeachPuff;
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.labelControl1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(232, 0);
+            this.panel1.Location = new System.Drawing.Point(150, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1146, 61);
+            this.panel1.Size = new System.Drawing.Size(1228, 61);
             this.panel1.TabIndex = 2;
             // 
             // labelControl1
@@ -184,7 +187,7 @@ namespace CUAHANGXEMAY
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.Location = new System.Drawing.Point(315, 8);
+            this.labelControl1.Location = new System.Drawing.Point(325, 14);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(5);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(595, 25);
@@ -195,25 +198,42 @@ namespace CUAHANGXEMAY
             // 
             this.panel2.Controls.Add(this.chartControl1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(232, 61);
+            this.panel2.Location = new System.Drawing.Point(150, 61);
             this.panel2.Margin = new System.Windows.Forms.Padding(5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1146, 695);
+            this.panel2.Size = new System.Drawing.Size(1228, 695);
             this.panel2.TabIndex = 3;
             // 
             // chartControl1
             // 
-            this.chartControl1.BackColor = System.Drawing.Color.White;
+            this.chartControl1.BackColor = System.Drawing.Color.Cornsilk;
+            this.chartControl1.Breadcrumbs.BackColor = System.Drawing.Color.Bisque;
             this.chartControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chartControl1.IndicatorsPaletteName = "Aspect";
+            this.chartControl1.Legend.BackColor = System.Drawing.Color.OldLace;
             this.chartControl1.Location = new System.Drawing.Point(0, 0);
             this.chartControl1.Margin = new System.Windows.Forms.Padding(5);
             this.chartControl1.Name = "chartControl1";
+            this.chartControl1.PaletteName = "Palette 1";
+            this.chartControl1.PaletteRepository.Add("Palette 1", new DevExpress.XtraCharts.Palette("Palette 1", DevExpress.XtraCharts.PaletteScaleMode.Repeat, new DevExpress.XtraCharts.PaletteEntry[] {
+                new DevExpress.XtraCharts.PaletteEntry(System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(121))))), System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(121))))))}));
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
-            this.chartControl1.Size = new System.Drawing.Size(1146, 695);
+            this.chartControl1.Size = new System.Drawing.Size(1228, 695);
             this.chartControl1.TabIndex = 2;
+            // 
+            // btnDoiMK
+            // 
+            this.btnDoiMK.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnDoiMK.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDoiMK.Name = "btnDoiMK";
+            this.btnDoiMK.Size = new System.Drawing.Size(145, 17);
+            this.btnDoiMK.Text = "Đổi mật khẩu";
+            this.btnDoiMK.Click += new System.EventHandler(this.btnDoiMK_Click);
             // 
             // frmTrangChinh
             // 
+            this.Appearance.BackColor = System.Drawing.Color.LemonChiffon;
+            this.Appearance.Options.UseBackColor = true;
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -221,8 +241,9 @@ namespace CUAHANGXEMAY
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.toolStrip1);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IconOptions.Image = global::CUAHANGXEMAY.Properties.Resources._4666276;
+            this.IconOptions.Image = global::CUAHANGXEMAY.Properties.Resources.LogoDemoNoBG;
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "frmTrangChinh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -255,5 +276,6 @@ namespace CUAHANGXEMAY
         private DevExpress.XtraCharts.ChartControl chartControl1;
         private System.Windows.Forms.ToolStripButton btnNhaCungCap;
         private System.Windows.Forms.ToolStripButton btnLoaiXe;
+        private System.Windows.Forms.ToolStripLabel btnDoiMK;
     }
 }

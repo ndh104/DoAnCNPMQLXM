@@ -91,7 +91,7 @@ namespace CUAHANGXEMAY
             {
 
                 tb_CHITIETMAUXE ctxe = new tb_CHITIETMAUXE();
-                ctxe.IDCHITIETXE = int.Parse(txtIDChiTietXe.Text);
+                //ctxe.IDCHITIETXE = int.Parse(txtIDChiTietXe.Text);
                 ctxe.IDMAU = int.Parse(cbbMauSac.SelectedValue.ToString());
                 ctxe.MAXE = cbbTenXe.SelectedValue.ToString();
                 _ctmauxe.them(ctxe);
@@ -99,7 +99,7 @@ namespace CUAHANGXEMAY
             else
             {
                 tb_CHITIETMAUXE ctxe = _ctmauxe.getItem(idctxe);
-                ctxe.IDMAU = int.Parse(cbbMauSac.Text);
+                ctxe.IDMAU = int.Parse(cbbMauSac.SelectedValue.ToString());
                 ctxe.MAXE = cbbTenXe.SelectedValue.ToString();
                 _ctmauxe.capnhat(ctxe);
             }

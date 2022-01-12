@@ -48,7 +48,20 @@ namespace BusinessLayer
         {
             return db.tb_NHANVIEN.FirstOrDefault(x => x.MANV == manv);
         }
+        public void doiMatKhau(string tk, string mkm)
+        {
 
+            tb_NHANVIEN _nhanvien = db.tb_NHANVIEN.FirstOrDefault(x => x.USERNAME == tk);
+            _nhanvien.PASSWORD = mkm;
+            try
+            {
+                db.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Có lỗi xảy ra trong quá trình xử lý dữ liệu" + ex.Message);
+            }
+        }
         public void add(tb_NHANVIEN nv)
         {
             try

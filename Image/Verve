@@ -1,0 +1,8 @@
+<Palette Name="Verve" ScaleMode="Extrapolate">
+  <PaletteEntry Color="#FF388C" Color2="#DA005C" />
+  <PaletteEntry Color="#E40059" Color2="#A0003E" />
+  <PaletteEntry Color="#9C007F" Color2="#6D0059" />
+  <PaletteEntry Color="#68007F" Color2="#490059" />
+  <PaletteEntry Color="#005BD3" Color2="#004094" />
+  <PaletteEntry Color="#00349E" Color2="#00246F" />
+</Palette>

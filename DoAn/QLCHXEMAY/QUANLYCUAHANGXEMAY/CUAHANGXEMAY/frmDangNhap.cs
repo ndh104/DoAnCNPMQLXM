@@ -21,6 +21,7 @@ namespace CUAHANGXEMAY
         }
         BUS_NHANVIEN _nhanvien;
         public string _tk;
+        public string _mk;
 
         private void frmDangNhap_Load(object sender, EventArgs e)
         {
@@ -39,6 +40,7 @@ namespace CUAHANGXEMAY
         private void btnDN_Click(object sender, EventArgs e)
         {
             _tk = txtTK.Text;
+            _mk = txtMK.Text;
             string tk = txtTK.Text;
             string mk = txtMK.Text;
             var nv = _nhanvien.getItem(tk, mk);

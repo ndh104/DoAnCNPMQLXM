@@ -130,7 +130,7 @@ namespace CUAHANGXEMAY
             this.txtMaNV.Location = new System.Drawing.Point(39, 5);
             this.txtMaNV.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaNV.Name = "txtMaNV";
-            this.txtMaNV.Size = new System.Drawing.Size(223, 20);
+            this.txtMaNV.Size = new System.Drawing.Size(178, 20);
             this.txtMaNV.TabIndex = 24;
             // 
             // txtTaiKhoan
@@ -141,7 +141,7 @@ namespace CUAHANGXEMAY
             this.txtTaiKhoan.Location = new System.Drawing.Point(36, 6);
             this.txtTaiKhoan.Margin = new System.Windows.Forms.Padding(4);
             this.txtTaiKhoan.Name = "txtTaiKhoan";
-            this.txtTaiKhoan.Size = new System.Drawing.Size(223, 20);
+            this.txtTaiKhoan.Size = new System.Drawing.Size(181, 20);
             this.txtTaiKhoan.TabIndex = 23;
             // 
             // label6
@@ -209,7 +209,7 @@ namespace CUAHANGXEMAY
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(34, 110);
+            this.label1.Location = new System.Drawing.Point(34, 92);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(116, 19);
@@ -267,7 +267,7 @@ namespace CUAHANGXEMAY
             this.panelControl1.Controls.Add(this.svgImageBox1);
             this.panelControl1.Location = new System.Drawing.Point(170, 86);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(265, 31);
+            this.panelControl1.Size = new System.Drawing.Size(223, 31);
             this.panelControl1.TabIndex = 34;
             // 
             // panelControl2
@@ -275,7 +275,7 @@ namespace CUAHANGXEMAY
             this.panelControl2.Controls.Add(this.txtMaNV);
             this.panelControl2.Location = new System.Drawing.Point(170, 123);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(265, 31);
+            this.panelControl2.Size = new System.Drawing.Size(223, 31);
             this.panelControl2.TabIndex = 35;
             // 
             // frmQuenMatKhau

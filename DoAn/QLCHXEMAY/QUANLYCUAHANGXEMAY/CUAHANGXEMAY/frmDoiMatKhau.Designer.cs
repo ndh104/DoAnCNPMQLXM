@@ -38,16 +38,14 @@ namespace CUAHANGXEMAY
             this.label4 = new System.Windows.Forms.Label();
             this.lblThoat = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.svgImageBox1 = new DevExpress.XtraEditors.SvgImageBox();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.svgImageBox2 = new DevExpress.XtraEditors.SvgImageBox();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.svgImageBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.svgImageBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.svgImageBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,11 +54,11 @@ namespace CUAHANGXEMAY
             this.txtMKMoi.BackColor = System.Drawing.SystemColors.Control;
             this.txtMKMoi.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMKMoi.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMKMoi.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtMKMoi.Location = new System.Drawing.Point(34, 8);
+            this.txtMKMoi.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtMKMoi.Location = new System.Drawing.Point(40, 8);
             this.txtMKMoi.Margin = new System.Windows.Forms.Padding(0);
             this.txtMKMoi.Name = "txtMKMoi";
-            this.txtMKMoi.Size = new System.Drawing.Size(186, 20);
+            this.txtMKMoi.Size = new System.Drawing.Size(180, 20);
             this.txtMKMoi.TabIndex = 1;
             this.txtMKMoi.UseSystemPasswordChar = true;
             // 
@@ -69,10 +67,10 @@ namespace CUAHANGXEMAY
             this.txtXacNhanMK.BackColor = System.Drawing.SystemColors.Control;
             this.txtXacNhanMK.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtXacNhanMK.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtXacNhanMK.Location = new System.Drawing.Point(34, 8);
+            this.txtXacNhanMK.Location = new System.Drawing.Point(40, 8);
             this.txtXacNhanMK.Margin = new System.Windows.Forms.Padding(0);
             this.txtXacNhanMK.Name = "txtXacNhanMK";
-            this.txtXacNhanMK.Size = new System.Drawing.Size(186, 20);
+            this.txtXacNhanMK.Size = new System.Drawing.Size(180, 20);
             this.txtXacNhanMK.TabIndex = 3;
             this.txtXacNhanMK.UseSystemPasswordChar = true;
             // 
@@ -142,15 +140,6 @@ namespace CUAHANGXEMAY
             this.panelControl1.Size = new System.Drawing.Size(223, 35);
             this.panelControl1.TabIndex = 13;
             // 
-            // panelControl2
-            // 
-            this.panelControl2.Controls.Add(this.svgImageBox2);
-            this.panelControl2.Controls.Add(this.txtXacNhanMK);
-            this.panelControl2.Location = new System.Drawing.Point(192, 98);
-            this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(223, 35);
-            this.panelControl2.TabIndex = 14;
-            // 
             // svgImageBox1
             // 
             this.svgImageBox1.BackColor = System.Drawing.Color.Transparent;
@@ -161,12 +150,14 @@ namespace CUAHANGXEMAY
             this.svgImageBox1.TabIndex = 15;
             this.svgImageBox1.Text = "svgImageBox1";
             // 
-            // textEdit1
+            // panelControl2
             // 
-            this.textEdit1.Location = new System.Drawing.Point(432, 155);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(100, 20);
-            this.textEdit1.TabIndex = 15;
+            this.panelControl2.Controls.Add(this.svgImageBox2);
+            this.panelControl2.Controls.Add(this.txtXacNhanMK);
+            this.panelControl2.Location = new System.Drawing.Point(192, 98);
+            this.panelControl2.Name = "panelControl2";
+            this.panelControl2.Size = new System.Drawing.Size(223, 35);
+            this.panelControl2.TabIndex = 14;
             // 
             // svgImageBox2
             // 
@@ -185,7 +176,6 @@ namespace CUAHANGXEMAY
             this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Stretch;
             this.BackgroundImageStore = global::CUAHANGXEMAY.Properties.Resources.backgroundnomoto;
             this.ClientSize = new System.Drawing.Size(463, 203);
-            this.Controls.Add(this.textEdit1);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.lblThoat);
@@ -195,18 +185,16 @@ namespace CUAHANGXEMAY
             this.Controls.Add(this.label2);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Name = "frmDoiMatKhau";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmDoiMatKhau_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.svgImageBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.svgImageBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.svgImageBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -224,7 +212,6 @@ namespace CUAHANGXEMAY
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.SvgImageBox svgImageBox1;
         private DevExpress.XtraEditors.PanelControl panelControl2;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
         private DevExpress.XtraEditors.SvgImageBox svgImageBox2;
     }
 }
