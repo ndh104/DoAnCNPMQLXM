@@ -30,7 +30,7 @@ namespace CUAHANGXEMAY
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNhanVien));
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.btnTrangChu = new System.Windows.Forms.ToolStripButton();
             this.btnThemNV = new System.Windows.Forms.ToolStripButton();
             this.btnSuaNV = new System.Windows.Forms.ToolStripButton();
@@ -67,32 +67,34 @@ namespace CUAHANGXEMAY
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.toolStrip1.SuspendLayout();
+            this.btnPrint = new System.Windows.Forms.ToolStripButton();
+            this.toolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcNhanVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvNhanVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // toolStrip1
+            // toolStrip
             // 
-            this.toolStrip1.AutoSize = false;
-            this.toolStrip1.BackColor = System.Drawing.Color.PeachPuff;
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStrip.AutoSize = false;
+            this.toolStrip.BackColor = System.Drawing.Color.PeachPuff;
+            this.toolStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnTrangChu,
             this.btnThemNV,
             this.btnSuaNV,
             this.btnXoaNV,
+            this.btnPrint,
             this.btnLuu,
             this.btnBoQua,
             this.btnThoat});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
-            this.toolStrip1.Size = new System.Drawing.Size(1443, 53);
-            this.toolStrip1.TabIndex = 6;
-            this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip.Name = "toolStrip";
+            this.toolStrip.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.toolStrip.Size = new System.Drawing.Size(1443, 53);
+            this.toolStrip.TabIndex = 6;
+            this.toolStrip.Text = "toolStrip1";
             // 
             // btnTrangChu
             // 
@@ -492,6 +494,16 @@ namespace CUAHANGXEMAY
             this.label1.TabIndex = 12;
             this.label1.Text = "Mã nhân viên";
             // 
+            // btnPrint
+            // 
+            this.btnPrint.AutoSize = false;
+            this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
+            this.btnPrint.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(100, 45);
+            this.btnPrint.Text = "In";
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
             // frmNhanVien
             // 
             this.Appearance.Options.UseFont = true;
@@ -500,7 +512,7 @@ namespace CUAHANGXEMAY
             this.ClientSize = new System.Drawing.Size(1443, 646);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.gcNhanVien);
-            this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.toolStrip);
             this.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IconOptions.Image = global::CUAHANGXEMAY.Properties.Resources._7712081;
             this.IconOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("frmNhanVien.IconOptions.LargeImage")));
@@ -509,8 +521,8 @@ namespace CUAHANGXEMAY
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "QUẢN LÝ NHÂN VIÊN";
             this.Load += new System.EventHandler(this.frmNhanVien_Load);
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
+            this.toolStrip.ResumeLayout(false);
+            this.toolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcNhanVien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvNhanVien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
@@ -522,7 +534,7 @@ namespace CUAHANGXEMAY
 
         #endregion
 
-        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStrip toolStrip;
         private System.Windows.Forms.ToolStripButton btnTrangChu;
         private System.Windows.Forms.ToolStripButton btnThemNV;
         private System.Windows.Forms.ToolStripButton btnSuaNV;
@@ -559,5 +571,6 @@ namespace CUAHANGXEMAY
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripButton btnPrint;
     }
 }

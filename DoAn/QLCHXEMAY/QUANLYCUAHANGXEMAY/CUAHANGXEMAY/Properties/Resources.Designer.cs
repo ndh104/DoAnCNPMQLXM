@@ -93,6 +93,16 @@ namespace CUAHANGXEMAY.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _3736324 {
+            get {
+                object obj = ResourceManager.GetObject("3736324", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _4666276 {
             get {
                 object obj = ResourceManager.GetObject("4666276", resourceCulture);

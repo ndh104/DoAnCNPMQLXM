@@ -25,11 +25,13 @@ namespace CUAHANGXEMAY
         BUS_KHACHHANG _khachhang;
         bool _them;
         string _makh;
+
         private void frmKhachHang_Load(object sender, EventArgs e)
         {
             _khachhang = new BUS_KHACHHANG();
             loadData();
-            txtMaKH.Enabled = false;
+            enable(false);
+            //txtMaKH.Enabled = false;
             showHideControl(true);
         }
         void loadData()
@@ -48,6 +50,16 @@ namespace CUAHANGXEMAY
             btnThoat.Visible = t;
         }
         #endregion
+
+        void enable(bool e)
+        {
+            txtMaKH.Enabled = e;
+            txtTenKH.Enabled = e;
+            txtDiaChi.Enabled = e;
+            txtSoDienThoai.Enabled = e;
+            chkDisabled.Enabled = false;
+        }
+
         #region Clear
         void clear()
         {
@@ -67,14 +79,16 @@ namespace CUAHANGXEMAY
         private void btnThemKH_Click(object sender, EventArgs e)
         {
             _them = true;
-            txtMaKH.Enabled = true;
+            enable(true);
+            //txtMaKH.Enabled = true;
             showHideControl(false);
         }
 
         private void btnSuaKH_Click(object sender, EventArgs e)
         {
             _them = false;
-            txtMaKH.Enabled = false;
+            enable(true);
+            //txtMaKH.Enabled = false;
             showHideControl(false);
             MessageBox.Show("Hãy chọn một khách hàng cần thay đổi thông tin", "Thông báo", MessageBoxButtons.OK);
         }
@@ -143,16 +157,14 @@ namespace CUAHANGXEMAY
             loadData();
             clear();
             _them = false;
+            enable(false);
             showHideControl(true);
         }
 
         private void btnBoQua_Click(object sender, EventArgs e)
         {
             _them = false;
-            this.Close();
-            frmKhachHang frm_khachhang = new frmKhachHang();
-            frm_khachhang.ShowDialog();
-            txtMaKH.Enabled = false;
+            enable(false);
             showHideControl(true);
         }
 

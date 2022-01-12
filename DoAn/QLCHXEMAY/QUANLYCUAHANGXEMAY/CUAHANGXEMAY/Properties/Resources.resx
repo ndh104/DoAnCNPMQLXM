@@ -127,11 +127,11 @@
   <data name="luucolor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\luucolor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="quanlymau" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\quanlymau.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="key" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\key.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="themmau" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\themmau.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="xuathoadoncolor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\xuathoadoncolor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -168,9 +168,6 @@
   </data>
   <data name="2970268" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2970268.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="themmau" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\themmau.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="dangnhap" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dangnhap.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -232,11 +229,17 @@
   <data name="homepagepromax" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\homepagepromax.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Thêmmàu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Thêmmàu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="luu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\luu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="banhang" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\banhang.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="quanlymau" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\quanlymau.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="2179357" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2179357.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -355,7 +358,7 @@
   <data name="homepage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\homepage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Thêmmàu" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Thêmmàu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="3736324" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3736324.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

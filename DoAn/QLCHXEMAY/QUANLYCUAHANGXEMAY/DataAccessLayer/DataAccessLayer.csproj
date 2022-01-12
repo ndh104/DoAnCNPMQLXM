@@ -78,6 +78,9 @@
       <DependentUpon>CUAHANG.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="storeHOADON_Result.cs">
+      <DependentUpon>CUAHANG.tt</DependentUpon>
+    </Compile>
     <Compile Include="tb_CHITIETHOADON.cs">
       <DependentUpon>CUAHANG.tt</DependentUpon>
     </Compile>

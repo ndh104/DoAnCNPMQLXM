@@ -101,7 +101,7 @@ namespace CUAHANGXEMAY
             this.btnNhaCungCap.Image = global::CUAHANGXEMAY.Properties.Resources.nhacungcapcolor;
             this.btnNhaCungCap.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnNhaCungCap.Name = "btnNhaCungCap";
-            this.btnNhaCungCap.Size = new System.Drawing.Size(130, 80);
+            this.btnNhaCungCap.Size = new System.Drawing.Size(150, 80);
             this.btnNhaCungCap.Text = "Nhà cung cấp";
             this.btnNhaCungCap.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnNhaCungCap.Click += new System.EventHandler(this.btnNhaCungCap_Click);
@@ -187,7 +187,7 @@ namespace CUAHANGXEMAY
             this.labelControl1.Location = new System.Drawing.Point(315, 8);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(5);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(595, 25);
+            this.labelControl1.Size = new System.Drawing.Size(895, 39);
             this.labelControl1.TabIndex = 3;
             this.labelControl1.Text = "TOP 10 SẢN PHẨM BÁN CHẠY TÍNH ĐẾN THỜI ĐIỂM HIỆN TẠI";
             // 
@@ -215,7 +215,7 @@ namespace CUAHANGXEMAY
             // frmTrangChinh
             // 
             this.Appearance.Options.UseFont = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1378, 756);
             this.Controls.Add(this.panel2);

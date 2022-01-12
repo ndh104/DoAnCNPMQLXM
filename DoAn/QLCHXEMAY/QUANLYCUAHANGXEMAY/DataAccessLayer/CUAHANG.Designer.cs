@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'F:\DoAnCNPM\DoAnCNPM\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\DataAccessLayer\CUAHANG.edmx'. 
+﻿// T4 code generation is enabled for model 'D:\CONG_NGHE_PHAN_MEM\DoAnCNPMQLXM\DoAn\QLCHXEMAY\QUANLYCUAHANGXEMAY\DataAccessLayer\CUAHANG.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

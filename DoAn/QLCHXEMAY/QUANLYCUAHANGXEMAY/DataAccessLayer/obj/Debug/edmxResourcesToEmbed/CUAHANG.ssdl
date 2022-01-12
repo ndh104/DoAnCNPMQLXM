@@ -1,5 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="CUAHANG.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tb_CHITIETMAUXE">
+    <Key>
+      <PropertyRef Name="IDCHITIETXE" />
+    </Key>
+    <Property Name="MAXE" Type="nchar" MaxLength="5" Nullable="false" />
+    <Property Name="IDMAU" Type="int" Nullable="false" />
+    <Property Name="IDCHITIETXE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
   <EntityType Name="tb_CHITIETHOADON">
     <Key>
       <PropertyRef Name="MAHD" />
@@ -9,14 +17,6 @@
     <Property Name="IDCHITIETXE" Type="int" Nullable="false" />
     <Property Name="SOLUONG" Type="int" />
     <Property Name="TONGTIEN" Type="numeric" Precision="18" Scale="0" />
-  </EntityType>
-  <EntityType Name="tb_CHITIETMAUXE">
-    <Key>
-      <PropertyRef Name="IDCHITIETXE" />
-    </Key>
-    <Property Name="MAXE" Type="nchar" MaxLength="5" Nullable="false" />
-    <Property Name="IDMAU" Type="int" Nullable="false" />
-    <Property Name="IDCHITIETXE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
   </EntityType>
   <EntityType Name="tb_HOADON">
     <Key>
@@ -112,9 +112,12 @@
       </CollectionType>
     </ReturnType>
   </Function>
+  <Function Name="storeHOADON" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MAHD" Type="char" Mode="In" />
+  </Function>
   <EntityContainer Name="CUAHANGStoreContainer">
-    <EntitySet Name="tb_CHITIETHOADON" EntityType="Self.tb_CHITIETHOADON" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_CHITIETMAUXE" EntityType="Self.tb_CHITIETMAUXE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_CHITIETHOADON" EntityType="Self.tb_CHITIETHOADON" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_HOADON" EntityType="Self.tb_HOADON" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_KHACHHANG" EntityType="Self.tb_KHACHHANG" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_LOAIXE" EntityType="Self.tb_LOAIXE" Schema="dbo" store:Type="Tables" />

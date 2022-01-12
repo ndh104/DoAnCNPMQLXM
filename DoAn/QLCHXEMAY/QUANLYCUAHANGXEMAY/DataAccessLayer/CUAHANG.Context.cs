@@ -27,8 +27,8 @@ namespace DataAccessLayer
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<tb_CHITIETHOADON> tb_CHITIETHOADON { get; set; }
         public virtual DbSet<tb_CHITIETMAUXE> tb_CHITIETMAUXE { get; set; }
+        public virtual DbSet<tb_CHITIETHOADON> tb_CHITIETHOADON { get; set; }
         public virtual DbSet<tb_HOADON> tb_HOADON { get; set; }
         public virtual DbSet<tb_KHACHHANG> tb_KHACHHANG { get; set; }
         public virtual DbSet<tb_LOAIXE> tb_LOAIXE { get; set; }
@@ -51,6 +51,15 @@ namespace DataAccessLayer
                 new ObjectParameter("maxe", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<MAUXETHEOMAXE_Result>("[Entities].[MAUXETHEOMAXE](@maxe)", maxeParameter);
+        }
+    
+        public virtual ObjectResult<storeHOADON_Result> storeHOADON(string mAHD)
+        {
+            var mAHDParameter = mAHD != null ?
+                new ObjectParameter("MAHD", mAHD) :
+                new ObjectParameter("MAHD", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<storeHOADON_Result>("storeHOADON", mAHDParameter);
         }
     }
 }

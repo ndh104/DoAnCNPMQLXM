@@ -29,8 +29,22 @@ namespace CUAHANGXEMAY
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBanHang));
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
+            this.gcHoaDon = new DevExpress.XtraGrid.GridControl();
+            this.gvHoaDon = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.MAHD = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.NGAYLAP = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TENNV = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TENKH = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TENXE = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TENMAU = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.GIABAN = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.SOLUONG = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TONGTIEN = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
+            this.btnIn = new System.Windows.Forms.ToolStripButton();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.gcBanHang = new DevExpress.XtraGrid.GridControl();
             this.gvBanHang = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -71,22 +85,12 @@ namespace CUAHANGXEMAY
             this.btnHuy = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnXuatHD = new System.Windows.Forms.ToolStripButton();
-            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
-            this.gcHoaDon = new DevExpress.XtraGrid.GridControl();
-            this.gvHoaDon = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.MAHD = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.NGAYLAP = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.TENNV = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.TENKH = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.TENXE = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.TENMAU = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.GIABAN = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.SOLUONG = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.TONGTIEN = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.btnIn = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gcHoaDon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvHoaDon)).BeginInit();
+            this.toolStrip2.SuspendLayout();
             this.xtraTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcBanHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvBanHang)).BeginInit();
@@ -94,9 +98,6 @@ namespace CUAHANGXEMAY
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).BeginInit();
             this.toolStrip1.SuspendLayout();
-            this.toolStrip2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gcHoaDon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvHoaDon)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraTabControl1
@@ -107,9 +108,10 @@ namespace CUAHANGXEMAY
             this.xtraTabControl1.Appearance.Options.UseFont = true;
             this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.xtraTabControl1.Location = new System.Drawing.Point(0, 0);
+            this.xtraTabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl1.Size = new System.Drawing.Size(1118, 571);
+            this.xtraTabControl1.Size = new System.Drawing.Size(1677, 835);
             this.xtraTabControl1.TabIndex = 6;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -119,26 +121,183 @@ namespace CUAHANGXEMAY
             // 
             this.xtraTabPage1.Controls.Add(this.gcHoaDon);
             this.xtraTabPage1.Controls.Add(this.toolStrip2);
+            this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1116, 546);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1675, 800);
             this.xtraTabPage1.Text = "Danh sách hóa đơn";
+            // 
+            // gcHoaDon
+            // 
+            this.gcHoaDon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gcHoaDon.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gcHoaDon.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gcHoaDon.Location = new System.Drawing.Point(0, 80);
+            this.gcHoaDon.MainView = this.gvHoaDon;
+            this.gcHoaDon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gcHoaDon.Name = "gcHoaDon";
+            this.gcHoaDon.Size = new System.Drawing.Size(1675, 720);
+            this.gcHoaDon.TabIndex = 11;
+            this.gcHoaDon.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvHoaDon});
+            // 
+            // gvHoaDon
+            // 
+            this.gvHoaDon.Appearance.HeaderPanel.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gvHoaDon.Appearance.HeaderPanel.Options.UseFont = true;
+            this.gvHoaDon.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.MAHD,
+            this.NGAYLAP,
+            this.TENNV,
+            this.TENKH,
+            this.TENXE,
+            this.TENMAU,
+            this.GIABAN,
+            this.SOLUONG,
+            this.TONGTIEN});
+            this.gvHoaDon.DetailHeight = 512;
+            this.gvHoaDon.GridControl = this.gcHoaDon;
+            this.gvHoaDon.Name = "gvHoaDon";
+            this.gvHoaDon.OptionsView.ShowFooter = true;
+            // 
+            // MAHD
+            // 
+            this.MAHD.Caption = "Mã hoá đơn";
+            this.MAHD.FieldName = "MAHD";
+            this.MAHD.MaxWidth = 225;
+            this.MAHD.MinWidth = 30;
+            this.MAHD.Name = "MAHD";
+            this.MAHD.Visible = true;
+            this.MAHD.VisibleIndex = 0;
+            this.MAHD.Width = 156;
+            // 
+            // NGAYLAP
+            // 
+            this.NGAYLAP.Caption = "Ngày lập";
+            this.NGAYLAP.FieldName = "NGAYLAP";
+            this.NGAYLAP.MinWidth = 30;
+            this.NGAYLAP.Name = "NGAYLAP";
+            this.NGAYLAP.Visible = true;
+            this.NGAYLAP.VisibleIndex = 1;
+            this.NGAYLAP.Width = 130;
+            // 
+            // TENNV
+            // 
+            this.TENNV.Caption = "Tên nhân viên";
+            this.TENNV.FieldName = "TENNV";
+            this.TENNV.MinWidth = 30;
+            this.TENNV.Name = "TENNV";
+            this.TENNV.Visible = true;
+            this.TENNV.VisibleIndex = 2;
+            this.TENNV.Width = 186;
+            // 
+            // TENKH
+            // 
+            this.TENKH.Caption = "Tên khách hàng";
+            this.TENKH.FieldName = "TENKH";
+            this.TENKH.MinWidth = 30;
+            this.TENKH.Name = "TENKH";
+            this.TENKH.Visible = true;
+            this.TENKH.VisibleIndex = 3;
+            this.TENKH.Width = 229;
+            // 
+            // TENXE
+            // 
+            this.TENXE.Caption = "Tên xe";
+            this.TENXE.FieldName = "TENXE";
+            this.TENXE.MinWidth = 30;
+            this.TENXE.Name = "TENXE";
+            this.TENXE.Visible = true;
+            this.TENXE.VisibleIndex = 4;
+            this.TENXE.Width = 162;
+            // 
+            // TENMAU
+            // 
+            this.TENMAU.Caption = "Màu sắc";
+            this.TENMAU.FieldName = "TENMAU";
+            this.TENMAU.MinWidth = 30;
+            this.TENMAU.Name = "TENMAU";
+            this.TENMAU.Visible = true;
+            this.TENMAU.VisibleIndex = 5;
+            this.TENMAU.Width = 148;
+            // 
+            // GIABAN
+            // 
+            this.GIABAN.Caption = "Giá bán(VND)";
+            this.GIABAN.DisplayFormat.FormatString = "0,0";
+            this.GIABAN.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.GIABAN.FieldName = "GIABAN";
+            this.GIABAN.MinWidth = 30;
+            this.GIABAN.Name = "GIABAN";
+            this.GIABAN.Visible = true;
+            this.GIABAN.VisibleIndex = 6;
+            this.GIABAN.Width = 174;
+            // 
+            // SOLUONG
+            // 
+            this.SOLUONG.Caption = "Số lượng";
+            this.SOLUONG.FieldName = "SOLUONG";
+            this.SOLUONG.MinWidth = 30;
+            this.SOLUONG.Name = "SOLUONG";
+            this.SOLUONG.Visible = true;
+            this.SOLUONG.VisibleIndex = 7;
+            this.SOLUONG.Width = 138;
+            // 
+            // TONGTIEN
+            // 
+            this.TONGTIEN.Caption = "Tổng tiền (VND)";
+            this.TONGTIEN.DisplayFormat.FormatString = "0,0";
+            this.TONGTIEN.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.TONGTIEN.FieldName = "TONGTIEN";
+            this.TONGTIEN.MinWidth = 30;
+            this.TONGTIEN.Name = "TONGTIEN";
+            this.TONGTIEN.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TONGTIEN", "Tổng tiền={0:n0}")});
+            this.TONGTIEN.Visible = true;
+            this.TONGTIEN.VisibleIndex = 8;
+            this.TONGTIEN.Width = 205;
+            // 
+            // toolStrip2
+            // 
+            this.toolStrip2.AutoSize = false;
+            this.toolStrip2.ImageScalingSize = new System.Drawing.Size(50, 50);
+            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnIn});
+            this.toolStrip2.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip2.Name = "toolStrip2";
+            this.toolStrip2.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.toolStrip2.Size = new System.Drawing.Size(1675, 80);
+            this.toolStrip2.TabIndex = 10;
+            this.toolStrip2.Text = "toolStrip2";
+            // 
+            // btnIn
+            // 
+            this.btnIn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIn.Image = global::CUAHANGXEMAY.Properties.Resources.printercolor;
+            this.btnIn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnIn.Name = "btnIn";
+            this.btnIn.Size = new System.Drawing.Size(300, 75);
+            this.btnIn.Text = "In danh sách hóa đơn";
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
             // 
             // xtraTabPage2
             // 
             this.xtraTabPage2.Controls.Add(this.gcBanHang);
             this.xtraTabPage2.Controls.Add(this.groupControl1);
             this.xtraTabPage2.Controls.Add(this.toolStrip1);
+            this.xtraTabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(1116, 546);
+            this.xtraTabPage2.Size = new System.Drawing.Size(1675, 800);
             this.xtraTabPage2.Text = "Lập hóa đơn bán";
             // 
             // gcBanHang
             // 
             this.gcBanHang.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcBanHang.Location = new System.Drawing.Point(0, 228);
+            this.gcBanHang.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gcBanHang.Location = new System.Drawing.Point(0, 333);
             this.gcBanHang.MainView = this.gvBanHang;
+            this.gcBanHang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gcBanHang.Name = "gcBanHang";
-            this.gcBanHang.Size = new System.Drawing.Size(1116, 318);
+            this.gcBanHang.Size = new System.Drawing.Size(1675, 467);
             this.gcBanHang.TabIndex = 12;
             this.gcBanHang.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvBanHang});
@@ -157,6 +316,7 @@ namespace CUAHANGXEMAY
             this.GIABANXE,
             this.SOLUONGBAN,
             this.THANHTIEN});
+            this.gvBanHang.DetailHeight = 512;
             this.gvBanHang.GridControl = this.gcBanHang;
             this.gvBanHang.Name = "gvBanHang";
             this.gvBanHang.Click += new System.EventHandler(this.gvBanHang_Click);
@@ -165,56 +325,62 @@ namespace CUAHANGXEMAY
             // 
             this.MAHOADON.Caption = "Mã hoá đơn";
             this.MAHOADON.FieldName = "MAHD";
-            this.MAHOADON.MaxWidth = 100;
+            this.MAHOADON.MaxWidth = 150;
+            this.MAHOADON.MinWidth = 30;
             this.MAHOADON.Name = "MAHOADON";
             this.MAHOADON.Visible = true;
             this.MAHOADON.VisibleIndex = 0;
-            this.MAHOADON.Width = 100;
+            this.MAHOADON.Width = 150;
             // 
             // NGAYLAPHD
             // 
             this.NGAYLAPHD.Caption = "Ngày lập";
             this.NGAYLAPHD.FieldName = "NGAYLAP";
+            this.NGAYLAPHD.MinWidth = 30;
             this.NGAYLAPHD.Name = "NGAYLAPHD";
             this.NGAYLAPHD.Visible = true;
             this.NGAYLAPHD.VisibleIndex = 1;
-            this.NGAYLAPHD.Width = 112;
+            this.NGAYLAPHD.Width = 168;
             // 
             // TENNVLAP
             // 
             this.TENNVLAP.Caption = "Tên nhân viên";
             this.TENNVLAP.FieldName = "TENNV";
+            this.TENNVLAP.MinWidth = 30;
             this.TENNVLAP.Name = "TENNVLAP";
             this.TENNVLAP.Visible = true;
             this.TENNVLAP.VisibleIndex = 2;
-            this.TENNVLAP.Width = 134;
+            this.TENNVLAP.Width = 201;
             // 
             // TENKHMUA
             // 
             this.TENKHMUA.Caption = "Tên khách hàng";
             this.TENKHMUA.FieldName = "TENKH";
+            this.TENKHMUA.MinWidth = 30;
             this.TENKHMUA.Name = "TENKHMUA";
             this.TENKHMUA.Visible = true;
             this.TENKHMUA.VisibleIndex = 3;
-            this.TENKHMUA.Width = 149;
+            this.TENKHMUA.Width = 223;
             // 
             // TENXEBAN
             // 
             this.TENXEBAN.Caption = "Tên xe";
             this.TENXEBAN.FieldName = "TENXE";
+            this.TENXEBAN.MinWidth = 30;
             this.TENXEBAN.Name = "TENXEBAN";
             this.TENXEBAN.Visible = true;
             this.TENXEBAN.VisibleIndex = 4;
-            this.TENXEBAN.Width = 119;
+            this.TENXEBAN.Width = 178;
             // 
             // MAUSACXE
             // 
             this.MAUSACXE.Caption = "Màu sắc";
             this.MAUSACXE.FieldName = "MAUSAC";
+            this.MAUSACXE.MinWidth = 30;
             this.MAUSACXE.Name = "MAUSACXE";
             this.MAUSACXE.Visible = true;
             this.MAUSACXE.VisibleIndex = 5;
-            this.MAUSACXE.Width = 109;
+            this.MAUSACXE.Width = 163;
             // 
             // GIABANXE
             // 
@@ -222,19 +388,21 @@ namespace CUAHANGXEMAY
             this.GIABANXE.DisplayFormat.FormatString = "0,0";
             this.GIABANXE.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.GIABANXE.FieldName = "GIABAN";
+            this.GIABANXE.MinWidth = 30;
             this.GIABANXE.Name = "GIABANXE";
             this.GIABANXE.Visible = true;
             this.GIABANXE.VisibleIndex = 6;
-            this.GIABANXE.Width = 130;
+            this.GIABANXE.Width = 195;
             // 
             // SOLUONGBAN
             // 
             this.SOLUONGBAN.Caption = "Số lượng";
             this.SOLUONGBAN.FieldName = "SOLUONG";
+            this.SOLUONGBAN.MinWidth = 30;
             this.SOLUONGBAN.Name = "SOLUONGBAN";
             this.SOLUONGBAN.Visible = true;
             this.SOLUONGBAN.VisibleIndex = 7;
-            this.SOLUONGBAN.Width = 96;
+            this.SOLUONGBAN.Width = 144;
             // 
             // THANHTIEN
             // 
@@ -242,10 +410,11 @@ namespace CUAHANGXEMAY
             this.THANHTIEN.DisplayFormat.FormatString = "0,0";
             this.THANHTIEN.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.THANHTIEN.FieldName = "TONGTIEN";
+            this.THANHTIEN.MinWidth = 30;
             this.THANHTIEN.Name = "THANHTIEN";
             this.THANHTIEN.Visible = true;
             this.THANHTIEN.VisibleIndex = 8;
-            this.THANHTIEN.Width = 142;
+            this.THANHTIEN.Width = 213;
             // 
             // groupControl1
             // 
@@ -281,9 +450,10 @@ namespace CUAHANGXEMAY
             this.groupControl1.Controls.Add(this.label2);
             this.groupControl1.Controls.Add(this.label1);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupControl1.Location = new System.Drawing.Point(0, 52);
+            this.groupControl1.Location = new System.Drawing.Point(0, 76);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1116, 176);
+            this.groupControl1.Size = new System.Drawing.Size(1675, 257);
             this.groupControl1.TabIndex = 11;
             this.groupControl1.Text = "Thông tin hoá đơn";
             // 
@@ -293,26 +463,29 @@ namespace CUAHANGXEMAY
             this.lblNhanVien.Appearance.Options.UseFont = true;
             this.lblNhanVien.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblNhanVien.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
-            this.lblNhanVien.Location = new System.Drawing.Point(471, 32);
+            this.lblNhanVien.Location = new System.Drawing.Point(706, 47);
+            this.lblNhanVien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lblNhanVien.Name = "lblNhanVien";
-            this.lblNhanVien.Size = new System.Drawing.Size(240, 23);
+            this.lblNhanVien.Size = new System.Drawing.Size(360, 34);
             this.lblNhanVien.TabIndex = 26;
             this.lblNhanVien.Text = "...";
             // 
             // cbbMauSac
             // 
             this.cbbMauSac.FormattingEnabled = true;
-            this.cbbMauSac.Location = new System.Drawing.Point(892, 69);
+            this.cbbMauSac.Location = new System.Drawing.Point(1338, 101);
+            this.cbbMauSac.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbbMauSac.Name = "cbbMauSac";
-            this.cbbMauSac.Size = new System.Drawing.Size(167, 24);
+            this.cbbMauSac.Size = new System.Drawing.Size(248, 32);
             this.cbbMauSac.TabIndex = 25;
             // 
             // cbbTenKH
             // 
             this.cbbTenKH.FormattingEnabled = true;
-            this.cbbTenKH.Location = new System.Drawing.Point(471, 69);
+            this.cbbTenKH.Location = new System.Drawing.Point(706, 101);
+            this.cbbTenKH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbbTenKH.Name = "cbbTenKH";
-            this.cbbTenKH.Size = new System.Drawing.Size(240, 24);
+            this.cbbTenKH.Size = new System.Drawing.Size(358, 32);
             this.cbbTenKH.TabIndex = 24;
             // 
             // txtThanhTien
@@ -321,9 +494,10 @@ namespace CUAHANGXEMAY
             this.txtThanhTien.Appearance.Options.UseFont = true;
             this.txtThanhTien.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.txtThanhTien.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
-            this.txtThanhTien.Location = new System.Drawing.Point(892, 123);
+            this.txtThanhTien.Location = new System.Drawing.Point(1338, 180);
+            this.txtThanhTien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtThanhTien.Name = "txtThanhTien";
-            this.txtThanhTien.Size = new System.Drawing.Size(167, 23);
+            this.txtThanhTien.Size = new System.Drawing.Size(250, 34);
             this.txtThanhTien.TabIndex = 22;
             this.txtThanhTien.Text = "...";
             this.txtThanhTien.TextChanged += new System.EventHandler(this.txtThanhTien_TextChanged);
@@ -334,9 +508,10 @@ namespace CUAHANGXEMAY
             this.txtGiaBan.Appearance.Options.UseFont = true;
             this.txtGiaBan.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.txtGiaBan.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
-            this.txtGiaBan.Location = new System.Drawing.Point(109, 123);
+            this.txtGiaBan.Location = new System.Drawing.Point(164, 180);
+            this.txtGiaBan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtGiaBan.Name = "txtGiaBan";
-            this.txtGiaBan.Size = new System.Drawing.Size(167, 23);
+            this.txtGiaBan.Size = new System.Drawing.Size(250, 34);
             this.txtGiaBan.TabIndex = 21;
             this.txtGiaBan.Text = "...";
             this.txtGiaBan.TextChanged += new System.EventHandler(this.txtGiaBan_TextChanged);
@@ -344,18 +519,20 @@ namespace CUAHANGXEMAY
             // cbbTenXe
             // 
             this.cbbTenXe.FormattingEnabled = true;
-            this.cbbTenXe.Location = new System.Drawing.Point(892, 32);
+            this.cbbTenXe.Location = new System.Drawing.Point(1338, 47);
+            this.cbbTenXe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbbTenXe.Name = "cbbTenXe";
-            this.cbbTenXe.Size = new System.Drawing.Size(167, 24);
+            this.cbbTenXe.Size = new System.Drawing.Size(248, 32);
             this.cbbTenXe.TabIndex = 20;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(830, 149);
+            this.label10.Location = new System.Drawing.Point(1245, 218);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(229, 16);
+            this.label10.Size = new System.Drawing.Size(354, 24);
             this.label10.TabIndex = 19;
             this.label10.Text = "*Tổng tiền đã bao gồm thuế VAT 10%";
             // 
@@ -364,9 +541,10 @@ namespace CUAHANGXEMAY
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(44, 126);
+            this.label9.Location = new System.Drawing.Point(66, 184);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(51, 16);
+            this.label9.Size = new System.Drawing.Size(78, 24);
             this.label9.TabIndex = 17;
             this.label9.Text = "Giá bán";
             // 
@@ -375,17 +553,20 @@ namespace CUAHANGXEMAY
             this.separatorControl1.BackColor = System.Drawing.Color.Transparent;
             this.separatorControl1.LineColor = System.Drawing.Color.Blue;
             this.separatorControl1.LineThickness = 1;
-            this.separatorControl1.Location = new System.Drawing.Point(0, 97);
+            this.separatorControl1.Location = new System.Drawing.Point(0, 142);
+            this.separatorControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.separatorControl1.Name = "separatorControl1";
-            this.separatorControl1.Size = new System.Drawing.Size(1113, 20);
+            this.separatorControl1.Padding = new System.Windows.Forms.Padding(14, 13, 14, 13);
+            this.separatorControl1.Size = new System.Drawing.Size(1670, 29);
             this.separatorControl1.TabIndex = 16;
             // 
             // txtSoLuong
             // 
             this.txtSoLuong.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoLuong.Location = new System.Drawing.Point(471, 123);
+            this.txtSoLuong.Location = new System.Drawing.Point(706, 180);
+            this.txtSoLuong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSoLuong.Name = "txtSoLuong";
-            this.txtSoLuong.Size = new System.Drawing.Size(240, 23);
+            this.txtSoLuong.Size = new System.Drawing.Size(358, 31);
             this.txtSoLuong.TabIndex = 13;
             this.txtSoLuong.Text = "1";
             this.txtSoLuong.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -394,9 +575,10 @@ namespace CUAHANGXEMAY
             // 
             this.dtpNgayLap.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpNgayLap.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNgayLap.Location = new System.Drawing.Point(109, 67);
+            this.dtpNgayLap.Location = new System.Drawing.Point(164, 98);
+            this.dtpNgayLap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpNgayLap.Name = "dtpNgayLap";
-            this.dtpNgayLap.Size = new System.Drawing.Size(167, 23);
+            this.dtpNgayLap.Size = new System.Drawing.Size(248, 31);
             this.dtpNgayLap.TabIndex = 11;
             this.dtpNgayLap.Value = new System.DateTime(2022, 1, 9, 0, 0, 0, 0);
             this.dtpNgayLap.ValueChanged += new System.EventHandler(this.dtpNgayLap_ValueChanged);
@@ -404,9 +586,10 @@ namespace CUAHANGXEMAY
             // txtMaHD
             // 
             this.txtMaHD.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaHD.Location = new System.Drawing.Point(109, 32);
+            this.txtMaHD.Location = new System.Drawing.Point(164, 47);
+            this.txtMaHD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMaHD.Name = "txtMaHD";
-            this.txtMaHD.Size = new System.Drawing.Size(167, 23);
+            this.txtMaHD.Size = new System.Drawing.Size(248, 31);
             this.txtMaHD.TabIndex = 8;
             // 
             // label8
@@ -414,9 +597,10 @@ namespace CUAHANGXEMAY
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(831, 72);
+            this.label8.Location = new System.Drawing.Point(1246, 105);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(55, 16);
+            this.label8.Size = new System.Drawing.Size(82, 24);
             this.label8.TabIndex = 7;
             this.label8.Text = "Màu sắc";
             // 
@@ -425,9 +609,10 @@ namespace CUAHANGXEMAY
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(817, 126);
+            this.label7.Location = new System.Drawing.Point(1226, 184);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(69, 16);
+            this.label7.Size = new System.Drawing.Size(106, 24);
             this.label7.TabIndex = 6;
             this.label7.Text = "Thành tiền";
             // 
@@ -436,9 +621,10 @@ namespace CUAHANGXEMAY
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(406, 126);
+            this.label6.Location = new System.Drawing.Point(609, 184);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(59, 16);
+            this.label6.Size = new System.Drawing.Size(88, 24);
             this.label6.TabIndex = 5;
             this.label6.Text = "Số lượng";
             // 
@@ -447,9 +633,10 @@ namespace CUAHANGXEMAY
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(839, 35);
+            this.label5.Location = new System.Drawing.Point(1258, 51);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 16);
+            this.label5.Size = new System.Drawing.Size(71, 24);
             this.label5.TabIndex = 4;
             this.label5.Text = "Tên xe";
             // 
@@ -458,9 +645,10 @@ namespace CUAHANGXEMAY
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(46, 72);
+            this.label4.Location = new System.Drawing.Point(69, 105);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 16);
+            this.label4.Size = new System.Drawing.Size(88, 24);
             this.label4.TabIndex = 3;
             this.label4.Text = "Ngày lập";
             // 
@@ -469,9 +657,10 @@ namespace CUAHANGXEMAY
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(366, 72);
+            this.label3.Location = new System.Drawing.Point(549, 105);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 16);
+            this.label3.Size = new System.Drawing.Size(152, 24);
             this.label3.TabIndex = 2;
             this.label3.Text = "Tên khách hàng";
             // 
@@ -480,9 +669,10 @@ namespace CUAHANGXEMAY
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(376, 35);
+            this.label2.Location = new System.Drawing.Point(564, 51);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 16);
+            this.label2.Size = new System.Drawing.Size(137, 24);
             this.label2.TabIndex = 1;
             this.label2.Text = "Tên nhân viên";
             // 
@@ -491,9 +681,10 @@ namespace CUAHANGXEMAY
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(28, 35);
+            this.label1.Location = new System.Drawing.Point(42, 51);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 16);
+            this.label1.Size = new System.Drawing.Size(114, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã hoá đơn";
             // 
@@ -510,7 +701,8 @@ namespace CUAHANGXEMAY
             this.btnXuatHD});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1116, 52);
+            this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.toolStrip1.Size = new System.Drawing.Size(1675, 76);
             this.toolStrip1.TabIndex = 10;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -543,7 +735,7 @@ namespace CUAHANGXEMAY
             // 
             this.duongNetXuat.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.duongNetXuat.Name = "duongNetXuat";
-            this.duongNetXuat.Size = new System.Drawing.Size(6, 52);
+            this.duongNetXuat.Size = new System.Drawing.Size(6, 76);
             // 
             // btnHuy
             // 
@@ -563,7 +755,7 @@ namespace CUAHANGXEMAY
             // 
             this.toolStripSeparator1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 52);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 76);
             // 
             // btnXuatHD
             // 
@@ -579,158 +771,24 @@ namespace CUAHANGXEMAY
             this.btnXuatHD.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnXuatHD.Click += new System.EventHandler(this.btnXuatHD_Click);
             // 
-            // toolStrip2
-            // 
-            this.toolStrip2.AutoSize = false;
-            this.toolStrip2.ImageScalingSize = new System.Drawing.Size(50, 50);
-            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnIn});
-            this.toolStrip2.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(1116, 55);
-            this.toolStrip2.TabIndex = 10;
-            this.toolStrip2.Text = "toolStrip2";
-            // 
-            // gcHoaDon
-            // 
-            this.gcHoaDon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcHoaDon.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gcHoaDon.Location = new System.Drawing.Point(0, 55);
-            this.gcHoaDon.MainView = this.gvHoaDon;
-            this.gcHoaDon.Name = "gcHoaDon";
-            this.gcHoaDon.Size = new System.Drawing.Size(1116, 491);
-            this.gcHoaDon.TabIndex = 11;
-            this.gcHoaDon.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gvHoaDon});
-            // 
-            // gvHoaDon
-            // 
-            this.gvHoaDon.Appearance.HeaderPanel.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gvHoaDon.Appearance.HeaderPanel.Options.UseFont = true;
-            this.gvHoaDon.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.MAHD,
-            this.NGAYLAP,
-            this.TENNV,
-            this.TENKH,
-            this.TENXE,
-            this.TENMAU,
-            this.GIABAN,
-            this.SOLUONG,
-            this.TONGTIEN});
-            this.gvHoaDon.GridControl = this.gcHoaDon;
-            this.gvHoaDon.Name = "gvHoaDon";
-            this.gvHoaDon.OptionsView.ShowFooter = true;
-            // 
-            // MAHD
-            // 
-            this.MAHD.Caption = "Mã hoá đơn";
-            this.MAHD.FieldName = "MAHD";
-            this.MAHD.MaxWidth = 150;
-            this.MAHD.Name = "MAHD";
-            this.MAHD.Visible = true;
-            this.MAHD.VisibleIndex = 0;
-            this.MAHD.Width = 104;
-            // 
-            // NGAYLAP
-            // 
-            this.NGAYLAP.Caption = "Ngày lập";
-            this.NGAYLAP.FieldName = "NGAYLAP";
-            this.NGAYLAP.Name = "NGAYLAP";
-            this.NGAYLAP.Visible = true;
-            this.NGAYLAP.VisibleIndex = 1;
-            this.NGAYLAP.Width = 87;
-            // 
-            // TENNV
-            // 
-            this.TENNV.Caption = "Tên nhân viên";
-            this.TENNV.FieldName = "TENNV";
-            this.TENNV.Name = "TENNV";
-            this.TENNV.Visible = true;
-            this.TENNV.VisibleIndex = 2;
-            this.TENNV.Width = 124;
-            // 
-            // TENKH
-            // 
-            this.TENKH.Caption = "Tên khách hàng";
-            this.TENKH.FieldName = "TENKH";
-            this.TENKH.Name = "TENKH";
-            this.TENKH.Visible = true;
-            this.TENKH.VisibleIndex = 3;
-            this.TENKH.Width = 153;
-            // 
-            // TENXE
-            // 
-            this.TENXE.Caption = "Tên xe";
-            this.TENXE.FieldName = "TENXE";
-            this.TENXE.Name = "TENXE";
-            this.TENXE.Visible = true;
-            this.TENXE.VisibleIndex = 4;
-            this.TENXE.Width = 108;
-            // 
-            // TENMAU
-            // 
-            this.TENMAU.Caption = "Màu sắc";
-            this.TENMAU.FieldName = "TENMAU";
-            this.TENMAU.Name = "TENMAU";
-            this.TENMAU.Visible = true;
-            this.TENMAU.VisibleIndex = 5;
-            this.TENMAU.Width = 99;
-            // 
-            // GIABAN
-            // 
-            this.GIABAN.Caption = "Giá bán(VND)";
-            this.GIABAN.DisplayFormat.FormatString = "0,0";
-            this.GIABAN.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.GIABAN.FieldName = "GIABAN";
-            this.GIABAN.Name = "GIABAN";
-            this.GIABAN.Visible = true;
-            this.GIABAN.VisibleIndex = 6;
-            this.GIABAN.Width = 116;
-            // 
-            // SOLUONG
-            // 
-            this.SOLUONG.Caption = "Số lượng";
-            this.SOLUONG.FieldName = "SOLUONG";
-            this.SOLUONG.Name = "SOLUONG";
-            this.SOLUONG.Visible = true;
-            this.SOLUONG.VisibleIndex = 7;
-            this.SOLUONG.Width = 92;
-            // 
-            // TONGTIEN
-            // 
-            this.TONGTIEN.Caption = "Tổng tiền (VND)";
-            this.TONGTIEN.DisplayFormat.FormatString = "0,0";
-            this.TONGTIEN.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.TONGTIEN.FieldName = "TONGTIEN";
-            this.TONGTIEN.Name = "TONGTIEN";
-            this.TONGTIEN.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TONGTIEN", "Tổng tiền={0:n0}")});
-            this.TONGTIEN.Visible = true;
-            this.TONGTIEN.VisibleIndex = 8;
-            this.TONGTIEN.Width = 137;
-            // 
-            // btnIn
-            // 
-            this.btnIn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIn.Image = global::CUAHANGXEMAY.Properties.Resources.printercolor;
-            this.btnIn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnIn.Name = "btnIn";
-            this.btnIn.Size = new System.Drawing.Size(213, 52);
-            this.btnIn.Text = "In danh sách hóa đơn";
-            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
-            // 
             // frmBanHang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1118, 571);
+            this.ClientSize = new System.Drawing.Size(1677, 835);
             this.Controls.Add(this.xtraTabControl1);
+            this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("frmBanHang.IconOptions.SvgImage")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmBanHang";
             this.Text = "BÁN HÀNG";
             this.Load += new System.EventHandler(this.frmBanHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
             this.xtraTabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gcHoaDon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvHoaDon)).EndInit();
+            this.toolStrip2.ResumeLayout(false);
+            this.toolStrip2.PerformLayout();
             this.xtraTabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gcBanHang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvBanHang)).EndInit();
@@ -740,10 +798,6 @@ namespace CUAHANGXEMAY
             ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            this.toolStrip2.ResumeLayout(false);
-            this.toolStrip2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gcHoaDon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvHoaDon)).EndInit();
             this.ResumeLayout(false);
 
         }
