@@ -27,6 +27,10 @@ namespace BusinessLayer
             return db.tb_NHANVIEN.FirstOrDefault(x=> x.USERNAME == tk && x.MANV == manv && x.TENNV == hoten 
                                                  && x.NGAYSINH == ngaysinh && x.CMND == cmnd && x.SDT == sdt);
         }
+        public tb_NHANVIEN getItemSDT(string sdt)
+        {
+            return db.tb_NHANVIEN.FirstOrDefault(x => x.SDT == sdt);
+        }
         public tb_NHANVIEN getItemNV(string tk)
         {
             return db.tb_NHANVIEN.FirstOrDefault(x => x.USERNAME == tk);
@@ -44,7 +48,7 @@ namespace BusinessLayer
                 throw new Exception("Có lỗi xảy ra trong quá trình xử lý dữ liệu" + ex.Message);
             }
         }
-        public tb_NHANVIEN Get_Item(string manv)
+        public tb_NHANVIEN Get_ItemMaNV(string manv)
         {
             return db.tb_NHANVIEN.FirstOrDefault(x => x.MANV == manv);
         }

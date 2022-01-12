@@ -45,7 +45,6 @@ namespace CUAHANGXEMAY
             btnXoaKH.Visible = t;
             btnLuu.Visible = !t;
             btnBoQua.Visible = !t;
-            btnThoat.Visible = t;
         }
         #endregion
         #region Clear
@@ -90,6 +89,8 @@ namespace CUAHANGXEMAY
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
+            var makh = _khachhang.getItem(txtMaKH.Text);
+            var sdt = _khachhang.getItemSDT(txtSoDienThoai.Text);
             if (_them)
             {
                 if (txtMaKH.Text == "" || txtTenKH.Text == "" || txtDiaChi.Text == "" || txtSoDienThoai.Text == "")
@@ -98,20 +99,41 @@ namespace CUAHANGXEMAY
                 }
                 else
                 {
-                    try
+                    if(makh == null)
                     {
-                        tb_KHACHHANG kh = new tb_KHACHHANG();
-                        kh.MAKH = txtMaKH.Text;
-                        kh.TENKH = txtTenKH.Text;
-                        kh.DIACHI = txtDiaChi.Text;
-                        kh.SDT = txtSoDienThoai.Text;
-                        kh.DISABLE = chkDisabled.Checked;
-                        _khachhang.add(kh);
-                        MessageBox.Show("Thêm thành công.", "Thông báo", MessageBoxButtons.OK);
+                        if(txtMaKH.Text.Length == 5)
+                        {
+                            if(sdt == null)
+                            {
+                                try
+                                {
+                                    tb_KHACHHANG kh = new tb_KHACHHANG();
+                                    kh.MAKH = txtMaKH.Text;
+                                    kh.TENKH = txtTenKH.Text;
+                                    kh.DIACHI = txtDiaChi.Text;
+                                    kh.SDT = txtSoDienThoai.Text;
+                                    kh.DISABLE = chkDisabled.Checked;
+                                    _khachhang.add(kh);
+                                    MessageBox.Show("Thêm thành công.", "Thông báo", MessageBoxButtons.OK);
+                                }
+                                catch
+                                {
+                                    MessageBox.Show("Thêm không thành công!", "Thông báo", MessageBoxButtons.OK);
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Số điện thoại đã tồn tại!", "Thông báo", MessageBoxButtons.OK);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Mã khách hàng có 5 ký tự!", "Thông báo", MessageBoxButtons.OK);
+                        }
                     }
-                    catch
+                    else
                     {
-                        MessageBox.Show("Mã khách hàng đã tồn tại.", "Thông báo", MessageBoxButtons.OK);
+                        MessageBox.Show("Mã khách hàng đã tồn tại!", "Thông báo", MessageBoxButtons.OK);
                     }
                 }
             }
@@ -123,25 +145,45 @@ namespace CUAHANGXEMAY
                 }
                 else
                 {
-                    try
+                    if (makh == null)
                     {
-                        tb_KHACHHANG kh = _khachhang.getItem(_makh);
-                        kh.MAKH = txtMaKH.Text;
-                        kh.TENKH = txtTenKH.Text;
-                        kh.DIACHI = txtDiaChi.Text;
-                        kh.SDT = txtSoDienThoai.Text;
-                        kh.DISABLE = chkDisabled.Checked;
-                        _khachhang.update(kh);
-                        MessageBox.Show("Sửa thông tin thành công.", "Thông báo", MessageBoxButtons.OK);
+                        if (txtMaKH.Text.Length == 5)
+                        {
+                            if (sdt == null)
+                            {
+                                try
+                                {
+                                    tb_KHACHHANG kh = _khachhang.getItem(_makh);
+                                    kh.MAKH = txtMaKH.Text;
+                                    kh.TENKH = txtTenKH.Text;
+                                    kh.DIACHI = txtDiaChi.Text;
+                                    kh.SDT = txtSoDienThoai.Text;
+                                    kh.DISABLE = chkDisabled.Checked;
+                                    _khachhang.update(kh);
+                                    MessageBox.Show("Sửa thông tin thành công.", "Thông báo", MessageBoxButtons.OK);
+                                }
+                                catch
+                                {
+                                    MessageBox.Show("Sửa không thành công!", "Thông báo", MessageBoxButtons.OK);
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Số điện thoại đã tồn tại!", "Thông báo", MessageBoxButtons.OK);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Mã khách hàng có 5 ký tự!", "Thông báo", MessageBoxButtons.OK);
+                        }
                     }
-                    catch
+                    else
                     {
-                        MessageBox.Show("Sửa không thành công.", "Thông báo", MessageBoxButtons.OK);
+                        MessageBox.Show("Mã khách hàng đã tồn tại!", "Thông báo", MessageBoxButtons.OK);
                     }
                 }
             }
             loadData();
-            clear();
             _them = false;
             showHideControl(true);
         }
@@ -155,12 +197,6 @@ namespace CUAHANGXEMAY
             txtMaKH.Enabled = false;
             showHideControl(true);
         }
-
-        private void btnThoat_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void gvKhachHang_Click(object sender, EventArgs e)
         {
             if (gvKhachHang.RowCount > 0)

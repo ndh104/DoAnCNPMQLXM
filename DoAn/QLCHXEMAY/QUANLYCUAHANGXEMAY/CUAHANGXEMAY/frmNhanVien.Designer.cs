@@ -37,7 +37,6 @@ namespace CUAHANGXEMAY
             this.btnXoaNV = new System.Windows.Forms.ToolStripButton();
             this.btnLuu = new System.Windows.Forms.ToolStripButton();
             this.btnBoQua = new System.Windows.Forms.ToolStripButton();
-            this.btnThoat = new System.Windows.Forms.ToolStripButton();
             this.gcNhanVien = new DevExpress.XtraGrid.GridControl();
             this.gvNhanVien = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.MA_NV = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -85,8 +84,7 @@ namespace CUAHANGXEMAY
             this.btnSuaNV,
             this.btnXoaNV,
             this.btnLuu,
-            this.btnBoQua,
-            this.btnThoat});
+            this.btnBoQua});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
@@ -157,17 +155,6 @@ namespace CUAHANGXEMAY
             this.btnBoQua.Size = new System.Drawing.Size(72, 50);
             this.btnBoQua.Text = "Bỏ qua";
             this.btnBoQua.Click += new System.EventHandler(this.btnBoQua_Click);
-            // 
-            // btnThoat
-            // 
-            this.btnThoat.AutoSize = false;
-            this.btnThoat.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
-            this.btnThoat.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(150, 45);
-            this.btnThoat.Text = "Thoát";
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // gcNhanVien
             // 
@@ -529,7 +516,6 @@ namespace CUAHANGXEMAY
         private System.Windows.Forms.ToolStripButton btnXoaNV;
         private System.Windows.Forms.ToolStripButton btnLuu;
         private System.Windows.Forms.ToolStripButton btnBoQua;
-        private System.Windows.Forms.ToolStripButton btnThoat;
         private DevExpress.XtraGrid.GridControl gcNhanVien;
         private DevExpress.XtraGrid.Views.Grid.GridView gvNhanVien;
         private DevExpress.XtraGrid.Columns.GridColumn MA_NV;

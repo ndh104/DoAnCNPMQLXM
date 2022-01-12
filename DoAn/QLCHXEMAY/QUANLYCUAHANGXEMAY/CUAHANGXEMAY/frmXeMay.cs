@@ -113,31 +113,59 @@ namespace CUAHANGXEMAY
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
+            var maxe = _xemay.getItem(txtMaXe.Text);
             if (_them)
             {
-
-                tb_XEMAY xe = new tb_XEMAY();
-                xe.MAXE = txtMaXe.Text;
-                xe.TENXE = txtTenXe.Text;
-                xe.DUNGTICH = txtDungTich.Text;
-                xe.TINHTRANG = txtTinhTrang.Text;
-                xe.GIABAN = decimal.Parse(txtGiaBan.Text);
-                xe.MALOAI = cbbLoaiXe.SelectedValue.ToString();
-                xe.MANCC = cbbNCC.SelectedValue.ToString();
-                xe.DISABLE = cbDisable.Checked;
-                _xemay.them(xe);
+                if (maxe == null)
+                {
+                    if (txtMaXe.Text.Length == 5)
+                    {
+                        tb_XEMAY xe = new tb_XEMAY();
+                        xe.MAXE = txtMaXe.Text;
+                        xe.TENXE = txtTenXe.Text;
+                        xe.DUNGTICH = txtDungTich.Text;
+                        xe.TINHTRANG = txtTinhTrang.Text;
+                        xe.GIABAN = decimal.Parse(txtGiaBan.Text);
+                        xe.MALOAI = cbbLoaiXe.SelectedValue.ToString();
+                        xe.MANCC = cbbNCC.SelectedValue.ToString();
+                        xe.DISABLE = cbDisable.Checked;
+                        _xemay.them(xe);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Mã xe chứa 5 ký tự!", "Thông báo!", MessageBoxButtons.OK);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Mã xe đã tồn tại!", "Thông báo!", MessageBoxButtons.OK);
+                }
             }
             else
             {
-                tb_XEMAY xe = _xemay.getItem(_maxe);
-                xe.TENXE = txtTenXe.Text;
-                xe.DUNGTICH = txtDungTich.Text;
-                xe.TINHTRANG = txtTinhTrang.Text;
-                xe.GIABAN = decimal.Parse(txtGiaBan.Text);
-                xe.MALOAI = cbbLoaiXe.SelectedValue.ToString();
-                xe.MANCC = cbbNCC.SelectedValue.ToString();
-                xe.DISABLE = cbDisable.Checked;
-                _xemay.capnhat(xe);
+                if (maxe == null)
+                {
+                    if (txtMaXe.Text.Length == 5)
+                    {
+                        tb_XEMAY xe = _xemay.getItem(_maxe);
+                        xe.TENXE = txtTenXe.Text;
+                        xe.DUNGTICH = txtDungTich.Text;
+                        xe.TINHTRANG = txtTinhTrang.Text;
+                        xe.GIABAN = decimal.Parse(txtGiaBan.Text);
+                        xe.MALOAI = cbbLoaiXe.SelectedValue.ToString();
+                        xe.MANCC = cbbNCC.SelectedValue.ToString();
+                        xe.DISABLE = cbDisable.Checked;
+                        _xemay.capnhat(xe);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Mã xe chứa 5 ký tự!", "Thông báo!", MessageBoxButtons.OK);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Mã xe đã tồn tại!", "Thông báo!", MessageBoxButtons.OK);
+                }
             }
             _them = false;
             loadData();

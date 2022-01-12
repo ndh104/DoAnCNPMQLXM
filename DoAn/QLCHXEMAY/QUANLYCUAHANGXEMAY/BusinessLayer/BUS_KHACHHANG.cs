@@ -22,6 +22,10 @@ namespace BusinessLayer
         {
             return db.tb_KHACHHANG.FirstOrDefault(x => x.MAKH == makh);
         }
+        public tb_KHACHHANG getItemSDT(string sdt)
+        {
+            return db.tb_KHACHHANG.FirstOrDefault(x => x.SDT == sdt);
+        }
 
         public void add(tb_KHACHHANG kh)
         {

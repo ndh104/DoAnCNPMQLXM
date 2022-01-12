@@ -42,7 +42,6 @@ namespace CUAHANGXEMAY
             btnXoaNV.Visible = t;
             btnLuu.Visible = !t;
             btnBoQua.Visible = !t;
-            btnThoat.Visible = t;
         }
         void clear()
         {
@@ -89,6 +88,8 @@ namespace CUAHANGXEMAY
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
+            var ma = _nhanvien.Get_ItemMaNV(txtMaNV.Text);
+            var sdt = _nhanvien.getItemSDT(txtSoDT.Text);
             if (_them)
             {
                 if (txtMaNV.Text == "" || txtTenNV.Text == "" || txtDiaChi.Text == ""
@@ -98,24 +99,47 @@ namespace CUAHANGXEMAY
                 }
                 else
                 {
-                    try
+                    if (ma == null)
                     {
-                        tb_NHANVIEN nv = new tb_NHANVIEN();
-                        nv.MANV = txtMaNV.Text;
-                        nv.TENNV = txtTenNV.Text;
-                        nv.CHUCVU = cmbChucVu.Text;
-                        nv.NGAYSINH = dtpNgaySinh.Value;
-                        nv.GIOITINH = cmbGioiTinh.Text;
-                        nv.DIACHI = txtDiaChi.Text;
-                        nv.CMND = txtCMND.Text;
-                        nv.SDT = txtSoDT.Text;
-                        nv.DISABLE = chkDisabled.Checked;
-                        _nhanvien.add(nv);
-                        MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK);
+                        if(txtMaNV.Text.Length == 4)
+                        {
+                            if(sdt == null)
+                            {
+                                try
+                                {
+                                    tb_NHANVIEN nv = new tb_NHANVIEN();
+                                    nv.MANV = txtMaNV.Text;
+                                    nv.TENNV = txtTenNV.Text;
+                                    nv.CHUCVU = cmbChucVu.Text;
+                                    nv.NGAYSINH = dtpNgaySinh.Value;
+                                    nv.GIOITINH = cmbGioiTinh.Text;
+                                    nv.DIACHI = txtDiaChi.Text;
+                                    nv.CMND = txtCMND.Text;
+                                    nv.SDT = txtSoDT.Text;
+                                    nv.DISABLE = chkDisabled.Checked;
+                                    _nhanvien.add(nv);
+                                    MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK);
+                                }
+                                catch
+                                {
+                                    MessageBox.Show("Thêm không thành công!", "Thông báo", MessageBoxButtons.OK);
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Số điện thoại trùng!", "Thông báo!", MessageBoxButtons.OK);
+
+                            }
+                            
+                        }
+                        else
+                        {
+                            MessageBox.Show("Mã nhân viên phải có 4 kí tự!", "Thông báo!", MessageBoxButtons.OK);
+                        }
                     }
-                    catch
+                    else
                     {
-                        MessageBox.Show("Thêm không thành công!", "Thông báo", MessageBoxButtons.OK);
+                        MessageBox.Show("Mã nhân viên không được trùng!", "Thông báo!", MessageBoxButtons.OK);
                     }
                 }
             }
@@ -128,28 +152,49 @@ namespace CUAHANGXEMAY
                 }
                 else
                 {
-                    try
+                    if (ma==null)
                     {
-                        tb_NHANVIEN nv = _nhanvien.Get_Item(_manv);
-                        nv.TENNV = txtTenNV.Text;
-                        nv.CHUCVU = cmbChucVu.Text;
-                        nv.NGAYSINH = dtpNgaySinh.Value;
-                        nv.GIOITINH = cmbGioiTinh.Text;
-                        nv.DIACHI = txtDiaChi.Text;
-                        nv.CMND = txtCMND.Text;
-                        nv.SDT = txtSoDT.Text;
-                        nv.DISABLE = chkDisabled.Checked;
-                        _nhanvien.update(nv);
-                        MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.OK);
+                        if(txtMaNV.Text.Length == 4)
+                        {
+                            if(sdt == null || txtSoDT.Text.Length==10)
+                            {
+                                try
+                                {
+                                    tb_NHANVIEN nv = _nhanvien.Get_ItemMaNV(_manv);
+                                    nv.TENNV = txtTenNV.Text;
+                                    nv.CHUCVU = cmbChucVu.Text;
+                                    nv.NGAYSINH = dtpNgaySinh.Value;
+                                    nv.GIOITINH = cmbGioiTinh.Text;
+                                    nv.DIACHI = txtDiaChi.Text;
+                                    nv.CMND = txtCMND.Text;
+                                    nv.SDT = txtSoDT.Text;
+                                    nv.DISABLE = chkDisabled.Checked;
+                                    _nhanvien.update(nv);
+                                    MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.OK);
+                                }
+                                catch
+                                {
+                                    MessageBox.Show("Sửa không thành công!", "Thông báo", MessageBoxButtons.OK);
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Số điện thoại không hợp lệ!", "Thông báo", MessageBoxButtons.OK);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Mã nhân viên phải có 4 kí tự!", "Thông báo!", MessageBoxButtons.OK);
+                        }
+
                     }
-                    catch
+                    else
                     {
-                        MessageBox.Show("Sửa không thành công!", "Thông báo", MessageBoxButtons.OK);
+                        MessageBox.Show("Mã nhân viên không được trùng!", "Thông báo!", MessageBoxButtons.OK);
                     }
                 }
             }
             loadData();
-            clear();
             _them = false;
             showHideControl(true);
         }
@@ -162,11 +207,6 @@ namespace CUAHANGXEMAY
             frm_nhanvien.ShowDialog();
             txtMaNV.Enabled = false;
             showHideControl(true);
-        }
-
-        private void btnThoat_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
 
         private void gvNhanVien_Click(object sender, EventArgs e)
