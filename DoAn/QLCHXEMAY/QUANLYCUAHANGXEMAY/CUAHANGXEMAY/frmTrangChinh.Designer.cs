@@ -38,11 +38,11 @@ namespace CUAHANGXEMAY
             this.btnBanHang = new System.Windows.Forms.ToolStripButton();
             this.btnBaoCao = new System.Windows.Forms.ToolStripButton();
             this.btnDangXuat = new System.Windows.Forms.ToolStripButton();
+            this.btnDoiMK = new System.Windows.Forms.ToolStripLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panel2 = new System.Windows.Forms.Panel();
             this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
-            this.btnDoiMK = new System.Windows.Forms.ToolStripLabel();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -69,7 +69,7 @@ namespace CUAHANGXEMAY
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 4, 0);
-            this.toolStrip1.Size = new System.Drawing.Size(150, 756);
+            this.toolStrip1.Size = new System.Drawing.Size(221, 756);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -104,7 +104,7 @@ namespace CUAHANGXEMAY
             this.btnNhaCungCap.Image = global::CUAHANGXEMAY.Properties.Resources.nhacungcapcolor;
             this.btnNhaCungCap.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnNhaCungCap.Name = "btnNhaCungCap";
-            this.btnNhaCungCap.Size = new System.Drawing.Size(130, 80);
+            this.btnNhaCungCap.Size = new System.Drawing.Size(150, 80);
             this.btnNhaCungCap.Text = "Nhà cung cấp";
             this.btnNhaCungCap.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnNhaCungCap.Click += new System.EventHandler(this.btnNhaCungCap_Click);
@@ -170,15 +170,25 @@ namespace CUAHANGXEMAY
             this.btnDangXuat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
             // 
+            // btnDoiMK
+            // 
+            this.btnDoiMK.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnDoiMK.AutoSize = false;
+            this.btnDoiMK.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDoiMK.Name = "btnDoiMK";
+            this.btnDoiMK.Size = new System.Drawing.Size(216, 25);
+            this.btnDoiMK.Text = "Đổi mật khẩu";
+            this.btnDoiMK.Click += new System.EventHandler(this.btnDoiMK_Click);
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.labelControl1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(150, 0);
+            this.panel1.Location = new System.Drawing.Point(221, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1228, 61);
+            this.panel1.Size = new System.Drawing.Size(1157, 61);
             this.panel1.TabIndex = 2;
             // 
             // labelControl1
@@ -190,7 +200,7 @@ namespace CUAHANGXEMAY
             this.labelControl1.Location = new System.Drawing.Point(325, 14);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(5);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(595, 25);
+            this.labelControl1.Size = new System.Drawing.Size(895, 39);
             this.labelControl1.TabIndex = 3;
             this.labelControl1.Text = "TOP 10 SẢN PHẨM BÁN CHẠY TÍNH ĐẾN THỜI ĐIỂM HIỆN TẠI";
             // 
@@ -198,10 +208,10 @@ namespace CUAHANGXEMAY
             // 
             this.panel2.Controls.Add(this.chartControl1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(150, 61);
+            this.panel2.Location = new System.Drawing.Point(221, 61);
             this.panel2.Margin = new System.Windows.Forms.Padding(5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1228, 695);
+            this.panel2.Size = new System.Drawing.Size(1157, 695);
             this.panel2.TabIndex = 3;
             // 
             // chartControl1
@@ -218,24 +228,15 @@ namespace CUAHANGXEMAY
             this.chartControl1.PaletteRepository.Add("Palette 1", new DevExpress.XtraCharts.Palette("Palette 1", DevExpress.XtraCharts.PaletteScaleMode.Repeat, new DevExpress.XtraCharts.PaletteEntry[] {
                 new DevExpress.XtraCharts.PaletteEntry(System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(121))))), System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(121))))))}));
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
-            this.chartControl1.Size = new System.Drawing.Size(1228, 695);
+            this.chartControl1.Size = new System.Drawing.Size(1157, 695);
             this.chartControl1.TabIndex = 2;
-            // 
-            // btnDoiMK
-            // 
-            this.btnDoiMK.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.btnDoiMK.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDoiMK.Name = "btnDoiMK";
-            this.btnDoiMK.Size = new System.Drawing.Size(145, 17);
-            this.btnDoiMK.Text = "Đổi mật khẩu";
-            this.btnDoiMK.Click += new System.EventHandler(this.btnDoiMK_Click);
             // 
             // frmTrangChinh
             // 
             this.Appearance.BackColor = System.Drawing.Color.LemonChiffon;
             this.Appearance.Options.UseBackColor = true;
             this.Appearance.Options.UseFont = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1378, 756);
             this.Controls.Add(this.panel2);

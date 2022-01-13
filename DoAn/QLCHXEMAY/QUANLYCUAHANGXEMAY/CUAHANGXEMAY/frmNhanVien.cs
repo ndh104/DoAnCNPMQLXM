@@ -1,5 +1,8 @@
 ﻿using DataAccessLayer;
 using BusinessLayer;
+using CrystalDecisions.CrystalReports.Engine;
+using CrystalDecisions.Shared;
+using CrystalDecisions.Windows.Forms;
 using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
@@ -27,7 +30,8 @@ namespace CUAHANGXEMAY
         {
             _nhanvien = new BUS_NHANVIEN();
             loadData();
-            txtMaNV.Enabled = false;
+            enable(false);
+            //txtMaNV.Enabled = false;
             showHideControl(true);
         }
         void loadData()
@@ -43,6 +47,20 @@ namespace CUAHANGXEMAY
             btnLuu.Visible = !t;
             btnBoQua.Visible = !t;
         }
+
+        void enable(bool e)
+        {
+            txtMaNV.Enabled = e;
+            txtTenNV.Enabled = e;
+            cmbChucVu.Enabled = e;
+            dtpNgaySinh.Enabled = e;
+            cmbGioiTinh.Enabled = e;
+            txtDiaChi.Enabled = e;
+            txtCMND.Enabled = e;
+            txtSoDT.Enabled = e;
+            chkDisabled.Enabled = false;
+        }
+
         void clear()
         {
             txtMaNV.Clear();
@@ -64,14 +82,16 @@ namespace CUAHANGXEMAY
         private void btnThemNV_Click(object sender, EventArgs e)
         {
             _them = true;
-            txtMaNV.Enabled = true;
+            enable(true);
+            //txtMaNV.Enabled = true;
             showHideControl(false);
         }
 
         private void btnSuaNV_Click(object sender, EventArgs e)
         {
             _them = false;
-            txtMaNV.Enabled = false;
+            enable(true);
+            //txtMaNV.Enabled = false;
             showHideControl(false);
             MessageBox.Show("Hãy chọn một nhân viên bạn muốn thay đổi thông tin", "Thông báo", MessageBoxButtons.OK);
         }
@@ -196,16 +216,15 @@ namespace CUAHANGXEMAY
             }
             loadData();
             _them = false;
+            enable(false);
             showHideControl(true);
         }
 
         private void btnBoQua_Click(object sender, EventArgs e)
         {
-            _them = false;
-            this.Close();
-            frmNhanVien frm_nhanvien = new frmNhanVien();
-            frm_nhanvien.ShowDialog();
-            txtMaNV.Enabled = false;
+            _them = false;            
+            enable(false);
+            //txtMaNV.Enabled = false;
             showHideControl(true);
         }
 
@@ -234,6 +253,43 @@ namespace CUAHANGXEMAY
                 e.Graphics.DrawImage(img, e.Bounds.X, e.Bounds.Y);
                 e.Handled = true;
             }
+        }
+
+        private void xuatReport(string _tenReport, string _title)
+        {
+            Form frm = new Form();
+            CrystalReportViewer Crv = new CrystalReportViewer();
+            Crv.ShowGroupTreeButton = false;
+            Crv.ShowParameterPanelButton = false;
+            Crv.ToolPanelView = ToolPanelViewType.None;
+            TableLogOnInfo Thongtin;
+            ReportDocument doc = new ReportDocument();
+            doc.Load(System.Windows.Forms.Application.StartupPath + "\\Reports\\" + _tenReport + @".rpt");
+            Thongtin = doc.Database.Tables[0].LogOnInfo;
+            Thongtin.ConnectionInfo.ServerName = Connection._svname;
+            Thongtin.ConnectionInfo.UserID = Connection._usname;
+            Thongtin.ConnectionInfo.Password = Connection._pwrd;
+            Thongtin.ConnectionInfo.DatabaseName = Connection._dtbase;
+            doc.Database.Tables[0].ApplyLogOnInfo(Thongtin);
+            try
+            {
+                Crv.Dock = DockStyle.Fill;
+                Crv.ReportSource = doc;
+                frm.Controls.Add(Crv);
+                Crv.Refresh();
+                frm.Text = _title;
+                frm.WindowState = FormWindowState.Maximized;
+                frm.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            xuatReport("ReportDSNHANVIEN", "DANH SÁCH NHÂN VIÊN");
         }
     }
 }
