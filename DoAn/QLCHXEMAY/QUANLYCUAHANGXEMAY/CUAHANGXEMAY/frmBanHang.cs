@@ -121,13 +121,13 @@ namespace CUAHANGXEMAY
             lblNhanVien.Text = nv.TENNV;
 
             _xemay = new BUS_XEMAY();
-            cbbTenXe.DataSource = _xemay.getAll();
+            cbbTenXe.DataSource = _xemay.getAll().Where(x => x.DISABLE == false).ToList();
             cbbTenXe.DisplayMember = "TENXE";
             cbbTenXe.ValueMember = "MAXE";
             cbbTenXe.Text = "Chọn xe";
 
             _khachhang = new BUS_KHACHHANG();
-            cbbTenKH.DataSource = _khachhang.getAll();
+            cbbTenKH.DataSource = _khachhang.getAll().Where(x => x.DISABLE == false).ToList();
             cbbTenKH.DisplayMember = "TENKH";
             cbbTenKH.ValueMember = "MAKH";
             cbbTenKH.Text = "Chọn khách hàng";
